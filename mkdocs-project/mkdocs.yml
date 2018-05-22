@@ -24,6 +24,28 @@ pages:
 - 'Resources': resources.md
 - 'REFERENCE: Software Design':
   - 'Overview': software-design/overview.md
+  - 'Repositories and Projects': software-design/repo/repo.md
+  - 'Test Framework': software-design/test-framework/test-framework.md
+  - 'Documentation': software-design/documentation/documentation.md
+  - 'User Interface (UI)': software-design/ui/ui.md
+  - 'Java Runtime Environment (JRE)': software-design/jre/jre.md
+  - 'TSTool Main Application': software-design/tstool-app/tstool-app.md
+  - 'Command File and Command Syntax': software-design/command-syntax/command-syntax.md
+  - 'Command Processor': software-design/command-processor/command-processor.md
+  - 'Command': software-design/command/command.md
+  - 'Command Factory': software-design/command-factory/command-factory.md
+  - 'Command Status': software-design/commandstatus/commandstatus.md
+  - 'Plugin Commands': software-design/plugin-commands/plugin-commands.md
+  - 'Utility Packages': software-design/util/util.md
+  - 'Logging': software-design/logging/logging.md
+  - 'Time Series': software-design/ts/ts.md
+  - 'Datastores': software-design/datastores/datastores.md
+  - 'Tables': software-design/tables/tables.md
+  - 'Data Products': software-design/data-products/data-products.md
+  - 'Spreadsheet': software-design/spreadsheet/spreadsheet.md
+  - 'Spatial Data': software-design/spatial/spatial.md
+  - 'Templates': software-design/templates/templates.md
+  - 'Development Roadmap': software-design/roadmap/roadmap.md
 - 'REFERENCE: Deployed Environment':
   - 'Overview': deployed-env/overview.md
 - 'REFERENCE: Development Environment':
