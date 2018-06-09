@@ -11,6 +11,7 @@ This documentation describes common tasks, roughly in the order from design to d
 * [Troubleshooting Eclipse](#troubleshooting-eclipse) - figuring out why Eclipse is not working, and responding to Eclipse errors (beyond code syntax errors)
 * [Coding](#coding) - Fortran coding information
 * [Compiling](#compiling) - compiling the software
+* [Running](#running) - running the software
 * [Testing](#testing) - how to automate TSTool code testing
 * [Deploying](#deploying) - building an installer and deploying an operational TSTool
 
@@ -56,6 +57,19 @@ TSTool documentation should follow conventions of the developer and user documen
 ## Compiling ##
 
 The Eclipse IDE automatically compiles code as changes are made.
+If no errors are found, TSTool can be run as in the next section.
+If errors are found, they need to be addressed by troubleshooting the code (or finishing incomplete edits).
+
+## Running ##
+
+TSTool can be run within the development environment using run configurations.
+The following figure shows how to access the configurations.
+
+![running-configurations-1](images/running-configurations-1.png)
+
+Run configurations are as follows, and the ***TSTool_CDSS*** run configuration can be used for interactive session:
+
+![running-configurations-2](images/running-configurations-2.png)
 
 ## Testing ##
 
