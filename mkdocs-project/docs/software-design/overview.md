@@ -18,6 +18,7 @@ Separate pages are provided to explain the following design elements.
 	+ [Command Factory](command-factory/command-factory)
 	+ [Command Status](commandstatus/commandstatus)
 	+ [Plugin Commands](plugin-commands/plugin-commands)
+	+ [Command - Read Time Series](command-read/command-read)
 	+ [Utility Packages](util/util)
 	+ [Logging](logging/logging)
 	+ [Time Series](ts/ts)

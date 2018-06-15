@@ -37,7 +37,9 @@ pages:
   - 'Command Status': software-design/commandstatus/commandstatus.md
   - 'Plugin Commands': software-design/plugin-commands/plugin-commands.md
   - 'Utility Packages': software-design/util/util.md
+  - 'Commands that Read Time Series': software-design/command-read-ts/command-read-ts.md
   - 'Logging': software-design/logging/logging.md
+  - 'Date/time Handling': software-design/datetime/datetime.md
   - 'Time Series': software-design/ts/ts.md
   - 'Datastores': software-design/datastores/datastores.md
   - 'Tables': software-design/tables/tables.md
