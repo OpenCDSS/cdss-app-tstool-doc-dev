@@ -4,6 +4,7 @@
 * [Log Messages](#log-messages)
 * [Log Files](#log-files)
 * [Setting Logging Levels](#setting-logging-levels)
+* [Logging Code Performance](#logging-code-performance)
 * [Log File Viewer](#log-file-viewer)
 * [Potential Future Changes](#potential-future-changes)
 
@@ -18,11 +19,16 @@ and in particular the
 [Message class](https://github.com/OpenWaterFoundation/cdss-lib-common-java/blob/master/src/RTi/Util/Message/Message.java) class.
 TSTool provides features to create a log file, view the log file contents interactively,
 and control the amount of output to the log file.
-Logging at a command level is also integrated via the `CommandStatus` as discussed above.
+Logging at a command level is also integrated via the
+[`CommandStatus` class](../CommandStatus/CommandStatus).
+A message is often logged using the [Message package](https://github.com/OpenWaterFoundation/cdss-lib-common-java/blob/master/src/RTi/Util/Message/)
+to allow review of the session,
+and also logged to [`CommandStatus` class](../CommandStatus/CommandStatus) in cases where a message is important enough for user to see in the UI.
 
 ## Log Messages ##
 
-Useful information can be logged for status, debug, warning, and failure messages.
+Useful information can be logged for debug, status, and warning messages.
+Warning level 1 is considered a failure.
 Logging messages can further be controlled to output to console (standard output to terminal window),
 log file, and user interface (any component that listens to messages).
 The general approach is to minimize logging in order to improve performance,
@@ -32,15 +38,86 @@ Numeric logging levels can be set for each message type.
 Whereas logging frameworks typically set this in a "handler" feature,
 the TSTool logging uses configuration data and levels passed in logging methods.
 
+Log levels default in the main TSTool program and can then be set using the ***Tools / Diagnostics...*** menu
+(see below for diagnostic settings after TSTool startup)
+or the `SetDebugLevel` and `SetWarningLevel` commands.
+
+![tstool-diagnostics](tstool-diagnostics.png)
+
+**<p style="text-align: center;">
+Tools / Diagnostics
+</p>**
+
+### Warning and Error Message ###
+
 The following is an example of a typical warning message in library code.
 Note that the method name (called `routine`) is constructed based on class
-information rather stack track, which might be used by a logging framework.
+information rather than extracting from the call stack, which might be used by a logging framework.
 
 ```
 String routine = getClass().getName() + ".checkCommandParameters";
 message = "Error requesting WorkingDir from processor.";
 Message.printWarning(3, routine, message );
 ```
+
+It is also possible to print the stack trace, as follows:
+
+```
+try {
+    // Some code
+}
+catch ( SomeException ) {
+    message = "Exception doing something (" + e + ").";
+    Message.printWarning(3, routine, message );
+    // Do the following if it is helpful to have the exception stack trace at this location
+    Message.printWarning(3, routine, e );
+}
+``` 
+
+The first message includes only the exception main string, not the stack.
+The second message prints the stack to the `Message` class internal handlers.
+Although it may be a best practice to catch each expected exception and output a suitable message,
+it is often typical to catch `Exception` so that nothing falls through.
+
+Within TSTool, the following warning levels are typical:
+
+|**Warning Level**|**Description**|
+|--|--|
+| `1` | Visible to user in a pop-up dialog (typically only used in main UI because it will block the application).|
+| `2` | Use in main application for non-blocking warnings.|
+| `3` | Use in command classes when processing data (and log on command).|
+| `3+` | Use to indicate less severe warnings (do not log on command).|
+
+It may be appropriate to use the word `Error` in the message, for example:
+
+```
+try {
+    // Some code
+}
+catch ( SomeException ) {
+    message = "Error doing something (" + e + ").";
+    Message.printWarning(3, routine, message );
+    // Do the following if it is helpful to have the exception stack trace at this location
+    Message.printWarning(3, routine, e );
+}
+``` 
+
+### Status Message ###
+
+Status messages are equivalent to "info" level in some logging frameworks.
+Status messages are useful to understand major "mile markers" in processing,
+such as when processing of a TSTool command starts and ends.
+The following levels are typically used:
+
+|**Debug Level**|**Description**|
+|--|--|
+| `1` | Visible to user in a UI, such as the TSTool UI status area.|
+| `2` | Important messages, logged to log file.|
+| `3+` | Other levels of messages. |
+
+If significant status messages are used, they may need to be converted to debug messages to limit the amount of output in normal situations.
+
+### Debug Message ###
 
 Debug messages are typically wrapped in a check to determine if debug level is active (non-zero).
 This improves performance because formatting can be avoid if not in debug mode.
@@ -60,6 +137,15 @@ message = "Error requesting DateTime(DateTime=" + InputStart + ") from processor
 Message.printWarning(warning_level,
     MessageUtil.formatMessageTag( command_tag, ++warning_count), routine, message );
 ```
+
+The following table summarizes typical debug levels.
+
+|**Debug Level**|**Description**|
+|--|--|
+| `1` | For most important debug levels, and often used for temporary messages (equivalent to printing to console).|
+| `2` | Not the most important but close, perhaps within a loop.|
+| `3-10` | Top tier messages, where level is used to limit output, perhaps nested loops.|
+| `100` | Typically used for only the most detailed output.|
 
 ## Log Files ##
 
@@ -95,6 +181,14 @@ and are typically used with [`StartLog`](http://learn.openwaterfoundation.org/cd
 
 Log levels are typically left at the default unless troubleshooting the application.
 In this case, 
+
+## Logging Code Performance ##
+
+Logging can be used to evaluate code performance (if other tools are not used).
+A simple way is to use the
+[`StopWatch`](https://github.com/OpenWaterFoundation/cdss-lib-common-java/blob/master/src/RTi/Util/Time/StopWatch.java)
+class to track time and then output using logging messages.
+For example, output status message that indicate how many milliseconds were required to complete a task.
 
 ## Log File Viewer ##
 
