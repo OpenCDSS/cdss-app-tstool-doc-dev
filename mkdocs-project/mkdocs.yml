@@ -9,15 +9,17 @@ pages:
   - 'Overview': dev-new/overview.md
 - 'Development Tasks':
   - 'Overview': dev-tasks/overview.md
-#  - 'Run Eclipse': dev-tasks/run-eclipse.md
-#  - 'Designing Software': dev-tasks/designing-software.md
-#  - 'Version Control with Git': dev-tasks/versioning.md
-#  - 'Documenting': dev-tasks/documenting.md
-#  - 'Troubleshooting Eclipse': dev-tasks/troubleshooting-eclipse.md
-#  - 'Coding': dev-tasks/coding.md
-#  - 'Compiling': dev-tasks/compiling.md
-#  - 'Testing': dev-tasks/testing.md
-#  - 'Deploying': dev-tasks/deploying.md
+  - 'OpenCDSS Coordination': dev-tasks/opencdss-coord/opencdss-coord.md
+  - 'Run Eclipse': dev-tasks/run-eclipse/run-eclipse.md
+  - 'Designing Software': dev-tasks/designing-software/designing-software.md
+  - 'Version Control with Git': dev-tasks/version-control/version-control.md
+  - 'Documenting': dev-tasks/documenting/documenting.md
+  - 'Troubleshooting Eclipse': dev-tasks/troubleshooting-eclipse/troubleshooting-eclipse.md
+  - 'Coding': dev-tasks/coding/coding.md
+  - 'Compiling': dev-tasks/compiling/compiling.md
+  - 'Running': dev-tasks/running/running.md
+  - 'Testing': dev-tasks/testing/testing.md
+  - 'Deploying': dev-tasks/deploying/deploying.md
 #  - 'FAQ for Cygwin': dev-tasks/faq-cygwin.md
 #  - 'FAQ for Linux': dev-tasks/faq-linux.md
 #  - 'FAQ for MinGW': dev-tasks/faq-mingw.md
@@ -60,6 +62,8 @@ pages:
   - 'Eclipse': dev-env/eclipse.md
 #  - 'Text Editor': dev-env/editor.md
   - 'KDiff3': dev-env/kdiff3.md
+  - 'NSIS': dev-env/nsis.md
+  - 'launch4j': dev-env/launch4j.md
 # Fill the following out later - may not need for TSTool
 - 'REFERENCE: Initial Project Setup':
   - Overview: project-init/overview.md

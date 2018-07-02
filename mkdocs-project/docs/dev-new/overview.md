@@ -28,6 +28,7 @@ After reading instructions for a step, use "back" to return to this outline so t
 	* **Required (if not already installed):** [Development Environment / Eclipse](../dev-env/eclipse/) - install Eclipse for use as IDE
 	* **Optional:** [Development Environment / KDiff3](../dev-env/kdiff3/) - install software to facilitate comparing files
 	**(highly useful and can be used with Git)**
+	* **Optional:** [Development Environment / NSIS](../dev-env/nsis/) - install software to create TSTool software installer
 6. **Required:** Eclipse Workspace Setup (interactive development environment)
 	* **Required:** [Create Eclipse Workspace Folder](#create-eclipse-workspace-folder) - simple manual step (***see details below***)
 	* **Required:** [Import the Existing Eclipse TSTool Projects from the Git Repository Folders](#import-the-existing-eclipse-tstool-projects-from-the-git-repository-folders) -  import
@@ -217,12 +218,14 @@ All of the repositories obviously use Git for version control (Eclipse generally
 
 ### Import Code Repositories ###
 
-After the initial Eclipse workspace is selected, import the following repositories by following the same general procedure indicated below:
+After the initial Eclipse workspace is selected, import the following repositories by following the same general procedure indicated below
+(**images below have not been updated to include cdss-lib-dmi-hydrobase-rest-java component**):
 
 * `cdss-app-tstool-main`
 * `cdss-lib-cdss-java`
 * `cdss-lib-common-java`
 * `cdss-lib-dmi-hydrobase-java`
+* `cdss-lib-dmi-hydrobase-rest-java`
 * `cdss-lib-dmi-nwsrfs-java`
 * `cdss-lib-dmi-riversidedb-java`
 * `cdss-lib-dmi-satmonsys-java`
