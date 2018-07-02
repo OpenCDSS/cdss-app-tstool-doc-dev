@@ -67,9 +67,24 @@ The Java installation process creates files as shown in the following image.
 The use of version-specific folder can be problematic because Eclipse Java Runtime Environment and build utilities must
 be configured to use the specific version.
 This may result in developers with different minor versions of Java flip-flopping repository contents.
-To minimize such issues, open a Windows command shell with Administrator privileges and create symbolic links as shown in the following image.
+To minimize such issues, open a Windows command shell with Administrator privileges and create symbolic links as shown in the following image and
+summarized below.
+**Actualy, Exclipse seems to traverse the link and use the specific resource in its environment, showing the full path rather than the link,
+but it is convenient nevertheless and is needed for the step below.**
+
+```
+mklink /d jdk8 jdk1.8.0_171
+mklink /d jre8 jre1.8.0_171
+```
 
 ![java8-32-6-link](images/java8-32-6-link.png)
+
+In addition, the automated build system uses JRE folder that requires another symbolic link to find the JRE to distribute with the installer.
+Create the link as follows in the `C:\Program Files (x86)\Java` folder:
+
+```
+mklink /d jre_18 jre8
+```
 
 ## Confirm Run Script Configuration ##
 

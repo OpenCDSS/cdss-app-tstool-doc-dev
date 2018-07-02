@@ -31,9 +31,10 @@ The following software are required for TSTool development:
 2. [Git](git) - needed to perform command line version control operations
 3. [Python and pip](python) - needed by MkDocs, and useful general tool (**skip if not editing MkDocs documentation**)
 4. [MkDocs](mkdocs) - MkDocs is used for developer and user documentation static websites, including this documentation (**skip if not editing MkDocs documentation**)
-5. [Java 8](java8) - used to run Eclipse, and can be used to write utility programs (**skip if using a text editor rather than Eclipse/Photran**)
+5. [Java 8](java8) - used to run Eclipse, and can be used to write utility programs
 6. [Eclipse](eclipse) - IDE used for interactive Java software development
 7. [KDiff3](kdiff3) - tool for comparing files (**skip if not comparing files or have equivalent tool**)
+8. [NSIS](nsis) - tool used to create software installer
 
 ## Software Install Location Considerations ##
 
