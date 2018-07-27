@@ -22,6 +22,9 @@ For example, if TSTool is running out of memory for large workflows,
 the installation configuration can be changed to use a 64-bit Java.
 This increases the memory ceiling that can be used at run-time, but 32-native features like HEC-DSS support will not work.
 
+It should be possible to change the run-time Java for deployed StateDMI software by using
+[`launch4j`](launch4j) configuration settings.
+
 ## Download Java 8 ##
 
 TSTool has traditionally been developed using Oracle Java.
