@@ -1,4 +1,4 @@
-## TSTool / Development Tasks / Version Control ##
+# TSTool / Development Tasks / Version Control #
 
 TSTool version control uses Git and GitHub and is consistent with CDSS protocols.
 

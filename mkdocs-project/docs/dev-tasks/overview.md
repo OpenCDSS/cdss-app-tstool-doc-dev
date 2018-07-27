@@ -2,7 +2,7 @@
 
 Development tasks are the day-to-day work that a software developer does to enhance TSTool software
 to add new functionality, fix bugs, etc.
-This documentation describes common tasks, roughly in the order from design to deployment
+This documentation describes common tasks, roughly in the order from design to deployment.
 
 * [OpenCDSS Coordination](opencdss-coord/opencdss-coord) - how to coordinate TSTool development within OpenCDSS
 * [Run Eclipse](run-eclipse/run-eclipse) - how to start Eclipse

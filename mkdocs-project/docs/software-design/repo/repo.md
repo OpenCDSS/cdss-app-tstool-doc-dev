@@ -40,6 +40,7 @@ TSTool GitHub Repositories and Code Projects (listed alphabetically)
 |[`cdss-lib-cdss-java`](https://github.com/OpenWaterFoundation/cdss-lib-cdss-java)|`cdss-lib-cdss-java`|Java|CDSS code components shared across CDSS applications|
 |[`cdss-lib-common-java`](https://github.com/OpenWaterFoundation/cdss-lib-common-java)|`cdss-lib-common-java`|Java|Utility code components shared across applications|
 |[`cdss-lib-dmi-hydrobase-java`](https://github.com/OpenWaterFoundation/cdss-lib-dmi-hydrobase-java)|`cdss-lib-dmi-hydrobase-java`|Java|API for Colorado's HydroBase database and web services|
+|[`cdss-lib-dmi-hydrobase-rest-java`](https://github.com/OpenWaterFoundation/cdss-lib-dmi-hydrobase-rest-java)|`cdss-lib-dmi-hydrobase-rest-java`|Java|API for Colorado's HydroBase REST web services|
 |[`cdss-lib-dmi-nwsrfs-java`](https://github.com/OpenWaterFoundation/cdss-lib-dmi-nwsrfs-java)|`cdss-lib-dmi-nwsrfs-java`|Java|Legacy API for National Weather Service River Forecast Center models|
 |[`cdss-lib-dmi-riversidedb-java`](https://github.com/OpenWaterFoundation/cdss-lib-dmi-riversidedb-java)|`cdss-lib-dmi-riversidedb-java`|Java|API for Riverside Technology Database|
 |[`cdss-lib-dmi-satmonsys-java`](https://github.com/OpenWaterFoundation/cdss-lib-dmi-satmonsys-java)|`cdss-lib-dmi-satmonsys-java`|Java|API for Colorado's Satellite Monitoring System|

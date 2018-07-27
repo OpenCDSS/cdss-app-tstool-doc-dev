@@ -179,7 +179,7 @@ It will be more difficult to ensure cross-references between different documents
 ### 5. Create Local Distribution ###
 
 The software file build process is broken into two main steps.
-The first creates a copy of all necessary files in the `dist/` folder,
+The first creates a copy of all necessary files in the `dist/install-cdss` folder,
 which is ignored in the repository and will be automatically created.
 This contents of this folder can then be inspected to make sure files are accurate and in the correct locations.
 To run this step, execute the external run configuration as shown in the following figure.
