@@ -20,7 +20,7 @@ The following are useful resources.
 
 Ant is the build automation tool used by Eclipse.
 It is currently used by the TSTool build utilities.
-The newer Maven software is often now used instead of Ant.
+The newer [Maven](#maven) software is often now used instead of Ant but is not currently used for TSTool.
 
 * [Ant](https://ant.apache.org/)
 
@@ -95,5 +95,6 @@ NSIS is used to create Windows software installers via automated scripts.
 
 SLF4J is a standard logging framework that allows logging messages from other frameworks
 to be handled through a common interface.
+SLF4J has not yet been integrated into TSTool - the legacy `Message` class is used instead.
 
 * [SLF4J](https://www.slf4j.org/)

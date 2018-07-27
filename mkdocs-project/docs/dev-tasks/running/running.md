@@ -6,6 +6,6 @@ Old run configurations will likely be removed and new ones added as TSTool conti
 
 ![running-configurations-1](images/running-configurations-1.png)
 
-Run configurations are as follows, and the ***TSTool_CDSS*** run configuration can be used for interactive session:
+Run configurations are as follows, and the ***TSTool_CDSS*** run configuration can be used to start an interactive TSTool session:
 
 ![running-configurations-2](images/running-configurations-2.png)

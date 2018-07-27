@@ -29,6 +29,7 @@ After reading instructions for a step, use "back" to return to this outline so t
 	* **Optional:** [Development Environment / KDiff3](../dev-env/kdiff3/) - install software to facilitate comparing files
 	**(highly useful and can be used with Git)**
 	* **Optional:** [Development Environment / NSIS](../dev-env/nsis/) - install software to create TSTool software installer
+	* **Optional:** [Development Environment / launch4j](../dev-env/launch4j/) - install software to create TSTool software installer
 6. **Required:** Eclipse Workspace Setup (interactive development environment)
 	* **Required:** [Create Eclipse Workspace Folder](#create-eclipse-workspace-folder) - simple manual step (***see details below***)
 	* **Required:** [Import the Existing Eclipse TSTool Projects from the Git Repository Folders](#import-the-existing-eclipse-tstool-projects-from-the-git-repository-folders) -  import
@@ -110,6 +111,11 @@ If prompted when using `git clone`, specify the GitHub account credentials.
 
 ### ![Cygwin](../images/cygwin-32.png) Clone the repository files (Cygwin) ###
 
+**It is recommened that a Windows development environment is used, although Cygwin can be used for
+repositories that are not included in Eclipse, such as this developer documentation (`cdss-app-tstool-doc-dev`),
+new MkDocs user documentation (`cdss-app-tstool-doc-user`),
+and test repository (`cdss-app-tstool-test`), if this allows the developer to be more efficient.**
+
 Follow the instructions for Linux (see below) but change the first step to the following to ensure that
 the shared Cygwin/Windows file location is used.
 
@@ -143,6 +149,8 @@ $ git clone https://github.com/OpenWaterFoundation/cdss-util-buildtools.git
 ```
 
 ### ![Windows](../images/windows-32.png) Clone the repository files (Windows) ###
+
+Use a Windows git client such as Git Bash:
 
 ```com
 > C:

@@ -15,7 +15,7 @@ Some enhancements will require significant effort because features are used thro
 4. Move to online documentation and phase out Word/PDF packaging in installer.
 5. Update installer to use latest NSIS and Launch4J.
 6. Update development environment to use Maven for dependency management and automation.
-7. Update development environment to NOT store Eclipse artifacts in repositories,
+7. Evaluate updating the development environment to NOT store Eclipse artifacts in repositories,
 to support more development environments.
 8. Split currently embedded packages into plugins for components that are maintained
 by third parties (rather than core CDSS/TSTool team), potentially:
