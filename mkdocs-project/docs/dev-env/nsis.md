@@ -27,6 +27,9 @@ creation of the installer.
 The core NSIS software does not provide all the necessary functionality.
 Additional NSIS components were apparently installed in the main software location.
 
+The files necessary for NSIS add-ons can be found in the repository `cdss-util-buildtools`
+under the directories `install` > `NSIS`.
+
 The following files were copied into the `C:\Program Files (x86)\NSIS`
 necessary for the TSTool install process. Files from original sources are used and where notes files are copied from the [NSIS 2.46 archive repository](https://github.com/OpenWaterFoundation/cdss-archive-nsis-2.46)
 
