@@ -16,6 +16,7 @@ The following discussion summarizes the UI design.
 * [Commands Editor Dialog Design](#command-editor-dialog-design)
 * [Running Commands via UI](#running-commands-via-ui)
 * [Displaying Results via UI](#displaying-results-via-ui)
+* [Resources](#resources)
 
 ------------------
 
@@ -478,3 +479,10 @@ problems generated during the run, processor properties,
 tables, and data views, and are displayed using built-in components.
 In other cases, the results are external, such as output files, and may be viewed using external programs
 such as Excel, a web browser, image viewer, or editor.
+
+## Resources ##
+
+The following are useful resources for UI design and development:
+
+* [Oracle Java Look and Feel Guidelines](https://www.oracle.com/technetwork/java/index-136139.html)
+* [Oracle Java Tutorials for Swing](https://docs.oracle.com/javase/tutorial/uiswing/)
