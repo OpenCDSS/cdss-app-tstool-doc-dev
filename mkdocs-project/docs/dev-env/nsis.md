@@ -22,27 +22,49 @@ from the download page on the following page.
 NSIS provides the benefit of being scriptable and therefore fits with automating
 creation of the installer.
 
+Running the installer advises to uninstall the earlier version of NSIS
+(2.46 was used for TSTool 12.05.00 and earlier).
+Therefore, uninstall the older version.
+
+Install NSIS 3.03 using the installer defaults.
+
 ## NSIS Add-ons for NSIS 3.03 ##
 
 The core NSIS software does not provide all the necessary functionality.
-Additional NSIS components were apparently installed in the main software location.
+Additional NSIS components were added to the main software location when NSIS was first
+chosen as a solution.
 
 The files necessary for NSIS add-ons can be found in the repository `cdss-util-buildtools`
-under the directories `install` > `NSIS`.
+under the directories `install/NSIS`.
 
-The following files were copied into the `C:\Program Files (x86)\NSIS`
-necessary for the TSTool install process. Files from original sources are used and where notes files are copied from the [NSIS 2.46 archive repository](https://github.com/OpenWaterFoundation/cdss-archive-nsis-2.46)
+The files discussed in the following sections should be copied into the
+`C:\Program Files (x86)\NSIS` necessary for the TSTool install process.
+Files from original sources are used and where notes files are copied from the
+[NSIS 2.46 archive repository](https://github.com/OpenWaterFoundation/cdss-archive-nsis-2.46).
+To facilitate installation of NSIS 3.03 add-ins, perform the following steps:
 
-The following files were added many years ago and it is not clear what files are
-still needed in the NSIS program files for the TSTool installer to build properly.
-In the comments section of each file there is mention of whether or not TSTool
-installer was still able to get built with or without the file present in the NSIS
-program files.
+1. Open a Git Bash shell.  Run as Administrator because the installation process
+will install files into `C:\Program Files (x86)`.
+2. Change directories to the `cdss-util-buildtools` repository `install/NSIS` folder.
+3. Run the `install-to-nsis-3.03.sh` script.
+This is an interactive script that will help confirm that NSIS 3.03 is installed
+and will prompt for confirmation to install.
 
-Files in bold and listed below each table are necessary and would
-result in build errors if not included. Files not bolded may be phased out over
-time, but are being kept as to not cause any potential issues if they are actually
+The files discussed in the following sections were added many years ago and it is not clear what files are
+still needed in the NSIS program files for the CDSS installers to build properly.
+The comments section for each file indicates whether or not the TSTool
+installer is functional with or without the file present in the NSIS program files.
+
+Files listed in table in bold are necessary and result in build errors if not included.
+Files not bolded may be phased out over time,
+but are being kept as to not cause any potential issues if they are actually
 needed, but this was not apparent in testing.
+
+The following sections are helpful mainly to indicate the source of files
+that are now saved in the `cdss-util-buildtools` repository `install/NSIS` folder.
+If the install process is not changed much,
+then the add-in installation process described above should result in a workable
+development environment.
 
 ### `Contrib/` Folder: ###
 | **Component for Plugin&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;** | Description | Where to Download | Comments |
@@ -104,7 +126,7 @@ that only includes one `.dll` file, it is safe to assume this will be `x86-ansi`
 
 ## NSIS Add-ons for NSIS 2.46 ##
 
-*This section is retained as a historical reference for use withy TSTool 12.05.00 and earlier.*
+*This section is retained as a historical reference for use with TSTool 12.05.00 and earlier.*
 
 The core NSIS software does not provide all the necessary functionality.
 Additional NSIS components were apparently installed on the main software,

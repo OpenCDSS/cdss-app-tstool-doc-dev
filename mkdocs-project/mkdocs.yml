@@ -12,14 +12,16 @@ pages:
   - 'OpenCDSS Coordination': dev-tasks/opencdss-coord/opencdss-coord.md
   - 'Run Eclipse': dev-tasks/run-eclipse/run-eclipse.md
   - 'Designing Software': dev-tasks/designing-software/designing-software.md
-  - 'Version Control with Git': dev-tasks/version-control/version-control.md
-  - 'Documenting': dev-tasks/documenting/documenting.md
   - 'Troubleshooting Eclipse': dev-tasks/troubleshooting-eclipse/troubleshooting-eclipse.md
   - 'Coding': dev-tasks/coding/coding.md
+  - 'Documenting': dev-tasks/documenting/documenting.md
+  - 'Version Control': dev-tasks/version-control/version-control.md
   - 'Compiling': dev-tasks/compiling/compiling.md
   - 'Running': dev-tasks/running/running.md
   - 'Testing': dev-tasks/testing/testing.md
+  - 'Building Installer': dev-tasks/building-installer/building-installer.md
   - 'Deploying': dev-tasks/deploying/deploying.md
+  - 'Installing': dev-tasks/installing/installing.md
 #  - 'FAQ for Cygwin': dev-tasks/faq-cygwin.md
 #  - 'FAQ for Linux': dev-tasks/faq-linux.md
 #  - 'FAQ for MinGW': dev-tasks/faq-mingw.md
