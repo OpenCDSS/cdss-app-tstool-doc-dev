@@ -10,12 +10,21 @@ launch4j software is used to create an executable that wraps the Java Runtime En
 ## launch4j Installation ##
 
 To facilitate use, launch4j has been previously installed in the `cdss-util-buildtools` repository in
-folder `lib/launch4j`.
+folder `lib/launch4j` and does not require any additional installation steps.
+The `cdss-util-buildtools` scripts will use launch4j to build the software installer.
+The following is the download page for launch4j in order to evaluate whether updates should be adopted.
 
 * [launch4j on SourceForge](https://sourceforge.net/projects/launch4j/)
 
-This software needs to be updated to use latest features and also ensure compatibility with current Windows operating system.
-
 ## launch4j Configuration ##
 
-**Need to discuss configuration properties that are relevant to TSTool.**
+The luanch4j software uses a file `bin/TSTool.l4j.ini` in the TSTool installation folder,
+which is version-controlled in the `cdss-app-tstool-main` repository in folder `installer/common` folder.
+This is used by launch4j at run-time to configure the Java Runtime Environment.
+The following command line parameters are used by default, but can be changed after the software is intalled:
+
+|**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|
+|--|--|
+|`-Xmx1170m`                       |Maximum memory for the Java virtual machine, appropriate for current 32-bit runtime environment.  This can be increased if a 64-bit JRE is used at run-time.  32-bit Java is used mainly because of historical support for old Windows operating systems and use of native 32-bit libraries for HEC-DSS integration.  A 64-bit run-time will be implemented in the future.  The theoretical limit for memory on a 32-bit system is 4GB.  However, quite a bit of memory is taken by the virtual machine and a practical limit is 1.4GB.|
+|`-Dsun.java2d.noddraw=true`       |Use to fix problems in graphics card drivers (sometimes have visual artifacts strewn about).|
+|`-Djava.net.useSystemProxies=true`|Ensure that TSTool picks up on system firewall settings that may limit normal HTTP traffic for web services.|

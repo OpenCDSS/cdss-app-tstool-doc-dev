@@ -168,9 +168,8 @@ Use a simple list with links to sections on the page.
 
 ## License ##
 
-This documentation is currently licensed under the
-[Creative Commons Attribution 2.0 Generic License](https://creativecommons.org/licenses/by/2.0/),
-which is the recommendation for CDSS documentation that is currently under review.
+The license for this documentation is under review.  A recommendation has been made to use the
+[Creative Commons Attribution 2.0 Generic License](https://creativecommons.org/licenses/by/2.0/).
 
 ## Contributing ##
 
@@ -194,4 +193,5 @@ This repository is maintained by the OpenCDSS team.
 The following release notes indicate the update history for documentation, with GitHub repository issue indicated,
 if applicable (links to issues via README.md are not cleanly supported by GitHub so use the repository issues page to find).
 
+* 2018-09-14 - Clean up documentation for TSTool 12.06.00 release.
 * 2018-04-22 - Initial content migrated from other forms.
