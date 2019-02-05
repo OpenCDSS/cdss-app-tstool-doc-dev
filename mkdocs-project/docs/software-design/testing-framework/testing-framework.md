@@ -7,9 +7,9 @@ by exercising code at multiple levels.
 This provides coverage testing of the functionality that users will experience.
 See the following for more information.
 
-* [cdss-app-tstool-test test repository](https://github.com/OpenWaterFoundation/cdss-app-tstool-test)
+* [cdss-app-tstool-test test repository](https://github.com/OpenCDSS/cdss-app-tstool-test)
 * [Quality Control chapter of user documentation](http://learn.openwaterfoundation.org/cdss-app-tstool-doc-user/quality-control/quality-control/)
-* [Development Tasks / Testing](../../dev-tasks/overview#testing)
+* [Development Tasks / Testing](../../dev-tasks/overview.md#testing)
 
 Testing TSTool can be complex, especially when using data from third party databased and web services.
 For example, it is often necessary to constrain the period of record for time series queries to a

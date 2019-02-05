@@ -24,7 +24,7 @@ Even so, it is important to understand how to use the new package, and it will t
 Developers are encouraged to use `java.time` where it makes sense and phase out use of Java `Date` class; however, read the remainder of this page first.
 
 Because the built-in Java `Date` class was insufficient, the "home grown"
-[`DateTime`](https://github.com/OpenWaterFoundation/cdss-lib-common-java/blob/master/src/RTi/Util/Time/DateTime.java) class was created for use in TSTool.
+[`DateTime`](https://github.com/OpenCDSS/cdss-lib-common-java/blob/master/src/RTi/Util/Time/DateTime.java) class was created for use in TSTool.
 This class has the following characteristics:
 
 * Internally represents data using date/time parts (year, month number, day number, etc.).

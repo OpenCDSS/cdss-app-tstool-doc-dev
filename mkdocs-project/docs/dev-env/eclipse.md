@@ -16,7 +16,7 @@ Eclipse does have some issues and limitations, but other IDEs have different iss
 
 TSTool development has typically occurred on Windows computers, although the software is often deployed to other operating systems.
 
-As discussed in the [Java 8](java8) section, Java 8 is currently used for development and 32-bit Java is used due to component requirements.
+As discussed in the [Java 8](java8.md) section, Java 8 is currently used for development and 32-bit Java is used due to component requirements.
 Therefore, to avoid confusion with compatibility, Eclipse 32-bit is also used.
 TSTool has been developed with Eclipse Neon.  A later version of Eclipse will be phased in as other updates occur.
 The minor Eclipse version is not generally an issue so the latest version should be used.

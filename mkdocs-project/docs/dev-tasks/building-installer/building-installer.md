@@ -39,12 +39,12 @@ however, TSTool is complex and sufficient resources need to be available to
 evaluate Maven implementation and impacts that it has on the existing build processes.
 The following are software tools used to create the installer
 
-* Eclipse IDE is used to run build processes using ***External Tools Configurations*** - see [instructions for installing Eclipse](../../dev-env/eclipse).
+* Eclipse IDE is used to run build processes using ***External Tools Configurations*** - see [instructions for installing Eclipse](../../dev-env/eclipse.md).
 * Eclipse Ant is used to automate tasks (comes packaged with Eclipse).
-* Java Runtime Environment (JRE) compatible with TSTool version is packaged with the installer - see [instructions for installing Java](../../dev-env/java8).
-* The NSIS software is used to create self-extracting installer for Windows - see [instructions for installing NSIS](../../dev-env/nsis).
+* Java Runtime Environment (JRE) compatible with TSTool version is packaged with the installer - see [instructions for installing Java](../../dev-env/java8.md).
+* The NSIS software is used to create self-extracting installer for Windows - see [instructions for installing NSIS](../../dev-env/nsis.md).
 * The launch4j software is used to create a launcher for TSTool, so that it behaves similar to other executable programs - see
-[instructions for installing launch4j](../../dev-env/launch4j).
+[instructions for installing launch4j](../../dev-env/launch4j.md).
 
 This build process is parallel to the normal Eclipse compile process, but they are separate in some ways.
 For example, Eclipse compiles source Java files located in `src` folders into class files located in the parallel `bin` folder.
@@ -67,7 +67,7 @@ as possible in order to minimize issues.
 
 ### cdss-util-buildtools ###
 
-The [cdss-util-buildtools repository](https://github.com/OpenWaterFoundation/cdss-util-buildtools)
+The [cdss-util-buildtools repository](https://github.com/OpenCDSS/cdss-util-buildtools)
 contains tools used to build TSTool and other CDSS installers.
 At one point it was thought that these tools would follow a hierarchy with general tools in this
 repository and specific scripts in each repository.
@@ -93,7 +93,7 @@ The Eclipse IDE provides a way to run external tools such as command line softwa
 Available run configurations are saved in the repository in `scripts` folder.
 The following shows the list of external tool configurations that have been defined for TSTool.
 Many of these can be phased out as software development focuses on the OpenCDSS configuration of TSTool.
-The specific run configurations of interest are described in the [Build Steps](#build-steps) sections.
+The specific run configurations of interest are described in the [Creating a Windows Installer](#creating-a-windows-installer) sections.
 
 ![eclipse-external-tools2.png](images/eclipse-external-tools2.png)
 
@@ -107,7 +107,7 @@ Packaging the installer requires configuring the location of a JRE for the insta
 
 ### NSIS ###
 
-[Nullsoft Scriptable Install System (NSIS)](../../dev-env/nsis)
+[Nullsoft Scriptable Install System (NSIS)](../../dev-env/nsis.md)
 is open source software that creates the self-extracting executable program to install TSTool.
 The installer provides a sequence of dialogs to control the installation.
 NSIS was adopted to create TSTool installations because commercial options limited use for developers and
@@ -118,7 +118,7 @@ operating system versions.
 
 ### launch4j ###
 
-[launch4j](../../dev-env/launch4j) is open source software that wraps Java Runtime Environment (JRE) startup for
+[launch4j](../../dev-env/launch4j.md) is open source software that wraps Java Runtime Environment (JRE) startup for
 a Java program so that startup is more streamlined, similar to running any executable program.
 There are multiple benefits including being able to configure the title that is shown when a program is minimized
 in the task bar, allowing configuration by a text file, etc.
@@ -153,13 +153,13 @@ There are two main places that version information needs to be specified.
 These should be changed as soon after making a release as possible (and planning for the next release)
 to minimize confusion and overwriting the previous release installer in the development environment.
 
-1. **TSTool Main Program Code** - The [TSToolMain.java](https://github.com/OpenWaterFoundation/cdss-app-tstool-main/blob/master/src/DWR/DMI/tstool/TSToolMain.java) file 
+1. **TSTool Main Program Code** - The [TSToolMain.java](https://github.com/OpenCDSS/cdss-app-tstool-main/blob/master/src/DWR/DMI/tstool/TSToolMain.java) file 
 sets the `PROGRAM_VERSION` with format similar to `12.05.00 (2018-06-17)`.
 By convention, the parts of the version have been padded with zeros (this may change in the future).  If necessary, `beta` can be added
 to the version, such as `12.05.00beta (2018-06-17)`.
 This information is shown in the ***Help / About*** dialog.
 2. **Build Process Configuration File** - The
-[cdss-app-tstool-main repository product properties file](https://github.com/OpenWaterFoundation/cdss-app-tstool-main/blob/master/conf/product.properties)
+[cdss-app-tstool-main repository product properties file](https://github.com/OpenCDSS/cdss-app-tstool-main/blob/master/conf/product.properties)
 contains important properties used by the build system to create the installer.
 The `nsis.version` and `exe.version` properties are used by NSIS to create the installer.
 
@@ -233,7 +233,7 @@ as the development environment.
 ### 8. Publish the Installer ###
 
 The tested installer can be published for others to download and install.
-See the [Deploying](../deploying/deploying) documentation.
+See the [Deploying](../deploying/deploying.md) documentation.
 
 ### 9. Repository Maintenance ###
 

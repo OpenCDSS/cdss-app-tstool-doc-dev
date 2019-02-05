@@ -8,7 +8,7 @@
 ## Introduction ##
 
 Many utility packages are used to provide general functionality.
-See the [cdss-lib-common-java](https://github.com/OpenWaterFoundation/cdss-lib-common-java) repository.
+See the [cdss-lib-common-java](https://github.com/OpenCDSS/cdss-lib-common-java) repository.
 Utility packages are used extensively in TSTool because TSTool includes many features
 and implements software to access data from many data sources.
 

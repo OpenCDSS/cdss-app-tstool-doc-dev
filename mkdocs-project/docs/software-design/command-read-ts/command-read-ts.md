@@ -139,7 +139,7 @@ for example to know that some daily data are recorded only infrequently.
 Consequently, effort is underway to introduce intervals like "irregday".
 These features will be phased in over time.
 
-To facilitate time series creation, use the [`TSUtil.newTimeSeries`](https://github.com/OpenWaterFoundation/cdss-lib-common-java/blob/master/src/RTi/TS/TSUtil.java) method,
+To facilitate time series creation, use the [`TSUtil.newTimeSeries`](https://github.com/OpenCDSS/cdss-lib-common-java/blob/master/src/RTi/TS/TSUtil.java) method,
 which handles many interval strings and returns an empty instance of `DayTS`, `MonthTS`, etc.
 Note that this method does not call `setTimeSeriesIdentiifer` method on the instance so
 call after the time series is returned.
@@ -252,4 +252,4 @@ by the processor.
 ## Date/time Handling ##
 
 Date/time handling is critical to implementing commands that read time series.
-See the general discussion of [Date/time Handling](../datetime/datetime).
+See the general discussion of [Date/time Handling](../datetime/datetime.md).

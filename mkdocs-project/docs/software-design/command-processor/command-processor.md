@@ -9,29 +9,29 @@
 
 ## Introduction ##
 
-The [TSCommandProcessor](https://github.com/OpenWaterFoundation/cdss-lib-processor-ts-java/blob/master/src/rti/tscommandprocessor/core/TSCommandProcessor.java)
+The [TSCommandProcessor](https://github.com/OpenCDSS/cdss-lib-processor-ts-java/blob/master/src/rti/tscommandprocessor/core/TSCommandProcessor.java)
 class (generically referred to as "command processor" or "processor")
 is the core class that handles processing commands shown in the TSTool UI and
 when processing command files in batch mode.
 For historical reasons, there are two main classes,
 which may be combined into a single class in the future:
 
-* [TSEngine](https://github.com/OpenWaterFoundation/cdss-lib-processor-ts-java/blob/master/src/rti/tscommandprocessor/core/TSEngine.java) - original processor class
-* [TSCommandProcessor](https://github.com/OpenWaterFoundation/cdss-lib-processor-ts-java/blob/master/src/rti/tscommandprocessor/core/TSCommandProcessor.java) - modern command processor, calls TSEngine
+* [TSEngine](https://github.com/OpenCDSS/cdss-lib-processor-ts-java/blob/master/src/rti/tscommandprocessor/core/TSEngine.java) - original processor class
+* [TSCommandProcessor](https://github.com/OpenCDSS/cdss-lib-processor-ts-java/blob/master/src/rti/tscommandprocessor/core/TSCommandProcessor.java) - modern command processor, calls TSEngine
 
 The current design maintains most large [processor data](#processor-data) in the 
-[TSCommandProcessor](https://github.com/OpenWaterFoundation/cdss-lib-processor-ts-java/blob/master/src/rti/tscommandprocessor/core/TSCommandProcessor.java) class,
+[TSCommandProcessor](https://github.com/OpenCDSS/cdss-lib-processor-ts-java/blob/master/src/rti/tscommandprocessor/core/TSCommandProcessor.java) class,
 whereas [processor properties](procesor-properties) are split between the processor and the
-[TSEngine](https://github.com/OpenWaterFoundation/cdss-lib-processor-ts-java/blob/master/src/rti/tscommandprocessor/core/TSEngine.java) instance used by the processor.
-[TSEngine](https://github.com/OpenWaterFoundation/cdss-lib-processor-ts-java/blob/master/src/rti/tscommandprocessor/core/TSEngine.java) functions
+[TSEngine](https://github.com/OpenCDSS/cdss-lib-processor-ts-java/blob/master/src/rti/tscommandprocessor/core/TSEngine.java) instance used by the processor.
+[TSEngine](https://github.com/OpenCDSS/cdss-lib-processor-ts-java/blob/master/src/rti/tscommandprocessor/core/TSEngine.java) functions
 are called from the processor to perform work.
 Some conventions that are in place were implemented many years ago and will require resources to change and test.
 For example interactive processing requests (graphs, reports) that originate in the UI are requested from the
-[TSEngine](https://github.com/OpenWaterFoundation/cdss-lib-processor-ts-java/blob/master/src/rti/tscommandprocessor/core/TSEngine.java) class.
+[TSEngine](https://github.com/OpenCDSS/cdss-lib-processor-ts-java/blob/master/src/rti/tscommandprocessor/core/TSEngine.java) class.
 In general, code should interact with the
-[TSCommandProcessor](https://github.com/OpenWaterFoundation/cdss-lib-processor-ts-java/blob/master/src/rti/tscommandprocessor/core/TSCommandProcessor.java) class,
+[TSCommandProcessor](https://github.com/OpenCDSS/cdss-lib-processor-ts-java/blob/master/src/rti/tscommandprocessor/core/TSCommandProcessor.java) class,
 which wraps
-[TSEngine](https://github.com/OpenWaterFoundation/cdss-lib-processor-ts-java/blob/master/src/rti/tscommandprocessor/core/TSEngine.java).
+[TSEngine](https://github.com/OpenCDSS/cdss-lib-processor-ts-java/blob/master/src/rti/tscommandprocessor/core/TSEngine.java).
  
 ## Processor Properties ##
 

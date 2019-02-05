@@ -11,4 +11,4 @@ The script ensures that proper environment and Eclipse version is used for the c
 C:\Users\user\cdss-dev\TSTool\git-repos\cdss-app-tstool-main\build-util\run-eclipse-neon3-32bit.bat`
 ```
 
-See the [run scripts on GitHub](https://github.com/OpenWaterFoundation/cdss-app-tstool-main/tree/master/build-util).
+See the [run scripts on GitHub](https://github.com/OpenCDSS/cdss-app-tstool-main/tree/master/build-util).

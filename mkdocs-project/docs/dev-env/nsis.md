@@ -40,7 +40,7 @@ under the directories `install/NSIS`.
 The files discussed in the following sections should be copied into the
 `C:\Program Files (x86)\NSIS` necessary for the TSTool install process.
 Files from original sources are used and where notes files are copied from the
-[NSIS 2.46 archive repository](https://github.com/OpenWaterFoundation/cdss-archive-nsis-2.46).
+[NSIS 2.46 archive repository](https://github.com/OpenCDSS/cdss-archive-nsis-2.46).
 To facilitate installation of NSIS 3.03 add-ins, perform the following steps:
 
 1. Open a Git Bash shell.  Run as Administrator because the installation process
@@ -133,7 +133,7 @@ Additional NSIS components were apparently installed on the main software,
 but it is unclear where to retrieve such files that are compatible with NSIS 2.46.
 Therefore, the following repository has been created with NSIS 2.46 files from an older computer used to create TSTool installers:
 
-* [cdss-archive-nsis-2.46](https://github.com/OpenWaterFoundation/cdss-archive-nsis-2.46)
+* [cdss-archive-nsis-2.46](https://github.com/OpenCDSS/cdss-archive-nsis-2.46)
 
 The following files in particular were copied into the `C:\Program Files (x86)\NSIS` to get the TSTool install process working
 (clone the above repository and then copy files as needed):

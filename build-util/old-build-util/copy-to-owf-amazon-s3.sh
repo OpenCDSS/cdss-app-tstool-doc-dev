@@ -1,7 +1,10 @@
 #!/bin/sh
 #
-# Run 'mkdocs serve' on port 8001
-# - this allows user documentation to be served on port 8000
+# Copy the site/* contents to the learn.openwaterfoundation.org website
+# - replace all the files on the web with local files
+# - must specify Amazon profile as argument to the script
+
+# Supporting functions, alphabetized
 
 # Make sure the MkDocs version is consistent with the documentation content
 # - require that at least version 1.0 is used because of use_directory_urls = True default
@@ -11,7 +14,6 @@ checkMkdocsVersion() {
 	# Required MkDocs version is at least 1
 	requiredMajorVersion="1"
 	# On Cygwin, mkdocs --version gives:  mkdocs, version 1.0.4 from /usr/lib/python3.6/site-packages/mkdocs (Python 3.6)
-	# On Debian Linux, similar to Cygwin:  mkdocs, version 0.17.3
 	if [ "$operatingSystem" = "cygwin" -o "$operatingSystem" = "linux" ]; then
 		mkdocsVersionFull=$(mkdocs --version)
 	elif [ "$operatingSystem" = "mingw" ]; then
@@ -79,17 +81,63 @@ checkMkdocsVersion
 # Check the source files for issues
 checkSourceDocs
 
-# Get the folder where this script is located since it may have been run from any folder
+# Set --dryrun to test before actually doing
+dryrun=""
+#dryrun="--dryrun"
+s3Folder="s3://learn.openwaterfoundation.org/cdss-app-tstool-doc-dev"
+
+# Folder for script
 scriptFolder=`cd $(dirname "$0") && pwd`
-# Change to the folder where the script is since other actions below are relative to that
-cd ${scriptFolder}
 
-cd ../mkdocs-project
-
-echo "View the website using http://localhost:8001"
-echo "Stop the server with CTRL-C"
-if [ "$operatingSystem" = "cygwin" -o "$operatingSystem" = "linux" ]; then
-	mkdocs serve -a 0.0.0.0:8001
-elif [ "$operatingSystem" = "mingw" ]; then
-	py -m mkdocs serve -a 0.0.0.0:8001
+if [ "$1" == "" ]
+	then
+	echo ""
+	echo "Usage:  $0 AmazonConfigProfile"
+	echo ""
+	echo "Copy the site files to the Amazon S3 static website folder:  $s3Folder"
+	echo ""
+	exit 0
 fi
+
+awsProfile="$1"
+
+# First build the site so that the "site" folder contains current content.
+# - "mkdocs serve" does not do this
+
+cd "$scriptFolder"
+cd ../../mkdocs-project
+if [ "$operatingSystem" = "cygwin" -o "$operatingSystem" = "linux" ]; then
+	mkdocs build --clean
+elif [ "$operatingSystem" = "mingw" ]; then
+	py -m mkdocs build --clean
+else
+	echo ""
+	echo "Don't know how to run on operating system $operatingSystem"
+	exit 1
+fi
+cd ../build-util/old-build-util
+
+# Now sync the local files up to Amazon S3
+if [ "$operatingSystem" = "cygwin" -o "$operatingSystem" = "linux" ]; then
+	# aws is in a standard location such as /usr/bin/aws
+	aws s3 sync ../../mkdocs-project/site ${s3Folder} ${dryrun} --delete --profile "$awsProfile"
+elif [ "$operatingSystem" = "mingw" ]; then
+	# For Windows Python 3.7, aws may be installed in Windows %USERPROFILE%\AppData\Local\Programs\Python\Python37\scripts
+	# - use Linux-like path to avoid backslash issues
+	# - TODO smalers 2019-01-04 could try to find if the script is in the PATH
+	# - TODO smalers 2019-01-04 could try to find where py thinks Python is installed but not sure how
+	awsScript="$HOME/AppData/Local/Programs/Python/Python37/scripts/aws"
+	if [ -f "$awsScript" ]; then
+		$awsScript s3 sync ../../mkdocs-project/site ${s3Folder} ${dryrun} --delete --profile "$awsProfile"
+	else
+		echo ""
+		echo "Can't find aws script"
+		exit 1
+	fi
+else
+	echo ""
+	echo "Don't know how to run on operating system $operatingSystem"
+	exit 1
+fi
+
+exit $?

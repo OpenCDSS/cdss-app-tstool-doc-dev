@@ -11,8 +11,8 @@ TSTool software has significant developer and user documentation.
 
 TSTool documentation was migrated to from Word/PDF to Markdown/MkDocs in early 2018 and is available in the following repository.
 
-* [User Documentation](https://github.com/OpenWaterFoundation/cdss-app-tstool-doc-user)
-* [Developer Documentation](https://github.com/OpenWaterFoundation/cdss-app-tstool-doc-dev)
+* [User Documentation](https://github.com/OpenCDSS/cdss-app-tstool-doc-user)
+* [Developer Documentation](https://github.com/OpenCDSS/cdss-app-tstool-doc-dev)
 
 The Markdown/MkDocs documentation is now the standard documentation and the legacy documentation discussed
 in the next section is being phased out.  MkDocs creates a static HTML website from Markdown,
@@ -38,7 +38,7 @@ The following design issues still need to be resolved:
 Legacy user documentation was created in Word format and manually saved to PDF from Word,
 saved in the following repository:
 
-* [cdss-app-tstool-doc](https://github.com/OpenWaterFoundation/cdss-app-tstool-doc)
+* [cdss-app-tstool-doc](https://github.com/OpenCDSS/cdss-app-tstool-doc)
 
 Each file uses header and other styles that allow a table of contents to be created.
 However, automating conversion of Word to PDF is not straightforward

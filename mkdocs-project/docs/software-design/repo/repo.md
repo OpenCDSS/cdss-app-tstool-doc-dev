@@ -32,24 +32,24 @@ TSTool GitHub Repositories and Code Projects (listed alphabetically)
 
 |**GitHub Repository**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Eclipse Project**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Primary File Type**|**Description**|
 |--|--|--|--|
-|[`cdss-app-tstool-doc`](https://github.com/OpenWaterFoundation/cdss-app-tstool-doc)|`cdss-app-tstool-doc`|Word and PDF|Legacy user documentation, some developer documentation (**files are typically edited with Word outside of Eclipse)**|
-|[`cdss-app-tstool-doc-dev`](https://github.com/OpenWaterFoundation/cdss-app-tstool-doc-dev)|`cdss-app-tstool-doc-dev`|Markdown|New Markdown/MkDocs developer documentation|
-|[`cdss-app-tstool-doc-user`](https://github.com/OpenWaterFoundation/cdss-app-tstool-doc-user)|`cdss-app-tstool-doc-user`|Markdown|New Markdown/MkDocs user documentation|
-|[`cdss-app-tstool-main`](https://github.com/OpenWaterFoundation/cdss-app-tstool-main)|`cdss-app-tstool-main`|Java|Main TSTool application code|
-|[`cdss-app-tstool-test`](https://github.com/OpenWaterFoundation/cdss-app-tstool-test)|`cdss-app-tstool-test`|TSTool command files|Functional tests using built-in test features.|
-|[`cdss-lib-cdss-java`](https://github.com/OpenWaterFoundation/cdss-lib-cdss-java)|`cdss-lib-cdss-java`|Java|CDSS code components shared across CDSS applications|
-|[`cdss-lib-common-java`](https://github.com/OpenWaterFoundation/cdss-lib-common-java)|`cdss-lib-common-java`|Java|Utility code components shared across applications|
-|[`cdss-lib-dmi-hydrobase-java`](https://github.com/OpenWaterFoundation/cdss-lib-dmi-hydrobase-java)|`cdss-lib-dmi-hydrobase-java`|Java|API for Colorado's HydroBase database and web services|
-|[`cdss-lib-dmi-hydrobase-rest-java`](https://github.com/OpenWaterFoundation/cdss-lib-dmi-hydrobase-rest-java)|`cdss-lib-dmi-hydrobase-rest-java`|Java|API for Colorado's HydroBase REST web services|
-|[`cdss-lib-dmi-nwsrfs-java`](https://github.com/OpenWaterFoundation/cdss-lib-dmi-nwsrfs-java)|`cdss-lib-dmi-nwsrfs-java`|Java|Legacy API for National Weather Service River Forecast Center models|
-|[`cdss-lib-dmi-riversidedb-java`](https://github.com/OpenWaterFoundation/cdss-lib-dmi-riversidedb-java)|`cdss-lib-dmi-riversidedb-java`|Java|API for Riverside Technology Database|
-|[`cdss-lib-dmi-satmonsys-java`](https://github.com/OpenWaterFoundation/cdss-lib-dmi-satmonsys-java)|`cdss-lib-dmi-satmonsys-java`|Java|API for Colorado's Satellite Monitoring System|
-|[`cdss-lib-models-java`](https://github.com/OpenWaterFoundation/cdss-lib-models-java)|`cdss-lib-models-java`|Java|API for CDSS StateCU and StateMod models|
-|[`cdss-lib-processor-ts-java`](https://github.com/OpenWaterFoundation/cdss-lib-processor-ts-java)|`cdss-lib-processor-ts-java`|Java|API for TSTool command processor and commands|
-|[`cdss-util-buildtools`](https://github.com/OpenWaterFoundation/cdss-util-buildtools)|`cdss-util-buildtools`|NSIS, Launch4J, various|Utility programs to build TSTool installer|
+|[`cdss-app-tstool-doc`](https://github.com/OpenCDSS/cdss-app-tstool-doc)|`cdss-app-tstool-doc`|Word and PDF|Legacy user documentation, some developer documentation (**files are typically edited with Word outside of Eclipse)**|
+|[`cdss-app-tstool-doc-dev`](https://github.com/OpenCDSS/cdss-app-tstool-doc-dev)|`cdss-app-tstool-doc-dev`|Markdown|New Markdown/MkDocs developer documentation|
+|[`cdss-app-tstool-doc-user`](https://github.com/OpenCDSS/cdss-app-tstool-doc-user)|`cdss-app-tstool-doc-user`|Markdown|New Markdown/MkDocs user documentation|
+|[`cdss-app-tstool-main`](https://github.com/OpenCDSS/cdss-app-tstool-main)|`cdss-app-tstool-main`|Java|Main TSTool application code|
+|[`cdss-app-tstool-test`](https://github.com/OpenCDSS/cdss-app-tstool-test)|`cdss-app-tstool-test`|TSTool command files|Functional tests using built-in test features.|
+|[`cdss-lib-cdss-java`](https://github.com/OpenCDSS/cdss-lib-cdss-java)|`cdss-lib-cdss-java`|Java|CDSS code components shared across CDSS applications|
+|[`cdss-lib-common-java`](https://github.com/OpenCDSS/cdss-lib-common-java)|`cdss-lib-common-java`|Java|Utility code components shared across applications|
+|[`cdss-lib-dmi-hydrobase-java`](https://github.com/OpenCDSS/cdss-lib-dmi-hydrobase-java)|`cdss-lib-dmi-hydrobase-java`|Java|API for Colorado's HydroBase database and web services|
+|[`cdss-lib-dmi-hydrobase-rest-java`](https://github.com/OpenCDSS/cdss-lib-dmi-hydrobase-rest-java)|`cdss-lib-dmi-hydrobase-rest-java`|Java|API for Colorado's HydroBase REST web services|
+|[`cdss-lib-dmi-nwsrfs-java`](https://github.com/OpenCDSS/cdss-lib-dmi-nwsrfs-java)|`cdss-lib-dmi-nwsrfs-java`|Java|Legacy API for National Weather Service River Forecast Center models|
+|[`cdss-lib-dmi-riversidedb-java`](https://github.com/OpenCDSS/cdss-lib-dmi-riversidedb-java)|`cdss-lib-dmi-riversidedb-java`|Java|API for Riverside Technology Database|
+|[`cdss-lib-dmi-satmonsys-java`](https://github.com/OpenCDSS/cdss-lib-dmi-satmonsys-java)|`cdss-lib-dmi-satmonsys-java`|Java|API for Colorado's Satellite Monitoring System|
+|[`cdss-lib-models-java`](https://github.com/OpenCDSS/cdss-lib-models-java)|`cdss-lib-models-java`|Java|API for CDSS StateCU and StateMod models|
+|[`cdss-lib-processor-ts-java`](https://github.com/OpenCDSS/cdss-lib-processor-ts-java)|`cdss-lib-processor-ts-java`|Java|API for TSTool command processor and commands|
+|[`cdss-util-buildtools`](https://github.com/OpenCDSS/cdss-util-buildtools)|`cdss-util-buildtools`|NSIS, Launch4J, various|Utility programs to build TSTool installer|
 |Plugin datastores and commands|Repository name is recommended|Java|Repositories and projects for plugin datastores and commands can be added to the workspace.  Plugins are a new design element and the approach will evolve.|
 
-The [New Developer](../dev-new/overview) documentation describes the typical way to set up the development environment.
+The [New Developer](../../dev-new/overview.md) documentation describes the typical way to set up the development environment.
 In short, the above repositories are typically cloned from GitHub to a parent folder such as
 `C:\Users\user\cdss-dev\TSTool\git-repos` on Windows.
 Then the projects are imported into an Eclipse workspace.

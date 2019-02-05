@@ -3,7 +3,7 @@
 # Reference: http://www.mkdocs.org/user-guide/configuration/
 #
 site_name: CDSS / TSTool (Developer)
-pages:
+nav:
 - 'Introduction': index.md
 - 'New Developer Setup':
   - 'Overview': dev-new/overview.md
@@ -29,7 +29,7 @@ pages:
 - 'REFERENCE: Software Design':
   - 'Overview': software-design/overview.md
   - 'Repositories and Projects': software-design/repo/repo.md
-  - 'Test Framework': software-design/test-framework/test-framework.md
+  - 'Testing Framework': software-design/testing-framework/testing-framework.md
   - 'Documentation': software-design/documentation/documentation.md
   - 'User Interface (UI)': software-design/ui/ui.md
   - 'Java Runtime Environment (JRE)': software-design/jre/jre.md
@@ -46,6 +46,7 @@ pages:
   - 'Date/time Handling': software-design/datetime/datetime.md
   - 'Time Series': software-design/ts/ts.md
   - 'Datastores': software-design/datastores/datastores.md
+  - 'Plugin Datastores': software-design/plugin-datastores/plugin-datastores.md
   - 'Tables': software-design/tables/tables.md
   - 'Data Products': software-design/data-products/data-products.md
   - 'Spreadsheet': software-design/spreadsheet/spreadsheet.md
@@ -83,17 +84,36 @@ pages:
 #  - 'Documentation, API (Doxygen)': project-init/doc-doxygen.md
 #  - 'Git StateMod History': project-init/git-statemod-history.md
 # ------- configuration properties ---------------
-# Use Material theme
-# - installation notes:  https://github.com/squidfunk/mkdocs-material
-theme: material
-# Don't enable the repo URL because irritating edit icons are shown when editing really isn't allowed
-#repo_url:  https://github.com/OpenWaterFoundation/cdss-app-tstool-doc-user
-site_description:  CDSS TSTool (Developer)
-site_author:  OpenCDSS
-site_favicon:  'images/opencdss-favicon.ico'
-copyright:  Copyright State of Colorado
+# Alphabetize
+# ------------------------------------------------
+copyright:  Copyright State of Colorado Department of Natural Resources
+# ------------------------------------------------
 # Use extra CSS to customize styles, based on theme
 extra_css:
   - 'css/extra-material-theme.css'
+# ------------------------------------------------
 markdown_extensions:
   - footnotes
+# ------------------------------------------------
+# Favicon is supposed to automatically be found:
+# - in docs/img/favicon.ico
+# - is a copy of docs/images/OWF-Logo-Favicon-32x32.ico
+# - instead, with Material them, have a different approach (see "theme" below)
+# ------------------------------------------------
+# Don't enable the repo URL because irritating edit icons are shown when editing really isn't allowed
+#repo_url:  https://github.com/OpenWaterFoundation/owf-app-geoprocessor-python-doc-user
+# ------------------------------------------------
+site_author:  OpenCDSS
+site_description:  CDSS TSTool (Developer)
+# ------------------------------------------------
+# Use Material theme
+# - installation notes:  https://github.com/squidfunk/mkdocs-material
+theme:
+  name: material
+  favicon: 'img/favicon.ico'
+# ------------------------------------------------
+# The following controls how URLs are created
+# - As of MkDocs 1.0 the default is true meaning URLs to a page ABC is ABC/ rather than something/ABC.html.
+# - see:  https://www.mkdocs.org/user-guide/configuration/#use_directory_urls
+# use_directory_urls: true
+# ------------------------------------------------
