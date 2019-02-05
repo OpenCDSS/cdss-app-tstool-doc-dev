@@ -5,7 +5,7 @@
 * [Database Datastores](#database-datastores)
 * [Web Service Datastores](#web-service-datastores)
 * [File Datastores](#file-datastores)
-* [Plugin Datastores](#plugin-datastores)
+* [Plugin Datastores](../plugin-datastores/plugin-datastores.md)
 
 -------------------
 
@@ -43,9 +43,9 @@ the code is fairly generic.
 The following datastore interfaces and classes were originally implemented by evolving
 legacy code that provided database connections (more discussion below).
 
-* [datastore](https://github.com/OpenWaterFoundation/cdss-lib-common-java/tree/master/src/riverside/datastore) package - core functionality
-* [DataStore](https://github.com/OpenWaterFoundation/cdss-lib-common-java/tree/master/src/riverside/datastore/DataStore.java) interface - defines behavior
-* [AbstractDataStore](https://github.com/OpenWaterFoundation/cdss-lib-common-java/tree/master/src/riverside/datastore/AbstractDataStore.java) class - default implementation
+* [datastore](https://github.com/OpenCDSS/cdss-lib-common-java/tree/master/src/riverside/datastore) package - core functionality
+* [DataStore](https://github.com/OpenCDSS/cdss-lib-common-java/tree/master/src/riverside/datastore/DataStore.java) interface - defines behavior
+* [AbstractDataStore](https://github.com/OpenCDSS/cdss-lib-common-java/tree/master/src/riverside/datastore/AbstractDataStore.java) class - default implementation
 for database datastore
 
 Refactoring the above code to use built-in Java data objects such as hash map for properties will allow the code to be more general,
@@ -70,7 +70,7 @@ for configuration information.
 
 The core datastore package is extended to create a database datastore:
 
-* [AbstractDatabaseDataStore](https://github.com/OpenWaterFoundation/cdss-lib-common-java/blob/master/src/RTi/DMI/AbstractDatabaseDataStore.java)
+* [AbstractDatabaseDataStore](https://github.com/OpenCDSS/cdss-lib-common-java/blob/master/src/RTi/DMI/AbstractDatabaseDataStore.java)
 
 The benefit of a general datastore design is that general commands can be implemented, including:
 
@@ -78,8 +78,8 @@ The benefit of a general datastore design is that general commands can be implem
 * [`RunSql`](http://learn.openwaterfoundation.org/cdss-app-tstool-doc-user/command-ref/RunSql/RunSql/)
 
 Database datastores typically use the
-[DMI (Data Management Interface)](https://github.com/OpenWaterFoundation/cdss-lib-common-java/tree/master/src/RTi/DMI) package
-and [DMI](https://github.com/OpenWaterFoundation/cdss-lib-common-java/blob/master/src/RTi/DMI/DMI.java) base class,
+[DMI (Data Management Interface)](https://github.com/OpenCDSS/cdss-lib-common-java/tree/master/src/RTi/DMI) package
+and [DMI](https://github.com/OpenCDSS/cdss-lib-common-java/blob/master/src/RTi/DMI/DMI.java) base class,
 which was originally developed to interface with SQL databases via ODBC/JDBC.
 Consequently, each DataStore implementation instance object includes an object that extends DMI.
 The decision of whether to put most of the working code in the DataStore or DMI class varies
@@ -94,11 +94,11 @@ The use of standard database API libraries is an area that could be improved.
 
 Web services datastores do not currently provide shared functionality given that each web service has a different API.
 However, the underlying design of the datastores is consistent and the
-[AbstractWebServiceDataStore](https://github.com/OpenWaterFoundation/cdss-lib-common-java/tree/master/src/riverside/datastore/AbstractWebServiceDataStore.java)
+[AbstractWebServiceDataStore](https://github.com/OpenCDSS/cdss-lib-common-java/tree/master/src/riverside/datastore/AbstractWebServiceDataStore.java)
 class provides data management and default implementation.
 
 Other classes should extend the
-[AbstractWebServiceDataStore](https://github.com/OpenWaterFoundation/cdss-lib-common-java/tree/master/src/riverside/datastore/AbstractWebServiceDataStore.java) class
+[AbstractWebServiceDataStore](https://github.com/OpenCDSS/cdss-lib-common-java/tree/master/src/riverside/datastore/AbstractWebServiceDataStore.java) class
 and provide specific functionality.
 Unlike database datastores, which are typically coupled with a `DMI` object,
 web service datastore code may be manually written or auto-generated with additional wrapper code.
@@ -113,17 +113,3 @@ This is mainly because file input is handled by simply opening the file and read
 However, there is an opportunity to evolve the terminology towards "file datastore"
 and consolidate the TSTool user interface to only show datastores.
 Additional work needs to be done in this area.
-
-## Plugin Datastores ##
-
-A prototype design for plugin datastores is under development to facilitate integrating third-party
-data sources with TSTool without having to change core code.
-
-See the [datastore package](https://github.com/OpenWaterFoundation/cdss-lib-common-java/tree/master/src/riverside/datastore)
-and [PluginDataStore](https://github.com/OpenWaterFoundation/cdss-lib-common-java/blob/master/src/riverside/datastore/PluginDataStore.java) interface.
-
-Plugin commands are a also a new feature that is under development.
-The purpose of plugin commands is to let TSTool run third-part commands that are loaded from Jar files at runtime,
-rather than being distributed with the core software.
-Plugin commands are often made available with datastores to read and write datastore data.
-See also [Plugin Commands](../plugin-commands/plugin-commands).

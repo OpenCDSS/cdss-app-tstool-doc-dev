@@ -11,7 +11,7 @@ This documentation explains to to deploy the software and documentation to publi
 
 The installer that is created in the `dist` folder in the main TSTool repository has in the past been deployed to the
 [Google Sites CDSS Staging page](https://sites.google.com/site/cdssstaging/tstool/download) that OWF created in 2013.
-However, this site needs to be migrated to a CDSS/OpenCDSS website (waiting on State to establish),
+However, this site needs to be migrated to a CDSS/OpenCDSS website,
 perhaps with continued backup on the [new OWF software website](http://software.openwaterfoundation.org/).
 
 The GitHub repository ***Releases*** tool should also be used to upload installers.

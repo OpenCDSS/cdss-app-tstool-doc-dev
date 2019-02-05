@@ -1,15 +1,19 @@
 # cdss-app-tstool-doc-dev #
 
 This repository contains the developer documentation for Colorado's Decision Support Systems (CDSS) TSTool software.
+The documentation uses Markdown format and MkDocs software to create a static website.
 
-See the deployed [CDSS / TSTool (Developer)](http://learn.openwaterfoundation.org/cdss-app-tstool-doc-dev/) documentation.
+See the deployed [CDSS / TSTool (Developer)](http://learn.openwaterfoundation.org/cdss-app-tstool-doc-dev/) documentation
+(this documentation is currently hosted on the Open Water Foundation website while an
+OpenCDSS server is being configured).
 This documentation is currently hosted on Open Water Foundation website but is expected to
 be integrated into the CDSS website.  See the following online resources:
 
-* [CDSS](http://cdss.state.co.us)
-* [OpenCDSS](http://learn.openwaterfoundation.org/cdss-website-opencdss/)
-* [TSTool software main repository](https://github.com/OpenWaterFoundation/cdss-app-tstool-main)
-* [TSTool User Documentation](http://learn.openwaterfoundation.org/cdss-app-tstool-doc-user/)
+* [Colorado's Decision Support System (CDSS)](http://cdss.state.co.us)
+* [OpenCDSS](http://learn.openwaterfoundation.org/cdss-website-opencdss/) - currently hosted
+on the Open Water Foundation website while an OpenCDSS server is being configured
+* [TSTool software main repository](https://github.com/OpenCDSS/cdss-app-tstool-main)
+* [TSTool User Documentation](http://learn.openwaterfoundation.org/cdss-app-tstool-doc-user/) - currently hosted on the Open Water Foundattion website while an OpenCDSS server is being configured
 
 See the following sections in this page:
 
@@ -98,7 +102,8 @@ C:\Users\user\                            Windows:  User's files.
   cdss-dev/                               Main development location for CDSS products.
     TSTool/                               TSTool software development files.
       git-repos/                          Git repositories for TSTool software.
-        cdss-app-tstool-doc/              Legacy user and developer documentation, primarily in Word/PDF.
+        cdss-app-tstool-doc/              Legacy user and developer documentation,
+				                                  primarily in Word/PDF.
         cdss-app-tstool-doc-dev/          Developer documentation using Markdown/MkDocs.
         cdss-app-tstool-doc-user/         User documentation using Markdown/MkDocs.
         cdss-app-tstool-main/             Main TSTool application, primarily the main UI.
@@ -118,12 +123,9 @@ C:\Users\user\                            Windows:  User's files.
 
 The development environment for contributing to this documentation requires
 installation of Python, MkDocs, and Material MkDocs theme.
-Python 2 has been used for development.
+Python 3 and MkDocs 1+ is currently used for development.
 See the [OWF / Learn MkDocs](http://learn.openwaterfoundation.org/owf-learn-mkdocs/)
 documentation for information about installing these tools.
-
-Python 3 with MkDocs and Material theme can also be used,
-given that the source documentation files are the same.
 
 ## Editing and Viewing Content ##
 
@@ -168,8 +170,8 @@ Use a simple list with links to sections on the page.
 
 ## License ##
 
-The license for this documentation is under review.  A recommendation has been made to use the
-[Creative Commons Attribution 2.0 Generic License](https://creativecommons.org/licenses/by/2.0/).
+The license for this documentation is the
+[Creative Commons Attribution International 4.0 (CC BY 4.0) license](https://creativecommons.org/licenses/by/4.0/).
 
 ## Contributing ##
 
@@ -184,14 +186,11 @@ Fill out the template issue.
 
 This repository is maintained by the OpenCDSS team.
 
-## Contributors ##
-
-* Steve Malers, Open Water Foundation (@smalers)
-
 ## Release Notes ##
 
-The following release notes indicate the update history for documentation, with GitHub repository issue indicated,
-if applicable (links to issues via README.md are not cleanly supported by GitHub so use the repository issues page to find).
+The following release notes indicate the update major history for documentation.
+See the GitHub issues and repository history for detailed information.
 
+* 2019-01-04 - Update for public release on OpenCDSS.
 * 2018-09-14 - Clean up documentation for TSTool 12.06.00 release.
 * 2018-04-22 - Initial content migrated from other forms.

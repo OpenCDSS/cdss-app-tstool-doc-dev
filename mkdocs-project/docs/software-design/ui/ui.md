@@ -127,7 +127,7 @@ Where possible, "browse" and right-click features are provided to access data an
 The TSTool UI is started from the main application class.
 The general logic is as follows:
 
-1. The [`DWR.DMI.tstool.TSToolMain`](https://github.com/OpenWaterFoundation/cdss-app-tstool-main/blob/master/src/DWR/DMI/tstool/TSToolMain.java)
+1. The [`DWR.DMI.tstool.TSToolMain`](https://github.com/OpenCDSS/cdss-app-tstool-main/blob/master/src/DWR/DMI/tstool/TSToolMain.java)
 class includes a static `main()` method as the entry point into TSTool.
 	1. Command line parameters are parsed by the `parseArgs()` method.
 	2. After parsing, the UI is started based on command line.
@@ -135,10 +135,10 @@ class includes a static `main()` method as the entry point into TSTool.
 	A number of data objects are passed to the method,
 	including configuration and other start-up data determined in the main program.
 	This approach is taken because such data are also needed when running in batch or other modes.
-2. The [`TSTool_JFrame`](https://github.com/OpenWaterFoundation/cdss-app-tstool-main/blob/master/src/DWR/DMI/tstool/TSTool_JFrame.java)
+2. The [`TSTool_JFrame`](https://github.com/OpenCDSS/cdss-app-tstool-main/blob/master/src/DWR/DMI/tstool/TSTool_JFrame.java)
 instance serves as the main UI.
 3. There is some interaction between the main application, UI,
-and [`TSToolSession`](https://github.com/OpenWaterFoundation/cdss-app-tstool-main/blob/master/src/DWR/DMI/tstool/TSToolSession.java)
+and [`TSToolSession`](https://github.com/OpenCDSS/cdss-app-tstool-main/blob/master/src/DWR/DMI/tstool/TSToolSession.java)
 to manage configuration data.
 
 ### Browsing Data via UI ###
@@ -222,7 +222,7 @@ rather than defaulting to Java `toString()`, which may result in too many digits
 This also ensures that text representation of a command does not randomly change as it is
 used in different software components.
 Both methods are provided in parent
-[`AbstractCommand`](https://github.com/OpenWaterFoundation/cdss-lib-common-java/blob/master/src/RTi/Util/IO/AbstractCommand.java)
+[`AbstractCommand`](https://github.com/OpenCDSS/cdss-lib-common-java/blob/master/src/RTi/Util/IO/AbstractCommand.java)
 class but can be defined in each class if needed.
 TSTool command syntax have traditionally not required double quotes around parameter values
 unless the data type required it.
@@ -230,15 +230,15 @@ In the future, quotes may become the default for all parameters to standardize c
 A summary of command management is as follows:
 
 * **Main window command list** - TSTool UI displays the commands in a
-[`AnnotatedCommandJList`](https://github.com/OpenWaterFoundation/cdss-lib-common-java/blob/master/src/RTi/Util/IO/AnnotatedCommandJList.java),
+[`AnnotatedCommandJList`](https://github.com/OpenCDSS/cdss-lib-common-java/blob/master/src/RTi/Util/IO/AnnotatedCommandJList.java),
 which extends [`JList`](https://docs.oracle.com/javase/8/docs/api/javax/swing/JList.html) (`TSTool_JFrame` `__commands_AnnotatedCommandJList`)
 using a list of strings as the data model
-[`TSCommandProcessorListModel`](https://github.com/OpenWaterFoundation/cdss-lib-processor-ts-java/blob/master/src/rti/tscommandprocessor/core/TSCommandProcessorListModel.java)
+[`TSCommandProcessorListModel`](https://github.com/OpenCDSS/cdss-lib-processor-ts-java/blob/master/src/rti/tscommandprocessor/core/TSCommandProcessorListModel.java)
 (`TSTool_JFrame` `__commands_JListModel`).
 The `AnnotatedCommandJList` is the UI component that provides features such as numbering commands and displaying the warning/error indicators.
-The [`TSCommandProcessorListModel`](https://github.com/OpenWaterFoundation/cdss-lib-processor-ts-java/blob/master/src/rti/tscommandprocessor/core/TSCommandProcessorListModel.java)
+The [`TSCommandProcessorListModel`](https://github.com/OpenCDSS/cdss-lib-processor-ts-java/blob/master/src/rti/tscommandprocessor/core/TSCommandProcessorListModel.java)
 is the data model for the UI list and contains a
-[`TSCommandProcessor`](https://github.com/OpenWaterFoundation/cdss-lib-processor-ts-java/blob/master/src/rti/tscommandprocessor/core/TSCommandProcessor.java) instance
+[`TSCommandProcessor`](https://github.com/OpenCDSS/cdss-lib-processor-ts-java/blob/master/src/rti/tscommandprocessor/core/TSCommandProcessor.java) instance
 (which maintains a list of commands, which include status, etc. shown in the UI).
 * **Command File** - command files are simple text files.
 The commands that are in the command file exactly match the strings that are displayed in the ***Commands*** workflow
@@ -317,7 +317,7 @@ throws Exception
 
 1. Special handling of comments occurs because multiple comments can be edited at once.
 2. Or, if a new command is being edited, a new instance of the command is created
-via the [`TSCommandFactory`](https://github.com/OpenWaterFoundation/cdss-lib-processor-ts-java/blob/master/src/rti/tscommandprocessor/core/TSCommandFactory.java) class.
+via the [`TSCommandFactory`](https://github.com/OpenCDSS/cdss-lib-processor-ts-java/blob/master/src/rti/tscommandprocessor/core/TSCommandFactory.java) class.
 The command class instance `editCommand()` method is called with an instance of the command
 to create an editor and modify the parameter list maintained in the command:
 	1. The `TSTool_JFrame` instance is passed so that the command editor dialog is positioned above to the main interface
@@ -354,8 +354,8 @@ for maximum flexibility.
 Consider the example for the
 [`NewTimeSeries`](http://learn.openwaterfoundation.org/cdss-app-tstool-doc-user/command-ref/NewTimeSeries/NewTimeSeries/)
 command below, which uses a simple layout where parameters are listed vertically
-(see the [`NewTimeSeries_Command` command class](https://github.com/OpenWaterFoundation/cdss-lib-processor-ts-java/blob/master/src/rti/tscommandprocessor/commands/ts/NewTimeSeries_Command.java)
-and [`NewTimeSeries_JDialog` editor class](https://github.com/OpenWaterFoundation/cdss-lib-processor-ts-java/blob/master/src/rti/tscommandprocessor/commands/ts/NewTimeSeries_JDialog.java)).
+(see the [`NewTimeSeries_Command` command class](https://github.com/OpenCDSS/cdss-lib-processor-ts-java/blob/master/src/rti/tscommandprocessor/commands/ts/NewTimeSeries_Command.java)
+and [`NewTimeSeries_JDialog` editor class](https://github.com/OpenCDSS/cdss-lib-processor-ts-java/blob/master/src/rti/tscommandprocessor/commands/ts/NewTimeSeries_JDialog.java)).
 
 ![ui-NewTimeSeries-dialog](images/ui-NewTimeSeries-dialog.png)
 
@@ -395,8 +395,8 @@ so that they can be used in the command class and its editor.
 More complex command editors are also used as illustrated by the
 [`ReadTableFromDataStore`](http://learn.openwaterfoundation.org/cdss-app-tstool-doc-user/command-ref/ReadTableFromDataStore/ReadTableFromDataStore/)
 command below, which uses a tabbed panel to organize parameters
-(see the [`ReadTableFromDataStore_Command` command class](https://github.com/OpenWaterFoundation/cdss-lib-processor-ts-java/blob/master/src/rti/tscommandprocessor/commands/table/ReadTableFromDataStore_Command.java)
-and [`ReadTableFromDataStore_JDialog` editor class](https://github.com/OpenWaterFoundation/cdss-lib-processor-ts-java/blob/master/src/rti/tscommandprocessor/commands/table/ReadTableFromDataStore_JDialog.java)).
+(see the [`ReadTableFromDataStore_Command` command class](https://github.com/OpenCDSS/cdss-lib-processor-ts-java/blob/master/src/rti/tscommandprocessor/commands/table/ReadTableFromDataStore_Command.java)
+and [`ReadTableFromDataStore_JDialog` editor class](https://github.com/OpenCDSS/cdss-lib-processor-ts-java/blob/master/src/rti/tscommandprocessor/commands/table/ReadTableFromDataStore_JDialog.java)).
 
 ![ui-ReadTableFromDataStore-dialog](images/ui-ReadTableFromDataStore-dialog.png)
 
@@ -455,7 +455,7 @@ The list of commands is a list of `Command` objects (not strings).
 3. The `TSTool_JFrame.commandProcessor_RunCommandsThreaded()` method is called with
 the commands to run.
 4. The above method runs in a thread via a
-[`TSCommandProcessorThreadRunner`](https://github.com/OpenWaterFoundation/cdss-lib-processor-ts-java/blob/master/src/rti/tscommandprocessor/core/TSCommandProcessorThreadRunner.java) instance.
+[`TSCommandProcessorThreadRunner`](https://github.com/OpenCDSS/cdss-lib-processor-ts-java/blob/master/src/rti/tscommandprocessor/core/TSCommandProcessorThreadRunner.java) instance.
 A `run()` method starts the run as per the [`Runnable`](https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html) interface.
 5. The command processor `processRequest("RunCommands",...)` request is processed.
 

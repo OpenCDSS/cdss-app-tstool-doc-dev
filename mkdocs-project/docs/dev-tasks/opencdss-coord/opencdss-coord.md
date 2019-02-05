@@ -8,9 +8,8 @@ Activities include the following:
 
 1. Selecting and implementing open source licenses.
 2. Managing software in GitHub:
-	1. initially in private repositories and later public
-	2. initially using the [Open Water Foundation's GitHub](https://github.com/OpenWaterFoundation) account and later the
-	[State's OpenCDSS](https://github.com/OpenCDSS) account (only public repositories).
+	1. initially in private repositories using the [Open Water Foundation's GitHub](https://github.com/OpenWaterFoundation) account
+	2. later in public repositories in the [State's OpenCDSS](https://github.com/OpenCDSS) account
 3. Updating the development environment and associated documentation.
 4. Working with State of Colorado to implement full open source projects with appropriate
 staffing and governance.

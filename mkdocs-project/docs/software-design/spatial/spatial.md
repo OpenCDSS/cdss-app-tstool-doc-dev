@@ -26,5 +26,5 @@ are cumbersome to integrate.  For example the [Java GeoTools](http://www.geotool
 require resources to properly integrate, deal with dependencies, etc.
 The following are code packages related to spatial data:
 
-* [GeoView](https://github.com/OpenWaterFoundation/cdss-lib-common-java/tree/master/src/RTi/GIS/GeoView) - spatial data package
-* [GR](https://github.com/OpenWaterFoundation/cdss-lib-common-java/tree/master/src/RTi/GR) - core graphics/drawing package
+* [GeoView](https://github.com/OpenCDSS/cdss-lib-common-java/tree/master/src/RTi/GIS/GeoView) - spatial data package
+* [GR](https://github.com/OpenCDSS/cdss-lib-common-java/tree/master/src/RTi/GR) - core graphics/drawing package

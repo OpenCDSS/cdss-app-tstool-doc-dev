@@ -23,7 +23,7 @@ the installation configuration can be changed to use a 64-bit Java.
 This increases the memory ceiling that can be used at run-time, but 32-native features like HEC-DSS support will not work.
 
 It should be possible to change the run-time Java for deployed StateDMI software by using
-[`launch4j`](launch4j) configuration settings.
+[`launch4j`](launch4j.md) configuration settings.
 
 ## Download Java 8 ##
 
@@ -94,4 +94,4 @@ mklink /d jre_18 jre8
 The order that Java and Eclipse are installed may vary.
 These major development environment components need to be configured appropriately and it is useful to use a run script to start Eclipse.
 
-* [See information about the run script](eclipse#check-eclipse-run-scipt)
+* [See information about the run script](eclipse.md#check-eclipse-run-scipt)

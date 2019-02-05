@@ -58,7 +58,7 @@ Additional enhancements to TSTool have been funded by various organizations incl
 * and others
 
 TSTool software developers are encouraged to provide feedback using the
-[GitHub Issues page](https://github.com/OpenWaterFoundation/cdss-app-tstool-main/issues)
+[GitHub Issues page](https://github.com/OpenCDSS/cdss-app-tstool-main/issues)
 for the TSTool main application repository,
 or the issues for the appropriate repositories.
 
@@ -102,7 +102,7 @@ See the [OpenCDSS Website](http://learn.openwaterfoundation.org/cdss-website-ope
 
 ## About the Open Water Foundation ##
 
-The [Open Water Foundation](http://openwaterfoundation.org) is a 501(c)3 nonprofit social enterprise that focuses
+The [Open Water Foundation](http://openwaterfoundation.org) is a nonprofit social enterprise that focuses
 on developing and supporting open source software for water resources,
 so that organizations can make better decisions about water.
 OWF also works to advance open data tools and implementation.
@@ -110,15 +110,15 @@ OWF staff have been the primary TSTool developers on State of Colorado and other
 
 ## License ##
 
-The TSTool software open source license is being determined in the OpenCDSS project.
-The code repositories will remain private until 
+This TSTool documentation is licensed using the
+[Creative Commons Attribution International 4.0 (CC BY 4.0) license](https://creativecommons.org/licenses/by/4.0/).
 
-The TSTool documentation is also being determined but is expected to be a Creative Commons license of some type.
+The TSTool software is licensed using the GPL 3 license (see the TSTool software repository).
 
 ## Source Repository on GitHub ##
 
 The source files for this documentation are maintained in a GitHub repository:
-[cdss-app-tstool-doc-dev](https://github.com/OpenWaterFoundation/cdss-app-tstool-doc-dev).
+[cdss-app-tstool-doc-dev](https://github.com/OpenCDSS/cdss-app-tstool-doc-dev).
 
 This developer documentation is currently maintained in a repository that is separate from TSTool code
 in order to avoid confusion with the legacy documentation and to facilitate updates.

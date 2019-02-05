@@ -14,14 +14,14 @@
 
 TSTool uses a "home grown" logging approach that was developed early in the TSTool development history
 because other options were not available that could meet requirements.
-See the [Message package](https://github.com/OpenWaterFoundation/cdss-lib-common-java/blob/master/src/RTi/Util/Message/)
+See the [Message package](https://github.com/OpenCDSS/cdss-lib-common-java/blob/master/src/RTi/Util/Message/)
 and in particular the
-[Message class](https://github.com/OpenWaterFoundation/cdss-lib-common-java/blob/master/src/RTi/Util/Message/Message.java) class.
+[Message class](https://github.com/OpenCDSS/cdss-lib-common-java/blob/master/src/RTi/Util/Message/Message.java) class.
 TSTool provides features to create a log file, view the log file contents interactively,
 and control the amount of output to the log file.
 Logging at a command level is also integrated via the
 [`CommandStatus` class](../CommandStatus/CommandStatus).
-A message is often logged using the [Message package](https://github.com/OpenWaterFoundation/cdss-lib-common-java/blob/master/src/RTi/Util/Message/)
+A message is often logged using the [Message package](https://github.com/OpenCDSS/cdss-lib-common-java/blob/master/src/RTi/Util/Message/)
 to allow review of the session,
 and also logged to [`CommandStatus` class](../CommandStatus/CommandStatus) in cases where a message is important enough for user to see in the UI.
 
@@ -171,8 +171,8 @@ Consequently, use the startup log file to troubleshoot startup issues.
 Logging levels are set in a number of ways:
 
 1. Logging levels are set in the
-[Message class](https://github.com/OpenWaterFoundation/cdss-lib-common-java/blob/master/src/RTi/Util/Message/Message.java) class.
-2. The [TSTool_Main](https://github.com/OpenWaterFoundation/cdss-app-tstool-main/blob/master/src/DWR/DMI/tstool/TSToolMain.java)
+[Message class](https://github.com/OpenCDSS/cdss-lib-common-java/blob/master/src/RTi/Util/Message/Message.java) class.
+2. The [TSTool_Main](https://github.com/OpenCDSS/cdss-app-tstool-main/blob/master/src/DWR/DMI/tstool/TSToolMain.java)
 class adjusts based on TSTool defaults and optionally command line parameters.
 3. User can interactively change levels via the ***Tools / Diagnostics...*** menu.
 4. The [`SetDebugLevel`](http://learn.openwaterfoundation.org/cdss-app-tstool-doc-user/command-ref/SetDebugLevel/SetDebugLevel/) and
@@ -186,7 +186,7 @@ In this case,
 
 Logging can be used to evaluate code performance (if other tools are not used).
 A simple way is to use the
-[`StopWatch`](https://github.com/OpenWaterFoundation/cdss-lib-common-java/blob/master/src/RTi/Util/Time/StopWatch.java)
+[`StopWatch`](https://github.com/OpenCDSS/cdss-lib-common-java/blob/master/src/RTi/Util/Time/StopWatch.java)
 class to track time and then output using logging messages.
 For example, output status message that indicate how many milliseconds were required to complete a task.
 
@@ -206,7 +206,7 @@ On the other hand, redesigning the logging system will likely provide better int
 that use a standard framework.
 
 One issue that needs to be addressed is that the
-[Message class](https://github.com/OpenWaterFoundation/cdss-lib-common-java/blob/master/src/RTi/Util/Message/Message.java) class
+[Message class](https://github.com/OpenCDSS/cdss-lib-common-java/blob/master/src/RTi/Util/Message/Message.java) class
 is an singleton that is shared across an application.
 This limits the ability to create "pooled" applications or split logging.
 This has not been an issue yet.

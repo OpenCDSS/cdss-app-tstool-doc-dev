@@ -20,18 +20,18 @@ and configuration files are simple text files that can be modified as appropriat
 ## Launching ##
 
 The TSTool main application class is launched in typical Java way via the
-static [TSToolMain class](https://github.com/OpenWaterFoundation/cdss-app-tstool-main/blob/master/src/DWR/DMI/tstool/TSToolMain.java).
+static [TSToolMain class](https://github.com/OpenCDSS/cdss-app-tstool-main/blob/master/src/DWR/DMI/tstool/TSToolMain.java).
 Command line parameters are parsed and TSTool is run in a mode that is requested.
 
 For example, if running in batch mode, a
-[TSCommandFileRunner class](https://github.com/OpenWaterFoundation/cdss-lib-processor-ts-java/blob/master/src/rti/tscommandprocessor/core/TSCommandFileRunner.java)
+[TSCommandFileRunner class](https://github.com/OpenCDSS/cdss-lib-processor-ts-java/blob/master/src/rti/tscommandprocessor/core/TSCommandFileRunner.java)
 is instantiated and the command file is run.
 
 If running the GUI, then an instance of
-[TSToolJFrame](https://github.com/OpenWaterFoundation/cdss-app-tstool-main/blob/master/src/DWR/DMI/tstool/TSTool_JFrame.java)
+[TSToolJFrame](https://github.com/OpenCDSS/cdss-app-tstool-main/blob/master/src/DWR/DMI/tstool/TSTool_JFrame.java)
 is created and the command file is run.
 
-On Windows, the [Launch4J](../../resources#launch4j) software is used to create an
+On Windows, the [Launch4J](../../resources.md#launch4j) software is used to create an
 executable program to launch TSTool.
 This allows the `tstool.exe` program to be run.
 Launch4j provides numerous features to optimize Java program start-up on Windows.
@@ -56,11 +56,11 @@ describes configuration files.
 ## User Interface (UI) ##
 
 The
-[TSToolJFrame](https://github.com/OpenWaterFoundation/cdss-app-tstool-main/blob/master/src/DWR/DMI/tstool/TSTool_JFrame.java)
+[TSToolJFrame](https://github.com/OpenCDSS/cdss-app-tstool-main/blob/master/src/DWR/DMI/tstool/TSTool_JFrame.java)
 class is quite large and could benefit from refactoring.
 However, much of the length results from the large number of menus and associated actions that
 occur in responding to those menus.
 Components could be refactored to act autonomous of the TSTool Main UI, but this would require evaluation.
 
-See the [User Interface Software Design documentation](../ui/ui).
+See the [User Interface Software Design documentation](../ui/ui.md).
 
