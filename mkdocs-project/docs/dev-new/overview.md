@@ -39,7 +39,7 @@ After reading instructions for a step, use "back" to return to this outline so t
 	* [Development Environment / MkDocs](../dev-env/mkdocs.md) - install MkDocs to view/edit full documentation locally.
 	See [Development Tasks / Documenting](../dev-tasks/overview.md#documenting)
 	for instructions on viewing documentation.
-8. [Next Steps - Development Tasks](#next-steps-development-tasks) - be productive!
+8. [Next Steps - Development Tasks](#next-steps-development-tasks) - to compile, edit, run, etc.
 
 The following sections are referenced from the above outline.
 
@@ -99,7 +99,7 @@ Do the following in a Windows command shell, Git CMD, or perform the equivalent 
 > mkdir TSTool
 ```
 
-*Press back in the browser to return to the outline.*
+*Press* ***back*** *in the browser to return to the outline.*
 
 ## Clone Git Repositories ##
 
@@ -114,12 +114,17 @@ If prompted when using `git clone`, specify the GitHub account credentials.
 
 ### ![Cygwin](../images/cygwin-32.png) Clone the repository files (Cygwin) ###
 
-**It is recommened that a Windows development environment is used including Git Bash,
-although Cygwin can be used for repositories that are not included in Eclipse,
+**It is recommened that a Windows development environment is used including Git Bash.
+Cygwin can be used for repositories that are not included in Eclipse,
 such as this developer documentation (`cdss-app-tstool-doc-dev`),
 new MkDocs user documentation (`cdss-app-tstool-doc-user`),
-and test repository (`cdss-app-tstool-test`), if this allows the developer to be more efficient.
+and test repository (`cdss-app-tstool-test`).
+However, experience has shown that mixing Git Bash and Cygwin results in
+excessive Git messages about end of line, and file execute permission file mode is not handed the same.
 Using Windows/Git Bash for all repositories avoids issues with the filemode executable property.**
+
+It may be possible to fully develop TSTool in a Cygwin environment,
+but this is not a focus of this documentation.
 
 Follow the instructions for Linux (see below) but change the first step to the following to ensure that
 the shared Cygwin/Windows file location is used.
@@ -137,7 +142,7 @@ If the `~` notation is not recognized as the home folder, use `$HOME`.
 $ cd ~/cdss-dev/TSTool
 $ mkdir git-repos
 $ cd git-repos
-$ git clone https://github.com/OpenCDSS/cdss-app-tstool-doc.git
+$ git clone https://github.com/OpenCDSS/cdss-app-tstool-main.git
 $ cd cdss-app-tstool-main/build-util
 $ ./git-clone-all-tstool.sh
 ```
@@ -146,19 +151,252 @@ The above will clone all repositories that comprise TSTool.
 
 ### ![Windows](../images/windows-32.png) Clone the repository files (Windows) ###
 
-Use a Windows git client.  If Git Bash is used (recommended):
+Use a Windows Git client.  Git Bash is recommended.
+Perform the following steps.
+Output is shown to illustrate typical behavior for user `sam`; however,
+output may not be exact as software is updated over time.
+Cloning all the repositories may take several minutes to complete.
 
 ```com
 $ cd
 $ cd cdss-dev/TSTool
 $ mkdir git-repos
 $ cd git-repos
-$ git clone https://github.com/OpenCDSS/cdss-app-tstool-doc.git
+$ git clone https://github.com/OpenCDSS/cdss-app-tstool-main.git
 $ cd cdss-app-tstool-main/build-util
 $ ./git-clone-all-tstool.sh
+operatingSystem=mingw (used to check for Cygwin and filemode compatibility)
+
+Clone all repositories for the product to set up a new developer environment.
+The following is from /c/Users/sam/cdss-dev/TSTool/git-repos/cdss-app-tstool-main/build-util/product-repo-list.txt
+
+--------------------------------------------------------------------------------
+# Repositories that comprise TSTool
+# - assumes that local folder name will match the repository name
+cdss-app-tstool-doc
+cdss-app-tstool-doc-dev
+cdss-app-tstool-doc-user
+cdss-app-tstool-main
+cdss-app-tstool-test
+cdss-archive-nsis-2.46
+cdss-lib-cdss-java
+cdss-lib-common-java
+cdss-lib-dmi-hydrobase-java
+cdss-lib-dmi-hydrobase-rest-java
+cdss-lib-dmi-nwsrfs-java
+cdss-lib-dmi-riversidedb-java
+cdss-lib-dmi-satmonsys-java
+cdss-lib-models-java
+cdss-lib-processor-ts-java
+cdss-util-buildtools
+--------------------------------------------------------------------------------
+
+All repositories that don't already exist will be cloned to /c/Users/sam/cdss-dev/TSTool/git-repos.
+Repositories will be cloned using root URL https://github.com/OpenCDSS
+You may be prompted to enter credentials.
+Continue [y/n]?: y
+================================================================================
+Cloning repository:  cdss-app-tstool-doc
+Repository folder:  /c/Users/sam/cdss-dev/TSTool/git-repos/cdss-app-tstool-doc
+Repository Url:  https://github.com/OpenCDSS/cdss-app-tstool-doc
+Cloning into 'cdss-app-tstool-doc'...
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 11321 (delta 1), reused 4 (delta 1), pack-reused 11315
+Receiving objects: 100% (11321/11321), 348.35 MiB | 5.22 MiB/s, done.
+Resolving deltas: 100% (5302/5302), done.
+Checking out files: 100% (1942/1942), done.
+================================================================================
+Cloning repository:  cdss-app-tstool-doc-dev
+Repository folder:  /c/Users/sam/cdss-dev/TSTool/git-repos/cdss-app-tstool-doc-dev
+Repository Url:  https://github.com/OpenCDSS/cdss-app-tstool-doc-dev
+Cloning into 'cdss-app-tstool-doc-dev'...
+remote: Enumerating objects: 81, done.
+remote: Counting objects: 100% (81/81), done.
+remote: Compressing objects: 100% (52/52), done.
+remote: Total 414 (delta 3), reused 42 (delta 3), pack-reused 333
+Receiving objects: 100% (414/414), 1.62 MiB | 4.22 MiB/s, done.
+Resolving deltas: 100% (116/116), done.
+================================================================================
+Cloning repository:  cdss-app-tstool-doc-user
+Repository folder:  /c/Users/sam/cdss-dev/TSTool/git-repos/cdss-app-tstool-doc-user
+Repository Url:  https://github.com/OpenCDSS/cdss-app-tstool-doc-user
+Cloning into 'cdss-app-tstool-doc-user'...
+remote: Enumerating objects: 521, done.
+remote: Counting objects: 100% (521/521), done.
+remote: Compressing objects: 100% (502/502), done.
+remote: Total 2839 (delta 74), reused 200 (delta 8), pack-reused 2318
+Receiving objects: 100% (2839/2839), 21.11 MiB | 5.82 MiB/s, done.
+Resolving deltas: 100% (847/847), done.
+Checking out files: 100% (987/987), done.
+================================================================================
+Cloning repository:  cdss-app-tstool-main
+Repository folder:  /c/Users/sam/cdss-dev/TSTool/git-repos/cdss-app-tstool-main
+Repository Url:  https://github.com/OpenCDSS/cdss-app-tstool-main
+Repo folder already exists so skipping:  /c/Users/sam/cdss-dev/TSTool/git-repos/cdss-app-tstool-main
+================================================================================
+Cloning repository:  cdss-app-tstool-test
+Repository folder:  /c/Users/sam/cdss-dev/TSTool/git-repos/cdss-app-tstool-test
+Repository Url:  https://github.com/OpenCDSS/cdss-app-tstool-test
+Cloning into 'cdss-app-tstool-test'...
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 17227 (delta 1), reused 4 (delta 1), pack-reused 17221
+Receiving objects: 100% (17227/17227), 32.25 MiB | 7.77 MiB/s, done.
+Resolving deltas: 100% (9965/9965), done.
+Checking out files: 100% (4994/4994), done.
+================================================================================
+Cloning repository:  cdss-archive-nsis-2.46
+Repository folder:  /c/Users/sam/cdss-dev/TSTool/git-repos/cdss-archive-nsis-2.46
+Repository Url:  https://github.com/OpenCDSS/cdss-archive-nsis-2.46
+Cloning into 'cdss-archive-nsis-2.46'...
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 907 (delta 1), reused 3 (delta 1), pack-reused 902
+Receiving objects: 100% (907/907), 6.60 MiB | 6.18 MiB/s, done.
+Resolving deltas: 100% (212/212), done.
+Checking out files: 100% (866/866), done.
+================================================================================
+Cloning repository:  cdss-lib-cdss-java
+Repository folder:  /c/Users/sam/cdss-dev/TSTool/git-repos/cdss-lib-cdss-java
+Repository Url:  https://github.com/OpenCDSS/cdss-lib-cdss-java
+Cloning into 'cdss-lib-cdss-java'...
+remote: Enumerating objects: 20, done.
+remote: Counting objects: 100% (20/20), done.
+remote: Compressing objects: 100% (12/12), done.
+remote: Total 391 (delta 4), reused 15 (delta 3), pack-reused 371
+Receiving objects: 100% (391/391), 857.13 KiB | 708.00 KiB/s, done.
+Resolving deltas: 100% (132/132), done.
+================================================================================
+Cloning repository:  cdss-lib-common-java
+Repository folder:  /c/Users/sam/cdss-dev/TSTool/git-repos/cdss-lib-common-java
+Repository Url:  https://github.com/OpenCDSS/cdss-lib-common-java
+Cloning into 'cdss-lib-common-java'...
+remote: Enumerating objects: 633, done.
+remote: Counting objects: 100% (633/633), done.
+remote: Compressing objects: 100% (509/509), done.
+remote: Total 11022 (delta 168), reused 241 (delta 117), pack-reused 10389
+Receiving objects: 100% (11022/11022), 16.51 MiB | 5.47 MiB/s, done.
+Resolving deltas: 100% (7266/7266), done.
+Checking out files: 100% (788/788), done.
+================================================================================
+Cloning repository:  cdss-lib-dmi-hydrobase-java
+Repository folder:  /c/Users/sam/cdss-dev/TSTool/git-repos/cdss-lib-dmi-hydrobase-java
+Repository Url:  https://github.com/OpenCDSS/cdss-lib-dmi-hydrobase-java
+Cloning into 'cdss-lib-dmi-hydrobase-java'...
+remote: Enumerating objects: 260, done.
+remote: Counting objects: 100% (260/260), done.
+remote: Compressing objects: 100% (200/200), done.
+remote: Total 2675 (delta 119), reused 88 (delta 53), pack-reused 2415
+Receiving objects: 100% (2675/2675), 11.78 MiB | 4.04 MiB/s, done.
+Resolving deltas: 100% (1608/1608), done.
+Checking out files: 100% (457/457), done.
+================================================================================
+Cloning repository:  cdss-lib-dmi-hydrobase-rest-java
+Repository folder:  /c/Users/sam/cdss-dev/TSTool/git-repos/cdss-lib-dmi-hydrobase-rest-java
+Repository Url:  https://github.com/OpenCDSS/cdss-lib-dmi-hydrobase-rest-java
+Cloning into 'cdss-lib-dmi-hydrobase-rest-java'...
+remote: Enumerating objects: 88, done.
+remote: Counting objects: 100% (88/88), done.
+remote: Compressing objects: 100% (50/50), done.
+remote: Total 1629 (delta 46), reused 51 (delta 29), pack-reused 1541
+Receiving objects: 100% (1629/1629), 2.01 MiB | 4.57 MiB/s, done.
+Resolving deltas: 100% (838/838), done.
+================================================================================
+Cloning repository:  cdss-lib-dmi-nwsrfs-java
+Repository folder:  /c/Users/sam/cdss-dev/TSTool/git-repos/cdss-lib-dmi-nwsrfs-java
+Repository Url:  https://github.com/OpenCDSS/cdss-lib-dmi-nwsrfs-java
+Cloning into 'cdss-lib-dmi-nwsrfs-java'...
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 961 (delta 1), reused 4 (delta 1), pack-reused 955
+Receiving objects: 100% (961/961), 1.02 MiB | 1.44 MiB/s, done.
+Resolving deltas: 100% (471/471), done.
+================================================================================
+Cloning repository:  cdss-lib-dmi-riversidedb-java
+Repository folder:  /c/Users/sam/cdss-dev/TSTool/git-repos/cdss-lib-dmi-riversidedb-java
+Repository Url:  https://github.com/OpenCDSS/cdss-lib-dmi-riversidedb-java
+Cloning into 'cdss-lib-dmi-riversidedb-java'...
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 859 (delta 1), reused 4 (delta 1), pack-reused 853
+Receiving objects: 100% (859/859), 7.59 MiB | 5.54 MiB/s, done.
+Resolving deltas: 100% (497/497), done.
+================================================================================
+Cloning repository:  cdss-lib-dmi-satmonsys-java
+Repository folder:  /c/Users/sam/cdss-dev/TSTool/git-repos/cdss-lib-dmi-satmonsys-java
+Repository Url:  https://github.com/OpenCDSS/cdss-lib-dmi-satmonsys-java
+Cloning into 'cdss-lib-dmi-satmonsys-java'...
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 508 (delta 1), reused 4 (delta 1), pack-reused 502
+Receiving objects: 100% (508/508), 2.18 MiB | 3.75 MiB/s, done.
+Resolving deltas: 100% (245/245), done.
+================================================================================
+Cloning repository:  cdss-lib-models-java
+Repository folder:  /c/Users/sam/cdss-dev/TSTool/git-repos/cdss-lib-models-java
+Repository Url:  https://github.com/OpenCDSS/cdss-lib-models-java
+Cloning into 'cdss-lib-models-java'...
+remote: Enumerating objects: 309, done.
+remote: Counting objects: 100% (309/309), done.
+remote: Compressing objects: 100% (137/137), done.
+remote: Total 2845 (delta 203), reused 216 (delta 171), pack-reused 2536
+Receiving objects: 100% (2845/2845), 9.69 MiB | 5.01 MiB/s, done.
+Resolving deltas: 100% (1978/1978), done.
+================================================================================
+Cloning repository:  cdss-lib-processor-ts-java
+Repository folder:  /c/Users/sam/cdss-dev/TSTool/git-repos/cdss-lib-processor-ts-java
+Repository Url:  https://github.com/OpenCDSS/cdss-lib-processor-ts-java
+Cloning into 'cdss-lib-processor-ts-java'...
+remote: Enumerating objects: 693, done.
+remote: Counting objects: 100% (693/693), done.
+remote: Compressing objects: 100% (241/241), done.
+remote: Total 19497 (delta 489), reused 569 (delta 444), pack-reused 18804
+Receiving objects: 100% (19497/19497), 63.42 MiB | 6.01 MiB/s, done.
+Resolving deltas: 100% (12836/12836), done.
+Checking out files: 100% (899/899), done.
+================================================================================
+Cloning repository:  cdss-util-buildtools
+Repository folder:  /c/Users/sam/cdss-dev/TSTool/git-repos/cdss-util-buildtools
+Repository Url:  https://github.com/OpenCDSS/cdss-util-buildtools
+Cloning into 'cdss-util-buildtools'...
+remote: Enumerating objects: 7, done.
+remote: Counting objects: 100% (7/7), done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 1454 (delta 2), reused 4 (delta 1), pack-reused 1447
+Receiving objects: 100% (1454/1454), 13.64 MiB | 6.01 MiB/s, done.
+Resolving deltas: 100% (598/598), done.
+Checking out files: 100% (525/525), done.
+================================================================================
+
+After cloning, /c/Users/sam/cdss-dev/TSTool/git-repos contains:
+cdss-app-tstool-doc
+cdss-app-tstool-doc-dev
+cdss-app-tstool-doc-user
+cdss-app-tstool-main
+cdss-app-tstool-test
+cdss-archive-nsis-2.46
+cdss-lib-cdss-java
+cdss-lib-common-java
+cdss-lib-dmi-hydrobase-java
+cdss-lib-dmi-hydrobase-rest-java
+cdss-lib-dmi-nwsrfs-java
+cdss-lib-dmi-riversidedb-java
+cdss-lib-dmi-satmonsys-java
+cdss-lib-models-java
+cdss-lib-processor-ts-java
+cdss-util-buildtools
 ```
 
-If Windows command prompt is used (not Git Bash), all repositories must be manually cloned:
+If Windows command prompt is used, then the `git-clone-all-tstool.sh` script cannot
+be run and all repositories must be manually cloned.
+In this case, do the following **instead of the above**:
 
 ```com
 > C:
@@ -183,7 +421,7 @@ If Windows command prompt is used (not Git Bash), all repositories must be manua
 
 The resulting files should match the [Development Files Structure](../project-init/overview.md#development-files-structure).
 
-*Press back in the browser to return to the outline.*
+*Press* ***back*** *in the browser to return to the outline.*
 
 ## Create Eclipse Workspace Folder ##
 
@@ -196,18 +434,32 @@ The recommended Eclipse workspace folder for different environments is as follow
 * ![Linux](../images/linux-32.png) Linux:  the workspace folder is `~/cdss-dev/TSTool/eclipse-workspace`
 * ![Windows](../images/windows-32.png) Windows: the workspace folder is `C:\Users\user\cdss-dev\TSTool\eclipse-workspace`
 
-Start Eclipse by running the [Eclipse run script](../project-init/eclipse-run-script.md) as shown below.
-This script can be used any time to run Eclipse for this project.
-
-Open the workspace in Eclipse in preparation of adding the code project from the Git repository in the next step.
+The folder can be created on the command line or with file system tool.  Or, create in Eclipse as shown below.
 
 ### ![Windows](../images/windows-32.png) Windows ###
+
+Git Bash can be used to create the workspace folder, as follows.
+Note that this folder does not exist in a Git repository folder because Eclipse workspace files are dynamic
+and don't need to be committed to the repository.
+
+```sh
+$ cd ~/cdss-dev/TSTool
+$ mkdir eclipse-workspace
+```
+
+Start Eclipse by running the [Eclipse run script](../project-init/eclipse-run-script.md) in a Windows
+command prompt window as shown below.
+This script can be run any time Eclipse needs to be run.
+It may also be possible to run the batch file from Git Bash but this has not been fully verified.
 
 ```bash
 > C:
 > cd \Users\user\cdss-dev\TSTool\git-repos\cdss-app-tstool-main\build-util
-> run-eclipse-neon-3-win32.bat
+> run-eclipse-win32.bat
 ```
+
+Open the workspace in Eclipse in preparation of adding the code project from the Git repository in the next step.
+If the `eclipse-workspace` folder does not exist, it can be created using Eclipse dialog.
 
 Select a workspace as shown in the following figure.
 If the `eclipse-workspace` folder was not created previously, it can be created via the eclipse dialog.
@@ -216,27 +468,32 @@ If the `eclipse-workspace` folder was not created previously, it can be created 
 
 The Eclipse workspace folder is identified by a `.metadata` folder, which will be hidden on Linux.
 
-*Press back in the browser to return to the outline.*
+*Press* ***back*** *in the browser to return to the outline.*
 
 ## Import the Existing Eclipse TSTool Projects from the Git Repository Folders ##
 
 The TSTool repositories each correspond to discrete components that must be imported into the TSTool Eclipse workspace.
-The development environment does not currently use Maven.
-Eclipse `.project` files are committed to each repository, which allows the repository folders to be imported and be recognized as projects by Eclipse.
-This approach may be changed as resources are allocated to evolving the development environment.
+The development environment does not currently use
+[Maven](https://www.eclipse.org/m2e/), which is a tool that helps with library dependencies and build processes.
+Instead, required third-party libraries are committed to the repository as jar files and are updated periodically.
+Upgrading to Maven would be a major change in the development environment and may be implemented in the future.
+Currently, Eclipse `.project` files are committed to each repository,
+which allows the repository folders to be imported and be recognized as projects by Eclipse.
 
 The repositories fall into four categories, which are discussed in the following sections.
-All of the repositories obviously use Git for version control (Eclipse generally detects this automatically when a project is imported).
+All of the repositories obviously use Git for version control
+(Eclipse generally detects this automatically when a project is imported and shows a repository icon decorator on the project folder and files).
 
 1. Code repositories with names ending with `java` are treated as Java projects.
-2. The CDSS build utility repository `cdss-util-buildtools` is treated as a general project as is currently required to create the software installer.
+2. The CDSS build utility repository `cdss-util-buildtools` is treated as a general project and is currently required to create the software installer.
 3. The TSTool function test repository `cdss-app-tstool-test` is treated as a general project and is useful to import into Eclipse.
-4. Documentation repositories with `doc` in names can be treated as general projects and do not need to be imported because their files are typically edited outside of Eclipse.
+4. Documentation repositories with `doc` in names can be treated as general projects and do not
+need to be imported because their files are typically edited outside of Eclipse.
+Eclipse can be used to edit these files but it can be problematic.
 
 ### Import Code Repositories ###
 
-After the initial Eclipse workspace is selected, import the following repositories by following the same general procedure indicated below
-(**images below have not been updated to include cdss-lib-dmi-hydrobase-rest-java component**):
+After the initial Eclipse workspace is selected, import the following repositories by following the same general procedure indicated below:
 
 * `cdss-app-tstool-main`
 * `cdss-lib-cdss-java`
@@ -249,56 +506,44 @@ After the initial Eclipse workspace is selected, import the following repositori
 * `cdss-lib-models-java`
 * `cdss-lib-processor-ts-java`
 
-The initial workspace will be similar to the following.
+The initial workspace will be similar to the following (if necessary, close the ***Welcome*** tab).
+Use the ***Help / About Eclipse*** menu to check the Eclipse version, which should be consistent
+with the [Development Environment / Eclipse](../dev-env/eclipse.md) instructions.
 
 ![eclipse-worskpace-0](images/eclipse-workspace-0.png)
 
 Because the `.project` files have already been created and are included in the repository,
-a general import of existing project can occur, initiated with ***File / Import*** and as shown in the following figure:
+a general import of existing project can occur and Eclipse will figure out other
+information such as whether a Java project.
+Use the ***File / Import...*** menu to start an import, as shown in the following figure.
+Click on ***General*** to expand the choices and then on ***Existing Projects into Workspace***.
 
 ![eclipse-workspace-1](images/eclipse-workspace-1.png)
 
 Press ***Next >*** in the above dialog to continue to the following step.
+Use the ***Browse...*** button to browse to the `git-repos` folder where
+repositories where cloned.
 
 ![eclipse-workspace-3](images/eclipse-workspace-3.png)
 
 All the existing projects can be added at once as shown in the following image.
-Note that ***Copy projects into workspace*** is NOT checked.
+Note that ***Copy projects into workspace*** is NOT checked and defaults can be used without changing.
 This allows the files to exist in the Git repository folders.
+Note that some repositories that were cloned, such as newer Markdown/MkDocs documentation,
+are not listed because these repositories are typically maintained without using Eclipse.
 
 Press ***Finish*** to start the import.
 Eclipse will automatically try to compile TSTool and should properly handle project dependencies because
 the `.classpath` file is also saved in each repository/project.
-The default settings may not result in a full build; however, in the following image there were no fatal errors that prevented a build:
+Eclipse may require several minutes to recompile the software.
+The default settings may not result in a full build;
+however, in the following image there were no fatal errors that prevented a build.
+The right arrow (`>`) symbol next to a component indicates that there are changes,
+in this case because the files were being modified to create this documentation.
 
 ![eclipse-workspace-4](images/eclipse-workspace-4.png)
 
-### Import Build Utility Repository ###
-
-* `cdss-util-buildtools`
-
-The above should have been imported as per the previous section.
-
-### Import Test Repository ###
-
-* `cdss-app-tstool-test`
-
-The above should have been imported as per the previous section.
-
-### Import Documentation Repositories (Optional) ###
-
-Optionally, import the following documentation repositories using the procedure below.
-It is not necessary to import the documentation repositories into Eclipse.
-Doing so is somewhat useful in that Eclipse can provide access to files and use Git to manage the files.
-However, a separate Git client can also be used.
-
-* `cdss-app-tstool-doc`
-* `cdss-app-tstool-doc-dev`
-* `cdss-app-tstool-doc-user`
-
-The first item above should have been imported as per the previous section, because it has traditionally been an Eclipse project.
-However, the other two are new repositories that have not been saved as Eclipse projects.
-It is OK to not import the last two repositories into Eclipse.
+*Press* ***back*** *in the browser to return to the outline.*
 
 ## Next Steps - Development Tasks ##
 
