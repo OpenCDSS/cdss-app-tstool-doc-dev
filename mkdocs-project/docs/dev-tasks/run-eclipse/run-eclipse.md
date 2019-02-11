@@ -8,7 +8,7 @@ It is generally best to open a command shell and then run the script so that any
 The script ensures that proper environment and Eclipse version is used for the current developer.
 
 ```
-C:\Users\user\cdss-dev\TSTool\git-repos\cdss-app-tstool-main\build-util\run-eclipse-neon3-32bit.bat`
+C:\Users\user\cdss-dev\TSTool\git-repos\cdss-app-tstool-main\build-util\run-eclipse-32bit.bat`
 ```
 
 See the [run scripts on GitHub](https://github.com/OpenCDSS/cdss-app-tstool-main/tree/master/build-util).

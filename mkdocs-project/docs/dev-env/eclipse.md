@@ -54,6 +54,6 @@ This is a bit redundant withe the extra `eclipse` folder but clearly indicates t
 ## Check Eclipse Run Script ##
 
 The `cdss-app-tstool-main` repository `build-util` folder contains scripts to run the correct version of Eclipse,
-assuming a standard installation folder.  For example, `run-eclipse-neon3-win32.bat` can be run from a Windows command shell.
+assuming a standard installation folder.  For example, `run-eclipse-win32.bat` can be run from a Windows command shell.
 This ensures that the proper version of Eclipse and configuration is used.
 If necessary, this script can be modified or other versions added over time (for example for new versions of Eclipse).
