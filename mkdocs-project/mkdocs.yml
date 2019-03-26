@@ -92,6 +92,10 @@ copyright:  Copyright State of Colorado Department of Natural Resources
 extra_css:
   - 'css/extra-material-theme.css'
 # ------------------------------------------------
+google_analytics:
+ - 'UA-43023264-1'
+ - auto
+# ------------------------------------------------
 markdown_extensions:
   - footnotes
 # ------------------------------------------------
