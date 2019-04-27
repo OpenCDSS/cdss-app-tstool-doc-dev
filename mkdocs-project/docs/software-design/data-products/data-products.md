@@ -21,7 +21,7 @@ The product properties can be further edited by right-clicking on a graph and us
 
 ## Automated Product Generation ##
 
-The [`ProcessTSProduct`](http://learn.openwaterfoundation.org/cdss-app-tstool-doc-user/command-ref/ProcessTSProduct/ProcessTSProduct/) command
+The [`ProcessTSProduct`](http://opencdss.state.co.us/tstool/latest/doc-user/command-ref/ProcessTSProduct/ProcessTSProduct/) command
 is the primary command used to automate data product creation.
 
 Time series product files (`*.tsp`) are used to describe data products.
@@ -31,13 +31,13 @@ This allows the data to be stored separately from the data products,
 which is important because data can be very large.
 Data products can also make use of templates by using `${Property}` notation and
 FreeMarker templating, as described in the
-[`ExpandTemplateFile`](http://learn.openwaterfoundation.org/cdss-app-tstool-doc-user/command-ref/ExpandTemplateFile/ExpandTemplateFile/) command.
+[`ExpandTemplateFile`](http://opencdss.state.co.us/tstool/latest/doc-user/command-ref/ExpandTemplateFile/ExpandTemplateFile/) command.
 The syntax of the product files is described in the next section.
 
 ## TSView Reference and GRTS Package ##
 
 Data products are described in the
-[TSView Documentation in the User Documentation](http://learn.openwaterfoundation.org/cdss-app-tstool-doc-user/appendix-tsview/tsview/).
+[TSView Documentation in the User Documentation](http://opencdss.state.co.us/tstool/latest/doc-user/appendix-tsview/tsview/).
 Extensive properties are available to describe in text form how to create graphical time series products.
 The TSView functionality is provided by the following code:
 

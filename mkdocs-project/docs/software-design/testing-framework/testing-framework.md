@@ -1,14 +1,14 @@
-# Test Framework #
+# Testing Framework #
 
-One of the major features of TSTool is a built-in test framework that facilitates testing commands in the full application.
+One of the major features of TSTool is a built-in testing framework that facilitates testing commands in the full application.
 Much of the code **does not** currently use Java unit tests (junit), although such tests could be added.
-However, the built-in functional test framework has proven to be capable of testing the software
+However, the built-in functional testing framework has proven to be capable of testing the software
 by exercising code at multiple levels.
 This provides coverage testing of the functionality that users will experience.
 See the following for more information.
 
 * [cdss-app-tstool-test test repository](https://github.com/OpenCDSS/cdss-app-tstool-test)
-* [Quality Control chapter of user documentation](http://learn.openwaterfoundation.org/cdss-app-tstool-doc-user/quality-control/quality-control/)
+* [Quality Control chapter of user documentation](http://opencdss.state.co.us/tstool/latest/doc-user/quality-control/quality-control/)
 * [Development Tasks / Testing](../../dev-tasks/overview.md#testing)
 
 Testing TSTool can be complex, especially when using data from third party databased and web services.

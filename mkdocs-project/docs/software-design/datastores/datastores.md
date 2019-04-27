@@ -22,7 +22,7 @@ Input types are being converted to datastores as follows:
 
 * Database input types are being migrated to database datatores.
 	+ Many databases have already been migrated
-	+ [Colorado's HydroBase](http://learn.openwaterfoundation.org/cdss-app-tstool-doc-user/datastore-ref/CO-HydroBase/CO-HydroBase/)
+	+ [Colorado's HydroBase](http://opencdss.state.co.us/tstool/latest/doc-user/datastore-ref/CO-HydroBase/CO-HydroBase/)
 	is available as datastore and input type, with input type as default due to historical conventions
 	related to how a HydroBase database is selected at TSTool startup
 * Web services are being migrated to web service datastores.
@@ -63,7 +63,7 @@ and if necessary provide database connection information.
 The implementation of datastores has moved the configuration information into separate datastore files,
 which are independently configured.
 This provides greater flexibility to users.
-See the [Datastore appendix in the TSTool User Documentation](http://learn.openwaterfoundation.org/cdss-app-tstool-doc-user/datastore-ref/overview/)
+See the [Datastore appendix in the TSTool User Documentation](http://opencdss.state.co.us/tstool/latest/doc-user/datastore-ref/overview/)
 for configuration information.
 
 ## Database Datastores ##
@@ -74,8 +74,8 @@ The core datastore package is extended to create a database datastore:
 
 The benefit of a general datastore design is that general commands can be implemented, including:
 
-* [`ReadTableFromDatastore`](http://learn.openwaterfoundation.org/cdss-app-tstool-doc-user/command-ref/ReadTableFromDataStore/ReadTableFromDataStore/)
-* [`RunSql`](http://learn.openwaterfoundation.org/cdss-app-tstool-doc-user/command-ref/RunSql/RunSql/)
+* [`ReadTableFromDatastore`](http://opencdss.state.co.us/tstool/latest/doc-user/command-ref/ReadTableFromDataStore/ReadTableFromDataStore/)
+* [`RunSql`](http://opencdss.state.co.us/tstool/latest/doc-user/command-ref/RunSql/RunSql/)
 
 Database datastores typically use the
 [DMI (Data Management Interface)](https://github.com/OpenCDSS/cdss-lib-common-java/tree/master/src/RTi/DMI) package
