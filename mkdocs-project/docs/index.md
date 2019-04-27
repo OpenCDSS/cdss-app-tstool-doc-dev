@@ -3,7 +3,7 @@
 This developer documentation explains how to build, enhance, and maintain
 [Colorado's Decision Support Systems (CDSS)](http://cdss.state.co.us/Pages/CDSSHome.aspx) TSTool software.
 TSTool software automates processing time series, data tables, and other data.
-See also the [TSTool User Documentation](http://learn.openwaterfoundation.org/cdss-app-tstool-doc-user/).
+See also the [TSTool User Documentation](https://opencdss.state.co.us/tstool/latest/doc-user/).
 
 * [How to Use this Documentation](#how-to-use-this-documentation)
 * [Acknowledgements](#acknowledgements)
@@ -64,7 +64,7 @@ or the issues for the appropriate repositories.
 
 Feedback specific to CDSS functionality (e.g.,
 HydroBase, StateMod, StateModB, StateCU input)
-can be provided using the [CDSS email address](mailto:cdss@state.co.us).
+can be provided using the [CDSS email address](mailto:DNR_OpenCDSS@state.co.us).
 
 ### Software Components
 
@@ -98,7 +98,7 @@ In late 2016, the Open Water Foundation began the effort to move TSTool and othe
 and establish open source software projects, referred to as "OpenCDSS".
 The OpenCDSS project is resulting in a significant evolution in how CDSS software development occurs,
 such as implementing version control with Git/GitHub and modernizing the development environment and documentation.
-See the [OpenCDSS Website](http://learn.openwaterfoundation.org/cdss-website-opencdss/) for more information.
+See the [OpenCDSS Website](http://opencdss.state.co.us/opencdss/) for more information.
 
 ## About the Open Water Foundation ##
 
@@ -113,7 +113,8 @@ OWF staff have been the primary TSTool developers on State of Colorado and other
 This TSTool documentation is licensed using the
 [Creative Commons Attribution International 4.0 (CC BY 4.0) license](https://creativecommons.org/licenses/by/4.0/).
 
-The TSTool software is licensed using the GPL 3 license (see the TSTool software repository).
+The TSTool software is licensed using the GPL 3 license (see the
+[TSTool software repository](https://github.com/OpenCDSS/cdss-app-tstool-main)).
 
 ## Source Repository on GitHub ##
 
@@ -125,5 +126,5 @@ in order to avoid confusion with the legacy documentation and to facilitate upda
 
 ## Release Notes ##
 
-See the [TSTool release notes](http://learn.openwaterfoundation.org/cdss-app-tstool-doc-user/appendix-release-notes/release-notes)
+See the [TSTool release notes](http://opencdss.state.co.us/tstool/latest/doc-user/appendix-release-notes/release-notes/)
 section of the TSTool user documentation for information about TSTool software changes.

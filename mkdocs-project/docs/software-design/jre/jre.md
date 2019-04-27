@@ -14,7 +14,7 @@ This documentation focuses on technical issues related to the Java Runtime Envir
 ## Java Language ##
 
 TSTool is written in the Java language, with use of C or other languages only when used by third-party components.
-The TSTool [`RunPython`](http://learn.openwaterfoundation.org/cdss-app-tstool-doc-user/command-ref/RunPython/RunPython/)
+The TSTool [`RunPython`](http://opencdss.state.co.us/tstool/latest/doc-user/command-ref/RunPython/RunPython/)
 command does allow integrating Python and TSTool/Java and future TSTool releases may further support this approach,
 but languages other than Java are not currently used for primary functionality.
 Java source code consists of files with `*.java` filename extension.

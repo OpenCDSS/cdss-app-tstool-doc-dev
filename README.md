@@ -3,17 +3,13 @@
 This repository contains the developer documentation for Colorado's Decision Support Systems (CDSS) TSTool software.
 The documentation uses Markdown format and MkDocs software to create a static website.
 
-See the deployed [CDSS / TSTool (Developer)](http://learn.openwaterfoundation.org/cdss-app-tstool-doc-dev/) documentation
-(this documentation is currently hosted on the Open Water Foundation website while an
-OpenCDSS server is being configured).
-This documentation is currently hosted on Open Water Foundation website but is expected to
-be integrated into the CDSS website.  See the following online resources:
+See the latest deployed [CDSS / TSTool (Developer)](http://opencdss.state.co.us/tstool/latest/doc-dev/) documentation.
+See the following online resources:
 
 * [Colorado's Decision Support System (CDSS)](http://cdss.state.co.us)
-* [OpenCDSS](http://learn.openwaterfoundation.org/cdss-website-opencdss/) - currently hosted
-on the Open Water Foundation website while an OpenCDSS server is being configured
+* [OpenCDSS](http://opencdss.state.co.us/opencdss/)
 * [TSTool software main repository](https://github.com/OpenCDSS/cdss-app-tstool-main)
-* [TSTool User Documentation](http://learn.openwaterfoundation.org/cdss-app-tstool-doc-user/) - currently hosted on the Open Water Foundattion website while an OpenCDSS server is being configured
+* [TSTool User Documentation](http://opencdss.state.co.us/tstool/latest/doc-user/)
 
 See the following sections in this page:
 
@@ -103,7 +99,7 @@ C:\Users\user\                            Windows:  User's files.
     TSTool/                               TSTool software development files.
       git-repos/                          Git repositories for TSTool software.
         cdss-app-tstool-doc/              Legacy user and developer documentation,
-				                                  primarily in Word/PDF.
+                                          primarily in Word/PDF.
         cdss-app-tstool-doc-dev/          Developer documentation using Markdown/MkDocs.
         cdss-app-tstool-doc-user/         User documentation using Markdown/MkDocs.
         cdss-app-tstool-main/             Main TSTool application, primarily the main UI.
@@ -191,6 +187,7 @@ This repository is maintained by the OpenCDSS team.
 The following release notes indicate the update major history for documentation.
 See the GitHub issues and repository history for detailed information.
 
+* 2019-04-26 - Update links for opencdss.state.co.us domain.
 * 2019-01-04 - Update for public release on OpenCDSS.
 * 2018-09-14 - Clean up documentation for TSTool 12.06.00 release.
 * 2018-04-22 - Initial content migrated from other forms.

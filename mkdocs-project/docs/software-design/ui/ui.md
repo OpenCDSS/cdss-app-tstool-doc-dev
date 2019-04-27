@@ -172,7 +172,7 @@ Input types have traditionally been used for file-based input and are useful whe
 various data files are read,
 in contrast to datastores, which tend to use a single configurable data connection.
 In the future, input types might be migrated to "file datastore".
-The [TSTool datastore appendices](http://learn.openwaterfoundation.org/cdss-app-tstool-doc-user/datastore-ref/overview/)
+The [TSTool datastore appendices](http://opencdss.state.co.us/tstool/latest/doc-user/datastore-ref/overview/)
 describe input types and datastores, including configuration.
 
 ![ui-main-browse](images/ui-main-browse.png)
@@ -183,7 +183,7 @@ TSTool Main Window Browse Area (<a href="../images/ui-main-browse.png">see also 
 
 TSIDs that are in the command area can be run to retrieve time series.
 The command can also be converted to a
-[`ReadTimeSeries`](http://learn.openwaterfoundation.org/cdss-app-tstool-doc-user/command-ref/ReadTimeSeries/ReadTimeSeries/)
+[`ReadTimeSeries`](http://opencdss.state.co.us/tstool/latest/doc-user/command-ref/ReadTimeSeries/ReadTimeSeries/)
 command by right-clicking on the
 command and using the ***Convert TSID command to general ReadTimeSeries() command*** popup menu item.
 This action provides a transition from data browsing to command-based automation.
@@ -352,7 +352,7 @@ Editor layout is generally consistent for all commands and uses the
 [`GridBagLayout`](https://docs.oracle.com/javase/8/docs/api/java/awt/GridBagLayout.html)
 for maximum flexibility.
 Consider the example for the
-[`NewTimeSeries`](http://learn.openwaterfoundation.org/cdss-app-tstool-doc-user/command-ref/NewTimeSeries/NewTimeSeries/)
+[`NewTimeSeries`](http://opencdss.state.co.us/tstool/latest/doc-user/command-ref/NewTimeSeries/NewTimeSeries/)
 command below, which uses a simple layout where parameters are listed vertically
 (see the [`NewTimeSeries_Command` command class](https://github.com/OpenCDSS/cdss-lib-processor-ts-java/blob/master/src/rti/tscommandprocessor/commands/ts/NewTimeSeries_Command.java)
 and [`NewTimeSeries_JDialog` editor class](https://github.com/OpenCDSS/cdss-lib-processor-ts-java/blob/master/src/rti/tscommandprocessor/commands/ts/NewTimeSeries_JDialog.java)).
@@ -393,7 +393,7 @@ However, if it is resizable, components such as the full command should be confi
 so that they can be used in the command class and its editor.
 
 More complex command editors are also used as illustrated by the
-[`ReadTableFromDataStore`](http://learn.openwaterfoundation.org/cdss-app-tstool-doc-user/command-ref/ReadTableFromDataStore/ReadTableFromDataStore/)
+[`ReadTableFromDataStore`](http://opencdss.state.co.us/tstool/latest/doc-user/command-ref/ReadTableFromDataStore/ReadTableFromDataStore/)
 command below, which uses a tabbed panel to organize parameters
 (see the [`ReadTableFromDataStore_Command` command class](https://github.com/OpenCDSS/cdss-lib-processor-ts-java/blob/master/src/rti/tscommandprocessor/commands/table/ReadTableFromDataStore_Command.java)
 and [`ReadTableFromDataStore_JDialog` editor class](https://github.com/OpenCDSS/cdss-lib-processor-ts-java/blob/master/src/rti/tscommandprocessor/commands/table/ReadTableFromDataStore_JDialog.java)).
@@ -470,7 +470,7 @@ When commands are run as per the previous section, logic control switches back t
 and actions are taken to display the results in the ***Results*** area at the bottom of the main window.
 The results are consistent with the state of the processor after processing commands.
 If only a subset of commands were processed using ***Run Selected Commands***
-or by using [`Exit`](http://learn.openwaterfoundation.org/cdss-app-tstool-doc-user/command-ref/Exit/Exit/) command,
+or by using [`Exit`](http://opencdss.state.co.us/tstool/latest/doc-user/command-ref/Exit/Exit/) command,
 then results may be less than for a full run.
 
 TSTool attempts to provide access to all results from running commands, via UI components in the ***Results*** area.
