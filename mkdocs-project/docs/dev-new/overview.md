@@ -464,7 +464,13 @@ If the `eclipse-workspace` folder does not exist, it can be created using Eclips
 Select a workspace as shown in the following figure.
 If the `eclipse-workspace` folder was not created previously, it can be created via the eclipse dialog.
 
+**<p style="text-align: center;">
 ![eclipse-workspace-select](images/eclipse-workspace-select.png)
+</p>**
+
+**<p style="text-align: center;">
+Select TSTool Workspace Folder (<a href="../images/eclipse-workspace-select.png">see full-size image</a>)
+</p>**
 
 The Eclipse workspace folder is identified by a `.metadata` folder, which will be hidden on Linux.
 
@@ -510,7 +516,13 @@ The initial workspace will be similar to the following (if necessary, close the 
 Use the ***Help / About Eclipse*** menu to check the Eclipse version, which should be consistent
 with the [Development Environment / Eclipse](../dev-env/eclipse.md) instructions.
 
+**<p style="text-align: center;">
 ![eclipse-worskpace-0](images/eclipse-workspace-0.png)
+</p>**
+
+**<p style="text-align: center;">
+Initial Workspace (<a href="../images/eclipse-workspace-0.png">see full-size image</a>)
+</p>**
 
 Because the `.project` files have already been created and are included in the repository,
 a general import of existing project can occur and Eclipse will figure out other
@@ -518,13 +530,26 @@ information such as whether a Java project.
 Use the ***File / Import...*** menu to start an import, as shown in the following figure.
 Click on ***General*** to expand the choices and then on ***Existing Projects into Workspace***.
 
+
+**<p style="text-align: center;">
 ![eclipse-workspace-1](images/eclipse-workspace-1.png)
+</p>**
+
+**<p style="text-align: center;">
+Import Existing Projects (<a href="../images/eclipse-workspace-1.png">see full-size image</a>)
+</p>**
 
 Press ***Next >*** in the above dialog to continue to the following step.
 Use the ***Browse...*** button to browse to the `git-repos` folder where
 repositories where cloned.
 
+**<p style="text-align: center;">
 ![eclipse-workspace-3](images/eclipse-workspace-3.png)
+</p>**
+
+**<p style="text-align: center;">
+Import Projects - Select Projects (<a href="../images/eclipse-workspace-3.png">see full-size image</a>)
+</p>**
 
 All the existing projects can be added at once as shown in the following image.
 Note that ***Copy projects into workspace*** is NOT checked and defaults can be used without changing.
@@ -541,7 +566,13 @@ however, in the following image there were no fatal errors that prevented a buil
 The right arrow (`>`) symbol next to a component indicates that there are changes,
 in this case because the files were being modified to create this documentation.
 
+**<p style="text-align: center;">
 ![eclipse-workspace-4](images/eclipse-workspace-4.png)
+</p>**
+
+**<p style="text-align: center;">
+Eclipse Workspace after Importing Projects (<a href="../images/eclipse-workspace-4.png">see full-size image</a>)
+</p>**
 
 *Press* ***back*** *in the browser to return to the outline.*
 

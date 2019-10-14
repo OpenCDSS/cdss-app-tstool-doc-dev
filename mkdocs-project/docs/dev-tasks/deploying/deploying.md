@@ -9,14 +9,11 @@ This documentation explains to to deploy the software and documentation to publi
 
 ## Deploy Software Installer ##
 
-The installer that is created in the `dist` folder in the main TSTool repository has in the past been deployed to the
-[Google Sites CDSS Staging page](https://sites.google.com/site/cdssstaging/tstool/download) that OWF created in 2013.
-Old installers can be migrated to the OpenCDSS Google Cloud Platform website,
-
-The GitHub repository ***Releases*** could also be used to upload installers,
-although using the OpenCDSS Google Cloud Platform site may be cleaner.
+The installer that is created in the `dist` folder in the main TSTool repository is uploaded to the
+OpenCDSS GCP cloud using the `build-util/copy-to-co-dnr-gcp.sh` script.
+This script optionally allows updating an OpenCDSS index file listing all software installers on GCP.
 
 ## Deploy Documentation ##
 
-The MkDocs user and developer documentation should be deployed according to the instructions in those repositories.
-Generally this will involve running a script in the `build-util` folder to upload the static website content to the cloud location(s).
+The MkDocs user and developer documentation are deployed using `build-util/copy-to-co-dnr-gcp.sh` scripts
+in the appropriate repositories.

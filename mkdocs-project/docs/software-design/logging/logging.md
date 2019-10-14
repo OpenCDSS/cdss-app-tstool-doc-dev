@@ -42,10 +42,12 @@ Log levels default in the main TSTool program and can then be set using the ***T
 (see below for diagnostic settings after TSTool startup)
 or the `SetDebugLevel` and `SetWarningLevel` commands.
 
+**<p style="text-align: center;">
 ![tstool-diagnostics](tstool-diagnostics.png)
+</p>**
 
 **<p style="text-align: center;">
-Tools / Diagnostics
+Tools / Diagnostics (<a href="../tstool-diagnostics.png">see full-size image</a>)
 </p>**
 
 ### Warning and Error Message ###

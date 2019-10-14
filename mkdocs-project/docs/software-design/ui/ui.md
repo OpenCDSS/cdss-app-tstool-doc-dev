@@ -175,7 +175,9 @@ In the future, input types might be migrated to "file datastore".
 The [TSTool datastore appendices](http://opencdss.state.co.us/tstool/latest/doc-user/datastore-ref/overview/)
 describe input types and datastores, including configuration.
 
+**<p style="text-align: center;">
 ![ui-main-browse](images/ui-main-browse.png)
+</p>**
 
 **<p style="text-align: center;">
 TSTool Main Window Browse Area (<a href="../images/ui-main-browse.png">see also the full-size image</a>)
@@ -357,7 +359,9 @@ command below, which uses a simple layout where parameters are listed vertically
 (see the [`NewTimeSeries_Command` command class](https://github.com/OpenCDSS/cdss-lib-processor-ts-java/blob/master/src/rti/tscommandprocessor/commands/ts/NewTimeSeries_Command.java)
 and [`NewTimeSeries_JDialog` editor class](https://github.com/OpenCDSS/cdss-lib-processor-ts-java/blob/master/src/rti/tscommandprocessor/commands/ts/NewTimeSeries_JDialog.java)).
 
+**<p style="text-align: center;">
 ![ui-NewTimeSeries-dialog](images/ui-NewTimeSeries-dialog.png)
+</p>**
 
 **<p style="text-align: center;">
 NewTimeSeries Command Editor (<a href="../images/ui-NewTimeSeries-dialog.png">see also the full-size image</a>)
@@ -398,7 +402,9 @@ command below, which uses a tabbed panel to organize parameters
 (see the [`ReadTableFromDataStore_Command` command class](https://github.com/OpenCDSS/cdss-lib-processor-ts-java/blob/master/src/rti/tscommandprocessor/commands/table/ReadTableFromDataStore_Command.java)
 and [`ReadTableFromDataStore_JDialog` editor class](https://github.com/OpenCDSS/cdss-lib-processor-ts-java/blob/master/src/rti/tscommandprocessor/commands/table/ReadTableFromDataStore_JDialog.java)).
 
+**<p style="text-align: center;">
 ![ui-ReadTableFromDataStore-dialog](images/ui-ReadTableFromDataStore-dialog.png)
+</p>**
 
 **<p style="text-align: center;">
 ReadTableFromDataStore Command Editor (<a href="../images/ui-ReadTableFromDataStore-dialog.png">see also the full-size image</a>)

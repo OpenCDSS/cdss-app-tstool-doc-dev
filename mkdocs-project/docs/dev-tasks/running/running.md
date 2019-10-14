@@ -11,11 +11,23 @@ TSTool can be run within the Eclipse development environment using run configura
 The following figure shows how to access the configurations.
 Old run configurations will likely be removed and new ones added as TSTool continues to evolve.
 
+**<p style="text-align: center;">
 ![running-configurations-1](images/running-configurations-1.png)
+</p>**
+
+**<p style="text-align: center;">
+Running TSTool from Eclipse (<a href="../images/running-configurations-1.png">see full-size image</a>)
+</p>**
 
 Run configurations are as follows, and the ***TSTool_CDSS*** run configuration can be used to start an interactive TSTool session:
 
+**<p style="text-align: center;">
 ![running-configurations-2](images/running-configurations-2.png)
+</p>**
+
+**<p style="text-align: center;">
+Running TSTool Eclipse Configurations (<a href="../images/running-configurations-2.png">see full-size image</a>)
+</p>**
 
 ## Development Run Environment ##
 

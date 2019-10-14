@@ -88,14 +88,26 @@ installation folder, to determine what needs to be changed.
 
 The Eclipse IDE provides a way to run external tools such as command line software:
 
+**<p style="text-align: center;">
 ![eclipse-external-tools1](images/eclipse-external-tools1.png)
+</p>**
+
+**<p style="text-align: center;">
+Eclipse External Tools Configurations Menu (<a href="../images/eclipse-external-tools1.png">see full-size image</a>)
+</p>**
 
 Available run configurations are saved in the repository in `scripts` folder.
 The following shows the list of external tool configurations that have been defined for TSTool.
 Many of these can be phased out as software development focuses on the OpenCDSS configuration of TSTool.
 The specific run configurations of interest are described in the [Creating a Windows Installer](#creating-a-windows-installer) sections.
 
+**<p style="text-align: center;">
 ![eclipse-external-tools2.png](images/eclipse-external-tools2.png)
+</p>**
+
+**<p style="text-align: center;">
+Eclipse External Tools Configurations (<a href="../images/eclipse-external-tools2.png">see full-size image</a>)
+</p>**
 
 ### Java Runtime Environment ###
 
@@ -190,7 +202,13 @@ To run this step, execute the external run configuration as shown in the followi
 
 The following image shows the ***External Tools Configurations...*** selection that should be used.
 
+**<p style="text-align: center;">
 ![eclipse-external-tools-create-1](images/eclipse-external-tools-create-1.png)
+</p>**
+
+**<p style="text-align: center;">
+Build Configuration to Create Distribution (<a href="../images/eclipse-external-tools-create-1.png">see full-size image</a>)
+</p>**
 
 Note the selection for the JRE that is used, which can be the same as the workspace Java, although any Java 8 should work.
 
@@ -210,7 +228,13 @@ If the previous step was successful, then the ***External Tools Configurations**
 This step will package the files in the `dist` folder into the installer using NSIS and launch4j software.
 The resulting files will be as shown below:
 
+**<p style="text-align: center;">
 ![eclipse-external-tools-create-dist](images/eclipse-external-tools-create-dist.png)
+</p>**
+
+**<p style="text-align: center;">
+Distribution Files for Installer (<a href="../images/eclipse-external-tools-create-dist.png">see full-size image</a>)
+</p>**
 
 * `install-cdss` - contains an image of all the files in the distribution before packaging
 * `cdss-app-tstool-main_18.jar` - the Jar file for the main TSTool application corresponding to the repository
@@ -223,7 +247,13 @@ The version number for the installer file will match the version in the `product
 The setup executable created in the previous step can be run to install the software on the Windows computer,
 which will show dialogs similar to the following.
 
+**<p style="text-align: center;">
 ![installer1](images/installer1.png)
+</p>**
+
+**<p style="text-align: center;">
+Run TSTool Installer (<a href="../images/installer1.png">see full-size image</a>)
+</p>**
 
 All of the defaults should be accepted.
 
@@ -246,4 +276,15 @@ Run the `build-util/git-check.sh` script to confirm that there are no loose ends
 
 ## Creating a Linux Installer ##
 
-**Need to fill in this section.**
+A Linux installer can be created by relying on a VirtualBox virtual machine (or similar), as follows:
+
+1. First install and configure a VirtualBox VM, for example see the
+[Open Water Foundation / Learn VirtualBox](http://learn.openwaterfoundation.org/owf-learn-virtualbox/) documentation.
+2. Configure a VirtualBox shared folder for CDSS files, to allow access to the Windows installed TSTool files.
+3. From a Linux VM terminal window run the `bin/build-linux-distro.bash` script that is distributed with TSTool,
+for the installed version of interest, using the shared folder to access Windows files.
+	1. The source exists in `resources/runtime/bin` folder in the TSTool repository.
+	2. The `makeself` software is used to create the installer (install with `sudo apt-get install makeself` if not already installed).
+	3. The resulting installer can be run on Linux to install TSTool in system or user files.
+	4. Java 8 will need to be installed on the VM where TSTool is installed.
+4. **Need to implement a script to uploaded to State of Colorado GCP cloud.**
