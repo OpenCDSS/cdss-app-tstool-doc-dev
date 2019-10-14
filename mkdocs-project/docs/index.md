@@ -80,7 +80,9 @@ has been developed to answer important questions about Colorado's water resource
 CDSS efforts are led by the [Colorado Water Conservation Board (CWCB)](http://cwcb.state.co.us)
 and [Colorado Division of Water Resources (DWR)](http://water.state.co.us).
 
+**<p style="text-align: center;">
 ![CDSS Website](index-images/CDSS-website.png)
+</p>**
 
 CDSS has been under development since 1994, with progress occurring via a series of basin
 decision support systems (DSS), starting with the Colorado River DSS (CRDSS).

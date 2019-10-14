@@ -1,6 +1,6 @@
 # TSTool / Development Tasks / Installing 
 
-The software installer produced in the [Building Installer](../building-installer/building-installer) section
+The software installer produced in the [Building Installer](../building-installer/building-installer.md) section
 can be downloaded to install TSTool.
 
 * [Install on Windows](#install-on-windows)
