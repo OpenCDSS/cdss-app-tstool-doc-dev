@@ -66,7 +66,7 @@ simplifying tracking of success and failure.  See also the [CommandStatus](../co
 
 The [CommandDiscoverable](https://github.com/OpenCDSS/cdss-lib-common-java/blob/master/src/RTi/Util/IO/CommandDiscoverable.java)
 interface is implemented by commands that can run in "discovery" mode.
-For example, the [`NewTimeSeries`](http://opencdss.state.co.us/tstool/latest/doc-user/command-ref/NewTimeSeries/NewTimeSeries/)
+For example, the [`NewTimeSeries`](https://opencdss.state.co.us/tstool/latest/doc-user/command-ref/NewTimeSeries/NewTimeSeries/)
 command parameters provide enough information for the command
 to indicate that a new time series will have a specific identifier and alias.
 The discovery information is used to provide command editors for later commands with

@@ -49,7 +49,7 @@ Some commands limit the command logging output to a specific count to minimize m
 
 ## Using with For Command ##
 
-The [`For`](http://learn.openwaterfoundation.org/cdss-app-tstool-doc-user/command-ref/For/For/)
+The [`For`](https://opencdss.state.co.us/tstool/latest/doc-user/command-ref/For/For/)
 command presents challenges for command logging because
 the same instance of a command can be executed multiple times during processing of the loop.
 There are at least three options for handling command status logging:

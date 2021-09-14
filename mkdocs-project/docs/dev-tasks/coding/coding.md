@@ -20,14 +20,14 @@ Code formatting may be a higher priority in the future as more developers engage
 It is important that data, methods, etc. are documented to capture the current developer's design
 vision and to ensure that follow-up developers have good context for troubleshooting and enhancements.
 Code this is not documented or documentation that is difficult to understand builds in debt that
-is borne by future developers.  See the [Documenting](../documenting/documenting) section.
+is borne by future developers.  See the [Documenting](../documenting/documenting.md) section.
 
 * **Developer Notes** - Code is never perfect and it is often necessary to include notes for future development.
 The following guidelines are recommended, using examples.  The `TODO` and `FIXME` phrases are standard
 in Eclipse and some other environments.  Including the author and date provides context
 for who to contact and whether addressing an issue has languished.
-	+ `TODO smalers 2018-09-14 Note for something to do in the future`
-	+ `FIXME smalers 2018-09-14 Need to fix this before the release.
+	+ `TODO smalers 2018-09-14 Note for something to do in the future.`
+	+ `FIXME smalers 2018-09-14 Need to fix this before the release.`
 
 * **End of Line** - TSTool development has primarily occurred on Windows computers and therefore files have
 traditionally used Windows end of line.
@@ -53,9 +53,9 @@ Some code organization could improved with sub-packages.
 Again, this is a low priority compared to other work items.
 
 * **Testing** - TSTool does not currently rely on JUnit for unit testing.
-Instead, there is great reliance on a built-in [testing framework](../testing/testing) that allows testing the functional software.
+Instead, there is great reliance on a built-in [testing framework](../testing/testing.md) that allows testing the functional software.
 This has proven to be very helpful because it automates testing commands and other features,
 which then test much of the underlying code.
 Additional use of JUnit tests will be phased in as resources allow.
 However, unit testing is likely to be more of a priority in libraries.
-See the [Testing](../testing/testing) section.
+See the [Testing](../testing/testing.md) section.

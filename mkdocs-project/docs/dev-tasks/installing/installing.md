@@ -11,11 +11,11 @@ can be downloaded to install TSTool.
 ## Install on Windows ##
 
 The installer program can be run on Windows to install TSTool on a computer for each user.
-TSTool will install in a new folder such as `C:\CDSS\TSTool-12.05.00` for each version.
+TSTool will install in a new folder such as `C:\CDSS\TSTool-14.0.0` for each version.
 This ensures that users can run different versions of TSTool needed for specific projects and processes.
-See the [TSTool Installation and Configuration Appendix](http://learn.openwaterfoundation.org/cdss-app-tstool-doc-user/appendix-install/install/).
+See the [TSTool Installation and Configuration Appendix](https://opencdss.state.co.us/tstool/latest/doc-user/appendix-install/install/).
 
 ## Install on Linux ##
 
 TSTool can also be installed on Linux, typically in the `/opt/` folder.
-See the [TSTool Installation and Configuration Appendix](http://learn.openwaterfoundation.org/cdss-app-tstool-doc-user/appendix-install/install/).
+See the [TSTool Installation and Configuration Appendix](https://opencdss.state.co.us/tstool/latest/doc-user/appendix-install/install/).

@@ -10,6 +10,9 @@ re-initialized, and to provide rationale for how the project was set up.
 
 ## Development Files Structure ##
 
+**The [cdss-app-tstool-main](https://github.com/OpenCDSS/cdss-app-tstool-doc-dev)
+repository README provides current information about folder organization.**
+
 This documentation assumes that files are configured according to the following file structure.
 It is recommended that TSTool developers follow this file organization closely because if they do not,
 the documentation will be less helpful and troubleshooting will require additional resources.

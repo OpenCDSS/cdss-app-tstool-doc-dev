@@ -11,7 +11,7 @@ See also the [TSTool User Documentation](https://opencdss.state.co.us/tstool/lat
 * [About the Open Water Foundation](#about-the-open-water-foundation)
 * [License](#license)
 * [Source Repository on GitHub](#source-repository-on-github)
-* [Release Notes](#release-notes)
+* [Release Notes](#release-notes) - **this documentation has been updated for TSTool version 14.0.0**
 
 ----------------
 
@@ -24,8 +24,8 @@ The documentation is organized with the first sections focusing on setup for a n
 The reference sections at the end provide information that may be of use but are typically not used day to day.
 Use the search feature of this website to find specific information.
 
-The TSTool development environment currently focuses on creating 32-bit Java TSTool runtime for use on Windows and Linux computers.
-Migration to 64-bit version will occur as components are updated.
+As of version 14.0.0, the TSTool development environment creates a 64-bit Java TSTool runtime for use on Windows and Linux computers.
+Older versions focused on 32-bit Java runtime.
 Icons for Cygwin ![Cygwin](images/cygwin-32.png), Linux ![Linux](images/linux-32.png), and Windows ![Windows](images/windows-32.png)
 are included to help indicate documentation
 specific to an operating system.
@@ -71,14 +71,13 @@ can be provided using the [CDSS email address](mailto:DNR_OpenCDSS@state.co.us).
 The following components are used in TSTool and require or request attribution:
 
 * [Material Theme icons](https://material.io/icons/) - these icons are used in documentation
-* More information will be added here as the open source license is finalized.
 
 ## Colorado's Decision Support Systems ##
 
-Colorado's Decision Support Systems (CDSS, [cdss.state.co.us](http://cdss.state.co.us))
+Colorado's Decision Support Systems (CDSS, [https://cdss.colorado.gov/](https://cdss.colorado.gov/))
 has been developed to answer important questions about Colorado's water resources.
-CDSS efforts are led by the [Colorado Water Conservation Board (CWCB)](http://cwcb.state.co.us)
-and [Colorado Division of Water Resources (DWR)](http://water.state.co.us).
+CDSS efforts are led by the [Colorado Water Conservation Board (CWCB)](https://cwcb.colorado.gov/)
+and [Colorado Division of Water Resources (DWR)](https://dwr.colorado.gov/).
 
 **<p style="text-align: center;">
 ![CDSS Website](index-images/CDSS-website.png)
@@ -98,13 +97,13 @@ and automated data processing.
 
 In late 2016, the Open Water Foundation began the effort to move TSTool and other CDSS software to open source licensing
 and establish open source software projects, referred to as "OpenCDSS".
-The OpenCDSS project is resulting in a significant evolution in how CDSS software development occurs,
+The OpenCDSS project has resulted in a significant evolution in how CDSS software development occurs,
 such as implementing version control with Git/GitHub and modernizing the development environment and documentation.
-See the [OpenCDSS Website](http://opencdss.state.co.us/opencdss/) for more information.
+See the [OpenCDSS Website](https://opencdss.state.co.us/opencdss/) for more information.
 
 ## About the Open Water Foundation ##
 
-The [Open Water Foundation](http://openwaterfoundation.org) is a nonprofit social enterprise that focuses
+The [Open Water Foundation](https://openwaterfoundation.org) is a nonprofit social enterprise that focuses
 on developing and supporting open source software for water resources,
 so that organizations can make better decisions about water.
 OWF also works to advance open data tools and implementation.

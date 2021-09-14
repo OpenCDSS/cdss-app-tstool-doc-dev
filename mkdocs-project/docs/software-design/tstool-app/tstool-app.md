@@ -38,7 +38,7 @@ Launch4j provides numerous features to optimize Java program start-up on Windows
 
 See also:
 
-* [Running TSTool in Various Modes appendix of User Documentation](http://opencdss.state.co.us/tstool/latest/doc-user/appendix-running/running/)
+* [Running TSTool in Various Modes appendix of User Documentation](https://opencdss.state.co.us/tstool/latest/doc-user/appendix-running/running/)
 
 ## Configuration ##
 
@@ -49,8 +49,8 @@ with sections and #-comments is used for `TSTool.cfg`.
 These simple formats will likely continue to be used, although JSON may be adopted where it has benefits,
 such as hierarchical time series product files.
 
-The [Installation TSTool appendix in the User Documentation](http://opencdss.state.co.us/tstool/latest/doc-user/appendix-install/install/),
-as well as [Datastore documentation](http://opencdss.state.co.us/tstool/latest/doc-user/datastore-ref/overview/)
+The [Installation TSTool appendix in the User Documentation](https://opencdss.state.co.us/tstool/latest/doc-user/appendix-install/install/),
+as well as [Datastore documentation](https://opencdss.state.co.us/tstool/latest/doc-user/datastore-ref/overview/)
 describes configuration files.
 
 ## User Interface (UI) ##

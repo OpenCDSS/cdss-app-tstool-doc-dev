@@ -4,7 +4,7 @@ This documentation focuses on technical issues related to the Java Runtime Envir
 
 * [Java Language](#java-language)
 * [Java Runtime Environment (JRE)](#java-runtime-environment_1)
-* [32-bit and 64-bit Versions](#32-bit-and-64-bit-versions)
+* [64-bit and 32-bit Versions](#64-bit-and-32-bit-versions)
 * [Java Launcher](#java-launcher)
 * [Classpath](#classpath)
 * [Plugins and Class Loaders](#plugins-and-class-loaders)
@@ -14,7 +14,7 @@ This documentation focuses on technical issues related to the Java Runtime Envir
 ## Java Language ##
 
 TSTool is written in the Java language, with use of C or other languages only when used by third-party components.
-The TSTool [`RunPython`](http://opencdss.state.co.us/tstool/latest/doc-user/command-ref/RunPython/RunPython/)
+The TSTool [`RunPython`](https://opencdss.state.co.us/tstool/latest/doc-user/command-ref/RunPython/RunPython/)
 command does allow integrating Python and TSTool/Java and future TSTool releases may further support this approach,
 but languages other than Java are not currently used for primary functionality.
 Java source code consists of files with `*.java` filename extension.
@@ -42,22 +42,19 @@ software is used to run TSTool.
 
 On Linux the `tstool` script is used.
 
-## 32-bit and 64-bit Versions ##
+## 64-bit and 32-bit Versions ##
 
-As of TSTool version 12.x, 32-bit java is used because some components use native Windows 32-bit libraries,
+As of TSTool version 14.0.0, 64-bit java is used for development and runtime libraries.
+Some 32-bit features are disabled as discussed below.
+
+TSTool prior to version 14.0.0 uses 32-bit java,
+which supports components that use native Windows 32-bit libraries,
 in particular the HEC-DSS libraries.
-Additional effort is needed to support 32- and 64-bit versions in the development and deployed environment.
-It is possible to replace the deployed JRE with alternate version by replacing
-the `jre_VERSION` folder with a different version of Java.
+These features will be updated to 64-bit as resources allow.
 
 ## Classpath ##
 
-The JRE starts by specifying the class path to files and folders with `*.class` and `*.jar` file extension.
-The current approach taken in TSTool is to exactly specify files to load, rather than just the
-folder where to search for files.
-This may be changed to specify the folder, so that startup can be simpler.
-However, this increases the opportunity for errors if extra files have somehow been added to the folder.
-See also the next section on plugins.
+The JRE starts by specifying the class path to look for `*.class` and `*.jar` files in the installation `bin/` folder.
 
 ## Plugins and Class Loaders ##
 

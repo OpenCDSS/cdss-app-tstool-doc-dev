@@ -18,7 +18,7 @@ This documentation discusses time series concepts and code that relates to time 
 ## Time Series Concepts ##
 
 Time series concepts related to TSTool are discussed in the
-[TSTool Introduction in the User Documentation](http://opencdss.state.co.us/tstool/latest/doc-user/introduction/introduction/).
+[TSTool Introduction in the User Documentation](https://opencdss.state.co.us/tstool/latest/doc-user/introduction/introduction/).
 
 ### Time Series Data Values ###
 
@@ -54,7 +54,7 @@ Additional work will occur in this area.
 
 Time series also include [TSDataFlagMetadata](https://github.com/OpenCDSS/cdss-lib-common-java/blob/master/src/RTi/TS/TSDataFlagMetadata.java) to describe data flags.
 The metadata is output in some formats such as
-[DateValue](http://opencdss.state.co.us/tstool/latest/doc-user/datastore-ref/DateValue/DateValue/).
+[DateValue](https://opencdss.state.co.us/tstool/latest/doc-user/datastore-ref/DateValue/DateValue/).
 
 ### Time Series Properties ###
 
@@ -118,7 +118,7 @@ Because the TSID can be cumbersome, time series also support the use of an alias
 A request to find matching time series for processing will check the alias first and then TSID.
 The [TSIdent](https://github.com/OpenCDSS/cdss-lib-common-java/blob/master/src/RTi/TS/TSIdent.java) class is used to store and manipulate TSIDs.
 
-The [TSTool Introduction in the User Documentation](http://opencdss.state.co.us/tstool/latest/doc-user/introduction/introduction/)
+The [TSTool Introduction in the User Documentation](https://opencdss.state.co.us/tstool/latest/doc-user/introduction/introduction/)
 discusses TSIDs and aliases.
 TSIDs and aliases are very important and are used in displays, logging, and nearly all functionality.
 

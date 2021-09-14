@@ -157,14 +157,14 @@ newer versions use a startup log file in the `.tstool/log/` folder in the users 
 This ensures that a log file can be written without administrator permissions.
 
 It is generally recommended that workflows use the
-[`StartLog`](http://opencdss.state.co.us/tstool/latest/doc-user/command-ref/StartLog/StartLog/)
+[`StartLog`](https://opencdss.state.co.us/tstool/latest/doc-user/command-ref/StartLog/StartLog/)
 command to open a log file that has the same name as the command file, appended with `.log`.
 The log file specific to the command file can then be used to troubleshoot the command file.
 This approach is used with automated testing to ensure that an artifact exists to review the run.
 Log files are typically omitted from repositories using the `.gitignore` file.
 
 Opening a log file with the
-[`StartLog`](http://opencdss.state.co.us/tstool/latest/doc-user/command-ref/StartLog/StartLog/) command
+[`StartLog`](https://opencdss.state.co.us/tstool/latest/doc-user/command-ref/StartLog/StartLog/) command
 closes the previous log file and starts the new log file.
 Consequently, use the startup log file to troubleshoot startup issues.
 
@@ -177,9 +177,9 @@ Logging levels are set in a number of ways:
 2. The [TSTool_Main](https://github.com/OpenCDSS/cdss-app-tstool-main/blob/master/src/DWR/DMI/tstool/TSToolMain.java)
 class adjusts based on TSTool defaults and optionally command line parameters.
 3. User can interactively change levels via the ***Tools / Diagnostics...*** menu.
-4. The [`SetDebugLevel`](http://opencdss.state.co.us/tstool/latest/doc-user/command-ref/SetDebugLevel/SetDebugLevel/) and
-[`SetWarningLevel`](http://opencdss.state.co.us/tstool/latest/doc-user/command-ref/SetWarningLevel/SetWarningLevel/) commands can change logging levels,
-and are typically used with [`StartLog`](http://opencdss.state.co.us/tstool/latest/doc-user/command-ref/StartLog/StartLog/) command.
+4. The [`SetDebugLevel`](https://opencdss.state.co.us/tstool/latest/doc-user/command-ref/SetDebugLevel/SetDebugLevel/) and
+[`SetWarningLevel`](https://opencdss.state.co.us/tstool/latest/doc-user/command-ref/SetWarningLevel/SetWarningLevel/) commands can change logging levels,
+and are typically used with [`StartLog`](https://opencdss.state.co.us/tstool/latest/doc-user/command-ref/StartLog/StartLog/) command.
 
 Log levels are typically left at the default unless troubleshooting the application.
 In this case, 

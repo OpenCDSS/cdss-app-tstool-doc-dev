@@ -27,15 +27,13 @@ This documentation describes how to create and package the TSTool software insta
 
 The TSTool installer depends on the target operating system:
 
-* ![Windows](../../images/windows-32.png) Windows - self-extracting installer (e.g., `TSTool_CDSS_12.00.00_Setup.exe`).
-* ![Linux](../../images/linux-32.png) Windows - compressed file (e.g., `TSTool_CDSS_12.00.00_Linux_x86.tar.gz`).
+* ![Windows](../../images/windows-32.png) Windows - self-extracting installer (e.g., `TSTool_CDSS_14.0.0_Setup.exe`).
+* ![Linux](../../images/linux-32.png) Linux - "run" file installer (e.g., `TSTool-linux-14.0.0.run`).
 
 The Windows installer uses the technologies described below to create the installer.
-The Linux installer has in the past been created as an extra step (after Windows installer is created)
-by packaging Windows files on a Linux machine.
-Note that Eclipse Ant is used and not Maven.
-In the future Maven (or the latest popular tool) will likely be implemented;
-however, TSTool is complex and sufficient resources need to be available to
+The Linux installer is created by packaging Windows files on a Linux machine, for example using a shared folder.
+Eclipse Ant is used to automate workflows, although Maven might be implemented in the future.
+TSTool is complex and sufficient resources need to be available to
 evaluate Maven implementation and impacts that it has on the existing build processes.
 The following are software tools used to create the installer
 
@@ -114,7 +112,7 @@ Eclipse External Tools Configurations (<a href="../images/eclipse-external-tools
 The Java Runtime Environment (JRE) is used to run Java software.
 TSTool and other CDSS software distribute a JRE with the software to ensure that the JRE is compatible
 with the software.  This takes up more disk space but controls the environment and helps ensure
-that even old versions of TSTool will run properly.
+that even old versions of TSTool will continue run properly.
 Packaging the installer requires configuring the location of a JRE for the installer.
 
 ### NSIS ###
@@ -166,10 +164,13 @@ These should be changed as soon after making a release as possible (and planning
 to minimize confusion and overwriting the previous release installer in the development environment.
 
 1. **TSTool Main Program Code** - The [TSToolMain.java](https://github.com/OpenCDSS/cdss-app-tstool-main/blob/master/src/DWR/DMI/tstool/TSToolMain.java) file 
-sets the `PROGRAM_VERSION` with format similar to `12.05.00 (2018-06-17)`.
-By convention, the parts of the version have been padded with zeros (this may change in the future).  If necessary, `beta` can be added
-to the version, such as `12.05.00beta (2018-06-17)`.
-This information is shown in the ***Help / About*** dialog.
+sets the `PROGRAM_VERSION` with format similar to `14.0.0 (2021-09-14)`.
+As of version 14.x, the parts are **not** padded with zeros.
+However; older versions padded the version parts with zeros).
+If necessary, `.beta`, `.dev1`, etc. can be added
+to the version, such as `14.0.0.dev1 (2021-09-01)`.
+This information is shown in the TSTool ***Help / About*** dialog,
+is used in installer names, is used in versioned documentation, and is shown on the download page.
 2. **Build Process Configuration File** - The
 [cdss-app-tstool-main repository product properties file](https://github.com/OpenCDSS/cdss-app-tstool-main/blob/master/conf/product.properties)
 contains important properties used by the build system to create the installer.
@@ -187,10 +188,8 @@ Previous versions of TSTool packaged PDF documentation in the installer but as o
 PDF documentation is no longer distributed with the software and instead the main ***Help*** menu and
 ***Help*** menu in each command editor point to online Markdown/MkDocs version of documentation.
 
-In the future, it may be necessary to distribute versioned documentation such as "latest", "12.05", etc.
-This could be accomplished by checkout out the MkDocs documentation for a version and publishing to a web address that
-includes the version in the leading part of of the URL.
-It will be more difficult to ensure cross-references between different documents.
+Latest ("latest") and versioned copies of documentation are deployed to the cloud.
+The latest documentation allows cross-linking documentation using generic URLs.
 
 ### 5. Create Local Distribution ###
 
@@ -271,8 +270,8 @@ When a release has been made, especially for an important milestone, each reposi
 
 1. Close issues that were resolved.
 2. Make sure that all local changes are committed.
-Run the `build-util/git-check.sh` script to confirm that there are no loose ends and deal with loose ends.
-3. Run the `build-util/git-tag-all.sh` script to tag all related repositories for the released TSTool version.
+Run the `build-util/git-check-tstool.sh` script to confirm that there are no loose ends and deal with loose ends.
+3. Run the `build-util/git-tag-all-tstool.sh` script to tag all related repositories for the released TSTool version.
 
 ## Creating a Linux Installer ##
 
@@ -287,4 +286,5 @@ for the installed version of interest, using the shared folder to access Windows
 	2. The `makeself` software is used to create the installer (install with `sudo apt-get install makeself` if not already installed).
 	3. The resulting installer can be run on Linux to install TSTool in system or user files.
 	4. Java 8 will need to be installed on the VM where TSTool is installed.
-4. **Need to implement a script to uploaded to State of Colorado GCP cloud.**
+
+Linux versions of TSTool are not currently supported by the State of Colorado.
