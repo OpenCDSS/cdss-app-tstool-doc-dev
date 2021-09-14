@@ -7,9 +7,9 @@ with deployment to Windows and Linux.
 Development on Linux computer should be possible.
 
 * Windows:
-	+ Windows 10 or 7
+	+ Windows 10+ (7 and other versions may also work)
 * Linux:
-	+ Confirm that Java 8 is available as a distribution
+	+ Confirm that Java 8 is available as a distribution (or later Java depending on TSTool version)
         + Oracle Java has traditionally be used for development
         + Other Java distributions may be appropriate
 * Memory: 8GB minimum, 16GB or 32GB will help improve performance

@@ -16,7 +16,10 @@ Templating is a powerful concept that can allow TSTool command files to scale be
 
 TSTool uses the [Apache Freemarker](https://freemarker.apache.org/) package to implement templates.
 
-The primary use of templates is:
+The primary use of templates is to support the following features:
 
-* [`ExpandTemplateFile`](http://opencdss.state.co.us/tstool/latest/doc-user/command-ref/ExpandTemplateFile/ExpandTemplateFile/) command for automation
+* [`ExpandTemplateFile`](https://opencdss.state.co.us/tstool/latest/doc-user/command-ref/ExpandTemplateFile/ExpandTemplateFile/) command for automation
 * time series product files have built in template functionality
+
+TSTool also supports built-in `${Property}` notation for many commands,
+which substitute processor properties.

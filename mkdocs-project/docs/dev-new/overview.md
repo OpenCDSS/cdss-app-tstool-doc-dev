@@ -33,6 +33,8 @@ After reading instructions for a step, use "back" to return to this outline so t
 6. **Required:** Eclipse Workspace Setup (interactive development environment)
 	* **Required:** [Create Eclipse Workspace Folder](#create-eclipse-workspace-folder) - simple manual step (***see details below***)
 	* **Required:** [Import the Existing Eclipse TSTool Projects from the Git Repository Folders](#import-the-existing-eclipse-tstool-projects-from-the-git-repository-folders) -  import
+		- [Import Code Repositories](#import-code-repositories)
+		- [Additional Eclipse Configuration](#additional-eclipse-configuration)
 	from Git repository working files (**see details below**)
 7. **Optional:** Development Environment software install part 3 (documentation tools), **(install if will view and edit documentation within the development environment)**
 	* [Development Environment / Python and pip](../dev-env/python.md) - install Python, which is needed by MkDocs
@@ -47,9 +49,12 @@ The following sections are referenced from the above outline.
 
 ## Create Folder for Development Files ##
 
-Create a development home folder consistent with the [initial project setup](../project-init/overview.md) - this
-is an umbrella folder for all TSTool development files,
+Create a development home folder in user files consistent with the
+[repository Development Environment Folder Structure](https://github.com/OpenCDSS/cdss-app-tstool-main#development-environment-folder-structure)
+(see also the [initial project setup](../project-init/overview.md)).
+This is an umbrella folder for all TSTool development files,
 including software tools that are installed locally (as appropriate).
+
 It is assumed that development will occur within a developer's home folder on the computer in order to provide separation from the
 work of other developers on the computer.
 Tools such as Git rely on a unique identity for developers in order to properly track edits to files
@@ -455,7 +460,7 @@ It may also be possible to run the batch file from Git Bash but this has not bee
 ```bash
 > C:
 > cd \Users\user\cdss-dev\TSTool\git-repos\cdss-app-tstool-main\build-util
-> run-eclipse-win32.bat
+> run-eclipse-win64.cmd
 ```
 
 Open the workspace in Eclipse in preparation of adding the code project from the Git repository in the next step.
@@ -477,6 +482,9 @@ The Eclipse workspace folder is identified by a `.metadata` folder, which will b
 *Press* ***back*** *in the browser to return to the outline.*
 
 ## Import the Existing Eclipse TSTool Projects from the Git Repository Folders ##
+
+**This documentation was originally written with an older version of the development environment.
+The process for newer Eclipse will be similar but may have changed.**
 
 The TSTool repositories each correspond to discrete components that must be imported into the TSTool Eclipse workspace.
 The development environment does not currently use
@@ -501,16 +509,17 @@ Eclipse can be used to edit these files but it can be problematic.
 
 After the initial Eclipse workspace is selected, import the following repositories by following the same general procedure indicated below:
 
+* `cdss-app-tstool-doc` - not typically edited in Eclipse, but useful to see
 * `cdss-app-tstool-main`
+* `cdss-app-tstool-test` - may not be edited in Eclipse, but useful to see
 * `cdss-lib-cdss-java`
 * `cdss-lib-common-java`
 * `cdss-lib-dmi-hydrobase-java`
 * `cdss-lib-dmi-hydrobase-rest-java`
 * `cdss-lib-dmi-nwsrfs-java`
-* `cdss-lib-dmi-riversidedb-java`
-* `cdss-lib-dmi-satmonsys-java`
 * `cdss-lib-models-java`
 * `cdss-lib-processor-ts-java`
+* `cdss-util-buildtools`
 
 The initial workspace will be similar to the following (if necessary, close the ***Welcome*** tab).
 Use the ***Help / About Eclipse*** menu to check the Eclipse version, which should be consistent
@@ -524,7 +533,7 @@ with the [Development Environment / Eclipse](../dev-env/eclipse.md) instructions
 Initial Workspace (<a href="../images/eclipse-workspace-0.png">see full-size image</a>)
 </p>**
 
-Because the `.project` files have already been created and are included in the repository,
+Because the Eclipse `.project` files have already been created and are included in the repository,
 a general import of existing project can occur and Eclipse will figure out other
 information such as whether a Java project.
 Use the ***File / Import...*** menu to start an import, as shown in the following figure.
@@ -575,6 +584,74 @@ Eclipse Workspace after Importing Projects (<a href="../images/eclipse-workspace
 </p>**
 
 *Press* ***back*** *in the browser to return to the outline.*
+
+### Additional Eclipse Configuration
+
+It may be necessary to perform additional Eclipse configuration,
+in particular to ensure that the proper Java version is used with development.
+
+**The following documentation was created during updates from 32-bit to 64-bit Java 8 and to Eclipse 2019-03.**
+
+The `cdss-app-tstool-main` project in Eclipse has the following JRE configuration.
+
+* ***Project / Properties / Java Build Path***
+* ***Libraries*** tab
+* ***JRE System Library*** - double click on it
+* Select ***Workspace default JRE*** radio button
+* Select ***Installed JREs...*** button
+
+It may appear as follows since was previously configured to use the 32-bit JRE.
+If no installed Java is listed, add as shown in the next step.
+
+**<p style="text-align: center;">
+![installed-jre-0](images/installed-jre-0.png)
+</p>**
+
+Use the ***Remove*** button to remove the JRE since the 64-bit version will have the same name (but different path).
+A warning will be shown as follows.
+
+**<p style="text-align: center;">
+![installed-jre-1](images/installed-jre-1.png)
+</p>**
+
+Use the ***Add...*** button.
+
+**<p style="text-align: center;">
+![installed-jre-2](images/installed-jre-2.png)
+</p>**
+
+Browse to the `C:\Program Files\Java\jdk8` folder that was configured as a symbolic link when Java was installed.
+The dialog automatically follows the link and uses the more specific folder.
+
+**<p style="text-align: center;">
+![installed-jre-3](images/installed-jre-3.png)
+</p>**
+
+Press ***Finish***.
+
+**<p style="text-align: center;">
+![installed-jre-4](images/installed-jre-4.png)
+</p>**
+
+Accept with ***Finish*** and then ***Apply and Close***.
+Then the following is shown.
+
+**<p style="text-align: center;">
+![installed-jre-5](images/installed-jre-5.png)
+</p>**
+
+Press ***Finish***.
+
+**<p style="text-align: center;">
+![installed-jre-6](images/installed-jre-6.png)
+</p>**
+
+Press ***Apply and Close***.
+
+Do a clean build with ***Projects / Clean...***.
+
+Run TSTool from Eclipse and use ***Help / About*** and then ***Show Software/System Details***.
+The `Java Virtual Machine Properties` shows `os.arch = "amd64"`, which indicates 64-bit.
 
 ## Next Steps - Development Tasks ##
 

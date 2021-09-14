@@ -10,7 +10,7 @@
 TSTool command files contain a workflow of commands as text.
 The commands are displayed in the middle of the TSTool window with no further modification.
 
-See also the [Command Syntax user documentation](http://opencdss.state.co.us/tstool/latest/doc-user/command-ref/command-syntax/).
+See also the [Command Syntax user documentation](https://opencdss.state.co.us/tstool/latest/doc-user/command-ref/command-syntax/).
 
 The following are important design considerations:
 

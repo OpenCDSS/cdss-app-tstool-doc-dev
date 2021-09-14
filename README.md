@@ -6,7 +6,7 @@ The documentation uses Markdown format and MkDocs software to create a static we
 See the latest deployed [CDSS / TSTool (Developer)](http://opencdss.state.co.us/tstool/latest/doc-dev/) documentation.
 See the following online resources:
 
-* [Colorado's Decision Support System (CDSS)](http://cdss.state.co.us)
+* [Colorado's Decision Support System (CDSS)](https://cdss.colorado.gov/)
 * [OpenCDSS](http://opencdss.state.co.us/opencdss/)
 * [TSTool software main repository](https://github.com/OpenCDSS/cdss-app-tstool-main)
 * [TSTool User Documentation](http://opencdss.state.co.us/tstool/latest/doc-user/)
@@ -187,6 +187,7 @@ This repository is maintained by the OpenCDSS team.
 The following release notes indicate the update major history for documentation.
 See the GitHub issues and repository history for detailed information.
 
+* 2021-09-14 - Update for 14.0.0 release.
 * 2019-04-26 - Update links for opencdss.state.co.us domain.
 * 2019-01-04 - Update for public release on OpenCDSS.
 * 2018-09-14 - Clean up documentation for TSTool 12.06.00 release.

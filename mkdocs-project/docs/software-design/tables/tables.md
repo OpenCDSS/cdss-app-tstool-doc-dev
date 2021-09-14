@@ -34,5 +34,5 @@ The table therefore consists of a list of lists (list of
 [`TableRecord`](https://github.com/OpenCDSS/cdss-lib-common-java/blob/master/src/RTi/Util/Table/TableRecord.java),
 which is list of column object values).
 This design could be optimized but works relatively well.
-If memory is an issue, the [`FreeTable`](http://opencdss.state.co.us/tstool/latest/doc-user/command-ref/FreeTable/FreeTable/)
+If memory is an issue, the [`FreeTable`](https://opencdss.state.co.us/tstool/latest/doc-user/command-ref/FreeTable/FreeTable/)
 command can be used.

@@ -2,8 +2,8 @@
 
 * [Introduction](#introduction)
 * ![Windows](../images/windows-32.png) [Windows](#windows)
-	+ [Download Eclipse Neon](#download-eclipse-neon)
-	+ [Install Eclipse Neon ](#install-eclipse-neon)
+	+ [Download Eclipse](#download-eclipse)
+	+ [Install Eclipse](#install-eclipse)
 	+ [Check Eclipse Run Script](#check-eclipse-run-script)
 * ![Linux](../images/linux-32.png) [Linux](#linux)
 
@@ -19,11 +19,11 @@ Eclipse does have some issues and limitations, but other IDEs have different iss
 TSTool development has typically occurred on Windows computers, although the software is often deployed to other operating systems.
 
 As discussed in the [Java 8](java8.md) section,
-Java 8 is currently used for development and 32-bit Java is used due to component requirements.
-To avoid confusion with compatibility, Eclipse 32-bit has traditionally been used.
-However, the Eclipse foundation has begun phasing out 32-bit Java and 64-bit Eclipse
-will be used when TSTool is transitioned to 64-bit Java.
-TSTool has been developed with various versions of Eclipse, including Mars and Neon.
+Java 8 is currently used for development and 64-bit Java and Eclipse are used as of TSTool version 14.0.0.
+
+32-bit Java was previously used due to component requirements.
+TSTool has been developed with various versions of Eclipse, including Mars, Neon, 2019-03 and later versions.
+The version of Eclipse is generally not critical as long as the appropriate Java version is configured for compatibility.
 
 The Eclipse `.project` file is currently saved in the Git repository for each TSTool component repository
 in order to facilitate development environment setup.  This may change in the future.
@@ -35,27 +35,26 @@ in a standard development folder structure.
 
 ## ![Windows](../images/windows-32.png) Windows ##
 
-### Download Eclipse Neon ###
+**This documentation was created for an older version of Eclipse and needs to be updated.
+The process for current installations is similar.**
 
-The download links for Eclipse may change as new versions are released.  Search for "download eclipse neon", which indicates that
-downloads are available on the following site (or similar).
-For example, this may return:
+### Download Eclipse 2019-03 (or newer) ###
 
-* [Eclipse Neon 3 Packages](http://www.eclipse.org/downloads/packages/release/Neon/3)
-
+The download links for Eclipse may change as new versions are released.
 Download the ***Eclipse IDE for Java Developers*** (there is currently no reason to use the Eclipse IDE for Java EE Developers,
-which is used for web development).  Make sure to select the ***Windows 32-bit*** version.
-The zip file is convenient because it is very clear where the software is installed.
+which is used for web development).  Make sure to select the ***Windows 64-bit*** version.
+The zip file installer is convenient because it is very clear where the software is installed.
 
-### Install Eclipse Neon ###
+### Install Eclipse ###
 
-The Eclipse Neon installer file will be named `eclipse-java-neon-3-win32.zip` or similar.
-Note that later versions of Eclipse provide an installation program so these instructions need to be updated when later versions of Eclipse are used.
+The Eclipse installer file will be named `eclipse-java-2019-03-R-win32-x86_64.zip` or similar.
+Note that later versions of Eclipse provide an option to use an installation program
+so these instructions need to be updated when later versions of Eclipse are used.
 
 To avoid confusion with other versions of Eclipse that may be installed on the computer (as needed for other product development),
-install by copying/unzipping into a folder named `C:\Program Files (x86)\eclipse-java-neon-3-win32`.
+install by copying/unzipping into a folder named `C:\Program Files\Eclipse\eclipse-java-2019-03`
+(older 32-bit Neon version used `C:\Program Files (x86)\eclipse-java-neon-3-win32`).
 The resulting folder structure is as shown in the following figure.
-This is a bit redundant withe the extra `eclipse` folder but clearly indicates the version and preserves the folder names from the zip file distribution.
 
 **<p style="text-align: center;">
 ![eclipse-install-folder](images/eclipse-install-folder.png)
@@ -68,7 +67,7 @@ Eclipse Software Folders (<a href="../images/eclipse-install-folder.png">see ful
 ### Check Eclipse Run Script ###
 
 The `cdss-app-tstool-main` repository `build-util` folder contains scripts to run the correct version of Eclipse,
-assuming a standard installation folder.  For example, `build-util/run-eclipse-win32.bat` can be run from a Windows command shell.
+assuming a standard installation folder.  For example, `build-util/run-eclipse-win64.cmd` can be run from a Windows command shell.
 This ensures that the proper versions of Eclipse and Java are used.
 If necessary, this script can be modified or other versions added over time (for example for new versions of Java and Eclipse).
 

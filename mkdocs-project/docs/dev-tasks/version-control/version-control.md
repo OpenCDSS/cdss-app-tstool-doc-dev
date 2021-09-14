@@ -7,7 +7,7 @@ TSTool version control uses Git and GitHub and is consistent with CDSS protocols
 
 See also:
 
-* [CDSS / Learn Git](http://learn.openwaterfoundation.org/cdss-learn-git/) documentation.
+* [CDSS / Learn Git](https://opencdss.state.co.us/cdss-learn-git/) documentation.
 
 -------
 
@@ -50,7 +50,7 @@ The version control process is as follows:
 
 1. **Use the a feature branch approach.** - The `master` branch should always contain tested software.
 Feature branches should be created, worked on, and merged as per the following.
-Use the [Testing](../testing/testing) protocols to confirm that software is functioning as expected.
+Use the [Testing](../testing/testing.md) protocols to confirm that software is functioning as expected.
 2. **Use GitHub issues** - Bugs and enhancements should be added as GitHub issues.
 The issue number should be used in the branch name such as `12-bug-commandname`.
 3. **Check Git status** - the main `cdss-app-tstool-main` repository contains `build-util/git-check.sh` script.
@@ -59,5 +59,5 @@ The script will detect when someone has made changes to a repository and need pu
 4. **Tag repositories for release** - Because TSTool uses multiple repositories,
 it can be difficult to check out a specific version later.
 Therefore, all repositories are tagged when a TSTool release occurs.
-Use the `build-util/git-tag-all.sh` script, which will will prompt for tag information.
+Use the `build-util/git-tag-all-tstool.sh` script, which will will prompt for tag information.
 The release is usually coordinated by the lead TSTool developer.

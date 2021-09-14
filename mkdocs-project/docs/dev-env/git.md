@@ -13,14 +13,15 @@ Git/GitHub are used for version control.
 It is expected that developers are proficient with Git and will configure and use a familiar Git client, such as:
 
 * Git within Eclipse
-	+ **Need to confirm handling of end of line across developers - repositories now have `.gitattributes` with `* text=auto`.**
-* Git for Windows:  Git Bash, Git Cmd, or Git GUI
+	+ **Developers should confirm handling of end of line in Eclipse version that is
+	being used - repositories now have `.gitattributes` with `* text=auto`.**
+* Git for Windows:  Git Bash or Git GUI
 * Git features in text editor
 * GitHub Desktop
-* Cygwin git command line ((**only use for repositories that are cloned with Cygwin Git**)
+* Cygwin git command line (**only use for repositories that are cloned with Cygwin Git**)
 * Other Git client
 
-See also [CDSS / Learn Git](http://learn.openwaterfoundation.org/cdss-learn-git/03-lesson-install/overview/).
+See also [CDSS / Learn Git](https://opencdss.state.co.us/cdss-learn-git/).
 
 ## Git Issues to be Aware of ##
 

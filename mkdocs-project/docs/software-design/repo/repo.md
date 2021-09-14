@@ -32,9 +32,9 @@ TSTool GitHub Repositories and Code Projects (listed alphabetically)
 
 |**GitHub Repository**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Eclipse Project**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Primary File Type**|**Description**|
 |--|--|--|--|
-|[`cdss-app-tstool-doc`](https://github.com/OpenCDSS/cdss-app-tstool-doc)|`cdss-app-tstool-doc`|Word and PDF|Legacy user documentation, some developer documentation (**files are typically edited with Word outside of Eclipse)**|
-|[`cdss-app-tstool-doc-dev`](https://github.com/OpenCDSS/cdss-app-tstool-doc-dev)|`cdss-app-tstool-doc-dev`|Markdown|New Markdown/MkDocs developer documentation|
-|[`cdss-app-tstool-doc-user`](https://github.com/OpenCDSS/cdss-app-tstool-doc-user)|`cdss-app-tstool-doc-user`|Markdown|New Markdown/MkDocs user documentation|
+|[`cdss-app-tstool-doc`](https://github.com/OpenCDSS/cdss-app-tstool-doc)|`cdss-app-tstool-doc`|Word and PDF|Archive of legacy user documentation, some developer documentation (**files are typically edited with Word outside of Eclipse)**|
+|[`cdss-app-tstool-doc-dev`](https://github.com/OpenCDSS/cdss-app-tstool-doc-dev)|`cdss-app-tstool-doc-dev`|Markdown|Markdown/MkDocs developer documentation|
+|[`cdss-app-tstool-doc-user`](https://github.com/OpenCDSS/cdss-app-tstool-doc-user)|`cdss-app-tstool-doc-user`|Markdown|Markdown/MkDocs user documentation|
 |[`cdss-app-tstool-main`](https://github.com/OpenCDSS/cdss-app-tstool-main)|`cdss-app-tstool-main`|Java|Main TSTool application code|
 |[`cdss-app-tstool-test`](https://github.com/OpenCDSS/cdss-app-tstool-test)|`cdss-app-tstool-test`|TSTool command files|Functional tests using built-in test features.|
 |[`cdss-lib-cdss-java`](https://github.com/OpenCDSS/cdss-lib-cdss-java)|`cdss-lib-cdss-java`|Java|CDSS code components shared across CDSS applications|
@@ -42,8 +42,6 @@ TSTool GitHub Repositories and Code Projects (listed alphabetically)
 |[`cdss-lib-dmi-hydrobase-java`](https://github.com/OpenCDSS/cdss-lib-dmi-hydrobase-java)|`cdss-lib-dmi-hydrobase-java`|Java|API for Colorado's HydroBase database and web services|
 |[`cdss-lib-dmi-hydrobase-rest-java`](https://github.com/OpenCDSS/cdss-lib-dmi-hydrobase-rest-java)|`cdss-lib-dmi-hydrobase-rest-java`|Java|API for Colorado's HydroBase REST web services|
 |[`cdss-lib-dmi-nwsrfs-java`](https://github.com/OpenCDSS/cdss-lib-dmi-nwsrfs-java)|`cdss-lib-dmi-nwsrfs-java`|Java|Legacy API for National Weather Service River Forecast Center models|
-|[`cdss-lib-dmi-riversidedb-java`](https://github.com/OpenCDSS/cdss-lib-dmi-riversidedb-java)|`cdss-lib-dmi-riversidedb-java`|Java|API for Riverside Technology Database|
-|[`cdss-lib-dmi-satmonsys-java`](https://github.com/OpenCDSS/cdss-lib-dmi-satmonsys-java)|`cdss-lib-dmi-satmonsys-java`|Java|API for Colorado's Satellite Monitoring System|
 |[`cdss-lib-models-java`](https://github.com/OpenCDSS/cdss-lib-models-java)|`cdss-lib-models-java`|Java|API for CDSS StateCU and StateMod models|
 |[`cdss-lib-processor-ts-java`](https://github.com/OpenCDSS/cdss-lib-processor-ts-java)|`cdss-lib-processor-ts-java`|Java|API for TSTool command processor and commands|
 |[`cdss-util-buildtools`](https://github.com/OpenCDSS/cdss-util-buildtools)|`cdss-util-buildtools`|NSIS, Launch4J, various|Utility programs to build TSTool installer|

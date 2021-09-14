@@ -8,7 +8,7 @@ This provides coverage testing of the functionality that users will experience.
 See the following for more information.
 
 * [cdss-app-tstool-test test repository](https://github.com/OpenCDSS/cdss-app-tstool-test)
-* [Quality Control chapter of user documentation](http://opencdss.state.co.us/tstool/latest/doc-user/quality-control/quality-control/)
+* [Quality Control chapter of user documentation](https://opencdss.state.co.us/tstool/latest/doc-user/quality-control/quality-control/)
 * [Development Tasks / Testing](../../dev-tasks/overview.md#testing)
 
 Testing TSTool can be complex, especially when using data from third party databased and web services.
