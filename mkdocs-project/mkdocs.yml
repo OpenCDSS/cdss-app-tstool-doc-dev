@@ -39,6 +39,7 @@ nav:
   - 'Command': software-design/command/command.md
   - 'Command Factory': software-design/command-factory/command-factory.md
   - 'Command Status': software-design/commandstatus/commandstatus.md
+  - 'Plugin Project': software-design/plugin-project/plugin-project.md
   - 'Plugin Commands': software-design/plugin-commands/plugin-commands.md
   - 'Utility Packages': software-design/util/util.md
   - 'Commands that Read Time Series': software-design/command-read-ts/command-read-ts.md
