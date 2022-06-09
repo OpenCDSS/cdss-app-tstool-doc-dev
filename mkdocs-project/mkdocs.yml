@@ -64,6 +64,7 @@ nav:
   - 'MkDocs': dev-env/mkdocs.md
   - 'Java 8': dev-env/java8.md
   - 'Eclipse': dev-env/eclipse.md
+  - 'Maven': dev-env/maven.md
 #  - 'Text Editor': dev-env/editor.md
   - 'KDiff3': dev-env/kdiff3.md
   - 'NSIS': dev-env/nsis.md
