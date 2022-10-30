@@ -5,22 +5,10 @@
 
 # Supporting functions, alphabetized.
 
-# Build the site so that the "site" folder contains current content:
-# - "mkdocs serve" does not do this
+# Build the MkDocs 'site' folder.
 buildMkDocsSite() {
-  # Change to the MkDocs project folder
   cd ${mkdocsProjectFolder}
-  if [ "${operatingSystem}" = "cygwin" -o "${operatingSystem}" = "linux" ]; then
-    # MkDocs is installed in a standard location.
-    mkdocs build --clean
-  elif [ "${operatingSystem}" = "mingw" ]; then
-    # Use the Windows Python.
-    py -m mkdocs build --clean
-  else
-    echo ""
-    echo "Don't know how to run on operating system ${operatingSystem}"
-    exit 1
-  fi
+  ${mkdocsExe} build --clean
 }
 
 # Make sure the MkDocs version is consistent with the documentation content:
@@ -32,19 +20,13 @@ checkMkdocsVersion() {
   requiredMajorVersion="1"
   # On Cygwin, mkdocs --version gives:  mkdocs, version 1.0.4 from /usr/lib/python3.6/site-packages/mkdocs (Python 3.6)
   # On Debian Linux, similar to Cygwin:  mkdocs, version 0.17.3
-  if [ "${operatingSystem}" = "cygwin" -o "${operatingSystem}" = "linux" ]; then
-    mkdocsVersionFull=$(mkdocs --version)
-  elif [ "${operatingSystem}" = "mingw" ]; then
-    mkdocsVersionFull=$(py -m mkdocs --version)
-  else
-    echo ""
-    echo "Don't know how to run on operating system ${operatingSystem}"
-    exit 1
-  fi
+  # On newer windows: MkDocs --version:  python -m mkdocs, version 1.3.1 from C:\Users\steve\AppData\Local\Programs\Python\Python310\lib\site-packages\mkdocs (Python 3.10)
+  # The following should work for any version after a comma.
+  mkdocsVersionFull=$(${mkdocsExe} --version | sed -e 's/.*, \(version .*\)/\1/g' | cut -d ' ' -f 2)
   echo "MkDocs --version:  ${mkdocsVersionFull}"
-  mkdocsVersion=$(echo ${mkdocsVersionFull} | cut -d ' ' -f 3)
+  mkdocsVersion=$(echo "${mkdocsVersionFull}" | cut -d ' ' -f 3)
   echo "MkDocs full version number:  ${mkdocsVersion}"
-  mkdocsMajorVersion=$(echo ${mkdocsVersion} | cut -d '.' -f 1)
+  mkdocsMajorVersion=$(echo "${mkdocsVersion}" | cut -d '.' -f 1)
   echo "MkDocs major version number:  ${mkdocsMajorVersion}"
   if [ "${mkdocsMajorVersion}" -lt ${requiredMajorVersion} ]; then
     echo ""
@@ -59,8 +41,7 @@ checkMkdocsVersion() {
 
 # Determine the operating system that is running the script:
 # - mainly care whether Cygwin or MINGW
-checkOperatingSystem()
-{
+checkOperatingSystem() {
   if [ ! -z "${operatingSystem}" ]; then
     # Have already checked operating system so return.
     return
@@ -96,7 +77,7 @@ getVersionModifier() {
   local fullVersion
   fullVersion="$1"
   # grep will print each found character on a separate line so concatenate output.
-  modifier=$(echo ${fullVersion} | grep -o -E '[[:alpha:]]' | tr -d '\n' | tr -d ' ')
+  tstoolVersionModifier=$(echo ${fullVersion} | grep -o -E '[[:alpha:]]' | tr -d '\n' | tr -d ' ')
   echo ${modifier}
 }
 
@@ -140,6 +121,37 @@ printUsage() {
   echo "-h print usage"
   echo "-l copy to latest folder in addition to auto-detected version folder"
   echo ""
+}
+
+# Set the MkDocs executable to use, depending operating system and PATH:
+# - sets the global ${mkdocsExe} variable
+# - return 0 if the executable is found, exit with 1 if not
+setMkDocsExe() {
+  if [ "${operatingSystem}" = "cygwin" -o "${operatingSystem}" = "linux" ]; then
+    # Is usually in the PATH.
+    mkdocsExe="mkdocs"
+    if hash py 2>/dev/null; then
+      echo "mkdocs is not found (not in PATH)."
+      exit 1
+    fi
+  elif [ "${operatingSystem}" = "mingw" ]; then
+    # This is used by Git Bash:
+    # - calling 'hash' is a way to determine if the executable is in the path
+    if hash py 2>/dev/null; then
+      mkdocsExe="py -m mkdocs"
+    else
+      # Try adding the Windows folder to the PATH and rerun:
+      # - not sure why C:\Windows is not in the path in the first place
+      PATH=/C/Windows:${PATH}
+      if hash py 2>/dev/null; then
+        mkdocsExe="py -m mkdocs"
+      else
+        echo 'mkdocs is not found in C:\Windows.'
+        exit 1
+      fi
+    fi
+  fi
+  return 0
 }
 
 # Sync the files to the cloud:
@@ -192,6 +204,10 @@ syncFiles() {
 
 # Check the operating system.
 checkOperatingSystem
+
+# Set the MkDocs executable:
+# - will exit if MkDocs is not found
+setMkDocsExe
 
 # Make sure the MkDocs version is OK.
 checkMkdocsVersion
