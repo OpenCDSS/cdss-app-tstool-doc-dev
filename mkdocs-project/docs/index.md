@@ -11,7 +11,7 @@ See also the [TSTool User Documentation](https://opencdss.state.co.us/tstool/lat
 * [About the Open Water Foundation](#about-the-open-water-foundation)
 * [License](#license)
 * [Source Repository on GitHub](#source-repository-on-github)
-* [Release Notes](#release-notes) - **this documentation has been updated for TSTool version 14.0.0**
+* [Release Notes](#release-notes) - **this documentation has been updated for TSTool version 14.4.0**
 
 ----------------
 
