@@ -1,11 +1,11 @@
 # TSTool / Development Environment / Eclipse ##
 
-* [Introduction](#introduction)
-* ![Windows](../images/windows-32.png) [Windows](#windows)
-	+ [Download Eclipse](#download-eclipse)
-	+ [Install Eclipse](#install-eclipse)
-	+ [Check Eclipse Run Script](#check-eclipse-run-script)
-* ![Linux](../images/linux-32.png) [Linux](#linux)
+*  [Introduction](#introduction)
+*  ![Windows icon](../images/windows-32.png) [Windows](#windows)
+    +  [Download Eclipse](#download-eclipse)
+    +  [Install Eclipse](#install-eclipse)
+    +  [Check Eclipse Run Script](#check-eclipse-run-script)
+*  ![Linux icon](../images/linux-32.png) [Linux](#linux)
 
 -----
 
@@ -33,7 +33,7 @@ The Eclipse workspace (`.metadata`) folder is not saved in Git repository and is
 is recommended to be saved in `eclipse-workspace` folder under the TSTool product folder
 in a standard development folder structure.
 
-## ![Windows](../images/windows-32.png) Windows ##
+## ![Windows icon](../images/windows-32.png) Windows ##
 
 **This documentation was created for an older version of Eclipse and needs to be updated.
 The process for current installations is similar.**
@@ -57,7 +57,7 @@ install by copying/unzipping into a folder named `C:\Program Files\Eclipse\eclip
 The resulting folder structure is as shown in the following figure.
 
 **<p style="text-align: center;">
-![eclipse-install-folder](images/eclipse-install-folder.png)
+![Eclipse software folders](images/eclipse-install-folder.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -71,7 +71,7 @@ assuming a standard installation folder.  For example, `build-util/run-eclipse-w
 This ensures that the proper versions of Eclipse and Java are used.
 If necessary, this script can be modified or other versions added over time (for example for new versions of Java and Eclipse).
 
-## ![Linux](../images/linux-32.png) Linux ##
+## ![Linux icon](../images/linux-32.png) Linux ##
 
 TSTool is typically developed on Windows, with Linux used for testing to ensure that features work on Linux.
 The Linux environment is not the primary development or production environment,
@@ -111,7 +111,7 @@ The following defaults are shown, based on Java 8 being installed and using the 
 installation folder.
 
 **<p style="text-align: center;">
-![linux-install-eclipse1](images/linux-install-eclipse1.png)
+![Linux eclipse installer selection](images/linux-install-eclipse1.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -122,7 +122,7 @@ Press ***Install*** to install Eclipse.  Accept the license.
 License certificates should also be accepted as shown below.
 
 **<p style="text-align: center;">
-![linux-install-eclipse2](images/linux-install-eclipse2.png)
+![Linux install Eclipse, accept certificates](images/linux-install-eclipse2.png)
 </p>**
 
 **<p style="text-align: center;">

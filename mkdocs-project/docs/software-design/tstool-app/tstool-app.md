@@ -1,9 +1,9 @@
 # TSTool Application #
 
-* [Introduction](#introduction)
-* [Launching](#launching)
-* [Configuration](#configuration)
-* [User Interface (UI)](#user-interface-ui)
+*   [Introduction](#introduction)
+*   [Launching](#launching)
+*   [Configuration](#configuration)
+*   [User Interface (UI)](#user-interface-ui)
 
 -----
 
@@ -38,7 +38,7 @@ Launch4j provides numerous features to optimize Java program start-up on Windows
 
 See also:
 
-* [Running TSTool in Various Modes appendix of User Documentation](https://opencdss.state.co.us/tstool/latest/doc-user/appendix-running/running/)
+*   [Running TSTool in Various Modes appendix of User Documentation](https://opencdss.state.co.us/tstool/latest/doc-user/appendix-running/running/)
 
 ## Configuration ##
 
@@ -63,4 +63,3 @@ occur in responding to those menus.
 Components could be refactored to act autonomous of the TSTool Main UI, but this would require evaluation.
 
 See the [User Interface Software Design documentation](../ui/ui.md).
-

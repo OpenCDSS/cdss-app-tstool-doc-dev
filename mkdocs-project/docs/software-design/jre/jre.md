@@ -2,12 +2,12 @@
 
 This documentation focuses on technical issues related to the Java Runtime Environment.
 
-* [Java Language](#java-language)
-* [Java Runtime Environment (JRE)](#java-runtime-environment_1)
-* [64-bit and 32-bit Versions](#64-bit-and-32-bit-versions)
-* [Java Launcher](#java-launcher)
-* [Classpath](#classpath)
-* [Plugins and Class Loaders](#plugins-and-class-loaders)
+*   [Java Language](#java-language)
+*   [Java Runtime Environment (JRE)](#java-runtime-environment_1)
+*   [64-bit and 32-bit Versions](#64-bit-and-32-bit-versions)
+*   [Java Launcher](#java-launcher)
+*   [Classpath](#classpath)
+*   [Plugins and Class Loaders](#plugins-and-class-loaders)
 
 --------------
 
@@ -50,7 +50,9 @@ Some 32-bit features are disabled as discussed below.
 TSTool prior to version 14.0.0 uses 32-bit java,
 which supports components that use native Windows 32-bit libraries,
 in particular the HEC-DSS libraries.
-These features will be updated to 64-bit as resources allow.
+
+TSTool has been updated to use 64-bit Java for development and runtime.
+There are no longer any HEC-DSS limitations.
 
 ## Classpath ##
 
@@ -66,5 +68,5 @@ New features in Java 9 may simplify plugin implementation.
 However, Java 9 is not currently being used as of TSTool 12.x.
 See also:
 
-* [Plugin Commands](../plugin-commands/plugin-commands.md)
-* [Plugin Datastores](../plugin-datastores/plugin-datastores.md)
+*   [Plugin Commands](../plugin-commands/plugin-commands.md)
+*   [Plugin Datastores](../plugin-datastores/plugin-datastores.md)

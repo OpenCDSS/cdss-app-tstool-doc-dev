@@ -2,8 +2,8 @@
 
 This documentation explains to to deploy the software and documentation to published locations.
 
-* [Deploy Software Installer](#deploy-software-installer)
-* [Deploy Documentation](#deploy-documentation)
+*   [Deploy Software Installer](#deploy-software-installer)
+*   [Deploy Documentation](#deploy-documentation)
 
 ---------------
 

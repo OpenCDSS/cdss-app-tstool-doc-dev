@@ -1,13 +1,13 @@
 # Command #
 
-* [Introduction](#introduction)
-* [Command Interface](#command-interface) - basic behavior requirements
-* [AbstractCommand Class](#abstractcommand-class) - default implementation of `CommandInterface`
-* [Specific Command Class](#specific-command-class)
-* [CommandStatusProvider Interface](#commandstatusprovider-interface) - for command log/status access
-* [CommandDiscovable Interface](#commanddiscoverable-interface) - to run in discovery (pre-run) mode
-* [FileGenerator Interface](#file-generator-interface) - for commands that create output files
-* [CommandProcessorEventProvider Interface](#commandprocessoreventprovider-interface) - to allow processor to listen for command events
+*   [Introduction](#introduction)
+*   [Command Interface](#command-interface) - basic behavior requirements
+*   [AbstractCommand Class](#abstractcommand-class) - default implementation of `CommandInterface`
+*   [Specific Command Class](#specific-command-class)
+*   [CommandStatusProvider Interface](#commandstatusprovider-interface) - for command log/status access
+*   [CommandDiscovable Interface](#commanddiscoverable-interface) - to run in discovery (pre-run) mode
+*   [FileGenerator Interface](#file-generator-interface) - for commands that create output files
+*   [CommandProcessorEventProvider Interface](#commandprocessoreventprovider-interface) - to allow processor to listen for command events
 
 ----
 
@@ -25,13 +25,13 @@ Command classes implement the functionality to perform data manipulation, analys
 The command design provides flexibility and has been used to implement a wide variety of computational functionality.
 Command classes are typically created by implementing interfaces:
 
-* [Specific Command class](#specific-command-class)
-	+ Extends [AbstractCommand](#abstractcommand-class) - manages command data and provides default implementation
-		- `AbstractCommand` implements [Command Interface](#command-interface)
-	+ Implements:
-		- [CommandStatusProvider interface](#commandstatusprovider-interface) - methods to provide command log/status
-		- [CommandDiscoverable interface](#commanddiscoverable-interface) - methods to run in discovery (pre-run) mode
-		- [FileGenerator interface](#filegenerator-interface) - method to retrieve list of generated files
+*   [Specific Command class](#specific-command-class)
+    +   Extends [AbstractCommand](#abstractcommand-class) - manages command data and provides default implementation
+        -   `AbstractCommand` implements [Command Interface](#command-interface)
+    +   Implements:
+        -   [CommandStatusProvider interface](#commandstatusprovider-interface) - methods to provide command log/status
+        -   [CommandDiscoverable interface](#commanddiscoverable-interface) - methods to run in discovery (pre-run) mode
+        -   [FileGenerator interface](#filegenerator-interface) - method to retrieve list of generated files
 
 ## Command Interface ##
 

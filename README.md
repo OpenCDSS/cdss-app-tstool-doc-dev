@@ -6,23 +6,24 @@ The documentation uses Markdown format and MkDocs software to create a static we
 See the latest deployed [CDSS / TSTool (Developer)](http://opencdss.state.co.us/tstool/latest/doc-dev/) documentation.
 See the following online resources:
 
-* [Colorado's Decision Support System (CDSS)](https://cdss.colorado.gov/)
-* [OpenCDSS](http://opencdss.state.co.us/opencdss/)
-* [TSTool software main repository](https://github.com/OpenCDSS/cdss-app-tstool-main)
-* [TSTool User Documentation](http://opencdss.state.co.us/tstool/latest/doc-user/)
+*   [Colorado's Decision Support System (CDSS)](https://cdss.colorado.gov/)
+*   [OpenCDSS](http://opencdss.state.co.us/opencdss/)
+*   [TSTool software main repository](https://github.com/OpenCDSS/cdss-app-tstool-main)
+*   [TSTool User Documentation](http://opencdss.state.co.us/tstool/latest/doc-user/)
 
 See the following sections in this page:
 
-* [TSTool Software Overview](#tstool-software-overview)
-* [Repository Contents](#repository-contents)
-* [Development Environment](#development-environment)
-* [Editing and Viewing Content](#editing-and-viewing-content)
-* [Style Guide](#style-guide)
-* [License](#license)
-* [Contributing](#contributing)
-* [Maintainers](#maintainers)
-* [Contributors](#contributors)
-* [Release Notes](#release-notes)
+*   [TSTool Software Overview](#tstool-software-overview)
+*   [Repository Contents](#repository-contents)
+*   [Development Environment](#development-environment)
+*   [Editing and Viewing Content](#editing-and-viewing-content)
+*   [Style Guide](#style-guide)
+    +   [Web Accessibility](#web-accessibility)
+*   [License](#license)
+*   [Contributing](#contributing)
+*   [Maintainers](#maintainers)
+*   [Contributors](#contributors)
+*   [Release Notes](#release-notes)
 
 ---------------------------
 
@@ -30,45 +31,44 @@ See the following sections in this page:
 
 The TSTool software is a Java application that automates time series processing:
 
-1. Command-based workflow language.
-2. General commands including as file manipulation, logic controls such as `For` and `If` commands,
-and support for processor properties to allow dynamic scripting.
-3. Time series data processing commands for:
-	1. Reading time series from files, databases, and web services
-	2. Creating time series
-	3. Setting time series data
-	4. Filling time series data
-	5. Manipulating time series data (add, multiply, etc.)
-	6. Analyzing time series
-	7. Models that use time series (e.g., routing)
-	8. Writing time series to files and databases
-	9. Checking time series
-4. Table processing commands:
-	1. Create tables
-	2. Read tables
-	3. Table/time series transfer
-	4. Manipulate tables
-	5. Analyze tables
-	6. Write tables
-5. Other data processing commands:
-	1. Datastores (databases)
-	2. Ensembles (groups of time series)
-	3. Network
-	4. Spatial data
-	5. Spreadsheet
-	6. Template
-	7. Visualization
-6. General commands
-	1. Comments
-	2. File handling
-	3. Logging
-	4. Run control
-	5. Testing
-7. General commands:
-8. Built-in test framework, which is used to run functional tests, suitable for software developers and also
-non-programmers who want to validate processing workflows.
-9. Multiple run modes including batch, command shell interpreter, user interface, HTTP server.
-10. Integration with other tools to leverage the strengths of those tools.
+1.  Command-based workflow language.
+2.  General commands including as file manipulation, logic controls such as `For` and `If` commands,
+    and support for processor properties to allow dynamic scripting.
+3.  Time series data processing commands for:
+    1.  Reading time series from files, databases, and web services
+    2.  Creating time series
+    3.  Setting time series data
+    4.  Filling time series data
+    5.  Manipulating time series data (add, multiply, etc.)
+    6.  Analyzing time series
+    7.  Models that use time series (e.g., routing)
+    8.  Writing time series to files and databases
+    9.  Checking time series
+4.  Table processing commands:
+    1.  Create tables
+    2.  Read tables
+    3.  Table/time series transfer
+    4.  Manipulate tables
+    5.  Analyze tables
+    6.  Write tables
+5.  Other data processing commands:
+    1.  Datastores (databases)
+    2.  Ensembles (groups of time series)
+    3.  Network
+    4.  Spatial data
+    5.  Spreadsheet
+    6.  Template
+    7.  Visualization
+6.  General commands:
+    1.  Comments
+    2.  File handling
+    3.  Logging
+    4.  Run control
+    5.  Testing
+7.  Built-in test framework, which is used to run functional tests, suitable for software developers and also
+    non-programmers who want to validate processing workflows.
+8.  Multiple run modes including batch, command shell interpreter, user interface, HTTP server.
+9.  Integration with other tools to leverage the strengths of those tools.
 
 ## Repository Contents ##
 
@@ -127,42 +127,63 @@ documentation for information about installing these tools.
 
 If the development environment is properly configured, edit and view content as follows:
 
-1. Edit content in the `mkdocs-project/docs` folder and update `mkdocs-project/mkdocs.yml` as appropriate.
-2. Run the `build-util/run-mkdocs-serve-8000.sh` script (Cygwin/Linux) or equivalent.
-3. View content in a web browser using URL `http://localhost:8000`.
+1.  Edit content in the `mkdocs-project/docs` folder and update `mkdocs-project/mkdocs.yml` as appropriate.
+2.  Run the `build-util/run-mkdocs-serve-8000.sh` script (Cygwin/Linux) or equivalent.
+3.  View content in a web browser using URL `http://localhost:8000`.
 
 ## Style Guide ##
 
 The following are general style guide recommendations for this documentation,
 with the goal of keeping formatting simple in favor of focusing on useful content:
 
-* Use the Material MkDocs theme - it looks nice, provides good navigation features, and enables search.
-* Follow MkDocs Markdown standards - use extensions beyond basic Markdown when useful.
-* Show files and program names as `code (tick-surrounded)` formatting.
-* Where a source file can be linked to in GitHub, provide a link so that the most current file can be viewed.
-* Use triple-tick formatting for code blocks, with language specifier.
-* Use ***bold italics*** when referencing UI components such as menus.
-* Use slashes to indicate ***Menu / SubMenu***.
-* Images are handled as follows:
-	+ Where narrative content pages are sufficiently separated into folders,
-	image files exist in those folder with names that match the original TSTool Word documentation.
-	This approach has been used for the most part.
-	+ If necessary, place images in a folder with the same name as the content file and include
-	`-images` at the end of the folder name at the same level (for example `x.md` and `x-images/`)
-	or include an `images` folder under the content folder.
-	+ When using images in the documents, consider providing a link to look at the full-sized
-	image, as follows (normal MkDocs approach does not seem to work?):
+*   Use the Material MkDocs theme - it looks nice, provides good navigation features, and enables search.
+*   Follow MkDocs Markdown standards - use extensions beyond basic Markdown when useful.
+*   Show files and program names as `code (tick-surrounded)` formatting.
+*   Where a source file can be linked to in GitHub, provide a link so that the most current file can be viewed.
+*   Use triple-tick formatting for code blocks, with language specifier.
+*   Use ***bold italics*** when referencing UI components such as menus.
+*   Use slashes to indicate ***Menu / SubMenu***.
+*   Images are handled as follows:
+    +   Where narrative content pages are sufficiently separated into folders,
+        image files exist in those folder with names that match the original TSTool Word documentation.
+        This approach has been used for the most part.
+    +   If necessary, place images in a folder with the same name as the content file and include
+        `-images` at the end of the folder name at the same level (for example `x.md` and `x-images/`)
+        or include an `images` folder under the content folder.
+    +   When using images in the documents, consider providing a link to look at the full-sized
+        image, as follows (normal MkDocs approach does not seem to work?):
 
 ```text
 The following figure illustrates the ***Mixed Station Analysis*** tool.
 <a href="../Menu_Tools_Analysis_MixedStationAnalysis.png">See also the full-size image.</a>
 
-![Menu_Tools_Analysis_MixedStationAnalysis](Menu_Tools_Analysis_MixedStationAnalysis.png)
+![Mixed station analysis tools menu](Menu_Tools_Analysis_MixedStationAnalysis.png)
 ```
-* Minimize the use of inlined HTML elements, but use it where Markdown formatting is limited.
-* Although the Material them provides site and page navigation sidebars,
-provide in-line table of contents on pages, where appropriate, to facilitate review of page content.
-Use a simple list with links to sections on the page.
+*   Minimize the use of inlined HTML elements, but use it where Markdown formatting is limited.
+*   Although the Material them provides site and page navigation sidebars,
+    provide in-line table of contents on pages, where appropriate, to facilitate review of page content.
+    Use a simple list with links to sections on the page.
+
+### Web Accessibility ###
+
+Ensuring web accessibility for people with disabilities such as visual impairments is important.
+See the following resources:
+
+*   [Federal government:  Guidance on Web Accessibility and the ADA](https://www.ada.gov/resources/web-guidance/)
+*   [State of Colorado:  Accessibility for Developers](https://oit.colorado.gov/standards-policies-guides/guide-to-accessible-web-services/accessibility-for-developers)
+
+Specific guidance for this documentation includes:
+
+*   Links:
+    +   The MkDocs material custom CSS uses underlines for links to provide a visual cue because
+        default reliance on color only is insufficient.
+*   Image "alt text":
+    +   "alt text" should be specified for all images using human-readable text to facilitate reading by audio tools.
+    +   Because this is technical documentation,
+        there is no way to fully avoid technical terms such as command names,
+        but try to make the text generally understandable.
+    +   Many images also have captions and the language for "alt text" may be similar to the caption.
+    +   It is OK to include punctuation in "alt text".
 
 ## License ##
 
@@ -173,10 +194,10 @@ The license for this documentation is the
 
 Contribute to the documentation as follows:
 
-1. Use GitHub repository issues to report minor issues.
-Fill out the template issue.
-2. Use GitHub pull requests.
-3. A member of the core development team will follow up to issues and pull requests.
+1.  Use GitHub repository issues to report minor issues.
+    Fill out the template issue.
+2.  Use GitHub pull requests.
+3.  A member of the core development team will follow up to issues and pull requests.
 
 ## Maintainers ##
 
@@ -187,8 +208,9 @@ This repository is maintained by the OpenCDSS team.
 The following release notes indicate the update major history for documentation.
 See the GitHub issues and repository history for detailed information.
 
-* 2021-09-14 - Update for 14.0.0 release.
-* 2019-04-26 - Update links for opencdss.state.co.us domain.
-* 2019-01-04 - Update for public release on OpenCDSS.
-* 2018-09-14 - Clean up documentation for TSTool 12.06.00 release.
-* 2018-04-22 - Initial content migrated from other forms.
+*   2023-03-27 - Update for 14.7.0 release (web accessibility).
+*   2021-09-14 - Update for 14.0.0 release.
+*   2019-04-26 - Update links for opencdss.state.co.us domain.
+*   2019-01-04 - Update for public release on OpenCDSS.
+*   2018-09-14 - Clean up documentation for TSTool 12.06.00 release.
+*   2018-04-22 - Initial content migrated from other forms.

@@ -2,8 +2,8 @@
 
 TSTool software has significant developer and user documentation.
 
-* [Markdown/MkDocs Documentation](#markdownmkdocs-documentation)
-* [Legacy Word/PDF Documentation](#legacy-wordpdf-documentation)
+*   [Markdown/MkDocs Documentation](#markdownmkdocs-documentation)
+*   [Legacy Word/PDF Documentation](#legacy-wordpdf-documentation)
 
 ----------------------
 
@@ -11,8 +11,8 @@ TSTool software has significant developer and user documentation.
 
 TSTool documentation was migrated to from Word/PDF to Markdown/MkDocs in early 2018 and is available in the following repositories.
 
-* [User Documentation](https://github.com/OpenCDSS/cdss-app-tstool-doc-user)
-* [Developer Documentation](https://github.com/OpenCDSS/cdss-app-tstool-doc-dev)
+*   [User Documentation](https://github.com/OpenCDSS/cdss-app-tstool-doc-user)
+*   [Developer Documentation](https://github.com/OpenCDSS/cdss-app-tstool-doc-dev)
 
 The Markdown/MkDocs documentation is now the standard documentation and the legacy documentation discussed
 in the next section is being phased out.  MkDocs creates a static HTML website from Markdown,
@@ -28,7 +28,7 @@ TSTool attempts to show documentation for the current software version and if th
 Legacy user documentation was created in Word format and manually saved to PDF from Word,
 saved in the following repository:
 
-* [cdss-app-tstool-doc](https://github.com/OpenCDSS/cdss-app-tstool-doc)
+*   [cdss-app-tstool-doc](https://github.com/OpenCDSS/cdss-app-tstool-doc)
 
 This documentation has been moved to Markdown and is retained only for archival purposes.
 

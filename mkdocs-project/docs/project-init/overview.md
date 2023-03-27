@@ -4,7 +4,7 @@ This documentation describes the project initialization.
 This information is provided in case the software project needs to be
 re-initialized, and to provide rationale for how the project was set up.
 
-* [Development Files Structure](#development-files-structure)
+*   [Development Files Structure](#development-files-structure)
 
 ------------------
 

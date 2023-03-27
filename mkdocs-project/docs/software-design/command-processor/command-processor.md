@@ -1,9 +1,9 @@
 # Command Processor #
 
-* [Introduction](#introduction)
-* [Processor Properties](#processor-properties)
-* [Processor Data](#processor-data)
-* [Communicating with Processor](#communicating-with-processor)
+*   [Introduction](#introduction)
+*   [Processor Properties](#processor-properties)
+*   [Processor Data](#processor-data)
+*   [Communicating with Processor](#communicating-with-processor)
 
 -------------
 
@@ -16,8 +16,8 @@ when processing command files in batch mode.
 For historical reasons, there are two main classes,
 which may be combined into a single class in the future:
 
-* [TSEngine](https://github.com/OpenCDSS/cdss-lib-processor-ts-java/blob/master/src/rti/tscommandprocessor/core/TSEngine.java) - original processor class
-* [TSCommandProcessor](https://github.com/OpenCDSS/cdss-lib-processor-ts-java/blob/master/src/rti/tscommandprocessor/core/TSCommandProcessor.java) - modern command processor, calls TSEngine
+*   [TSEngine](https://github.com/OpenCDSS/cdss-lib-processor-ts-java/blob/master/src/rti/tscommandprocessor/core/TSEngine.java) - original processor class
+*   [TSCommandProcessor](https://github.com/OpenCDSS/cdss-lib-processor-ts-java/blob/master/src/rti/tscommandprocessor/core/TSCommandProcessor.java) - modern command processor, calls TSEngine
 
 The current design maintains most large [processor data](#processor-data) in the 
 [TSCommandProcessor](https://github.com/OpenCDSS/cdss-lib-processor-ts-java/blob/master/src/rti/tscommandprocessor/core/TSCommandProcessor.java) class,
@@ -38,11 +38,11 @@ which wraps
 Properties are maintained in the processor to control processing.
 Properties fall into two categories:
 
-* "built-in properties" have meaning to the core processor/engine and are defined with built-in data members.
-For example, the global output period start and end.
-Built-in properties are generally objects, not primitives, in order to better handle missing/null.
-* "user-defined properties" provide flexibility for controlling workflows via `${Property}` notation.
-User-defined properties are first-class objects, not primitives:
+*   "built-in properties" have meaning to the core processor/engine and are defined with built-in data members.
+    For example, the global output period start and end.
+    Built-in properties are generally objects, not primitives, in order to better handle missing/null.
+*   "user-defined properties" provide flexibility for controlling workflows via `${Property}` notation.
+    User-defined properties are first-class objects, not primitives:
 
 ```
 /**
@@ -58,18 +58,18 @@ and performs the appropriate action.
 
 The following are complexities with properties:
 
-* **How to handle missing/null** - properties that are not defined will have a value of null if requested.
-Missing values are generally treated similarly.
-String values should distinctly handle differences between null/missing and spaces.
-Calling code must handle the difference between missing/null and empty strings.
-* **How to handle case-specificity** - TSTool code is generally forgiving related to case-specificity
-but does try to enforce standards.
-The default is to use property names that are `MixedCase`.
-However, to minimize issues with case, much of the code compares strings by ignoring case.
-This protocol was implemented early on due to Microsoft operating systems generally not enforcing case.
-This approach can be problematic with properties because internally the HashMap is case-specific.
-The general trend in TSTool is to move towards case-specificity for properties,
-although the code works well now so major changes are not envisioned.
+*   **How to handle missing/null** - properties that are not defined will have a value of null if requested.
+    Missing values are generally treated similarly.
+    String values should distinctly handle differences between null/missing and spaces.
+    Calling code must handle the difference between missing/null and empty strings.
+*   **How to handle case-specificity** - TSTool code is generally forgiving related to case-specificity
+    but does try to enforce standards.
+    The default is to use property names that are `MixedCase`.
+    However, to minimize issues with case, much of the code compares strings by ignoring case.
+    This protocol was implemented early on due to Microsoft operating systems generally not enforcing case.
+    This approach can be problematic with properties because internally the HashMap is case-specific.
+    The general trend in TSTool is to move towards case-specificity for properties,
+    although the code works well now so major changes are not envisioned.
 
 ## Processor Data ##
 

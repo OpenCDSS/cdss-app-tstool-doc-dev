@@ -1,7 +1,7 @@
 # Templates #
 
-* [Introduction](#itroduction)
-* [Software Design](#software-design)
+*   [Introduction](#itroduction)
+*   [Software Design](#software-design)
 
 -----------------
 
@@ -18,8 +18,8 @@ TSTool uses the [Apache Freemarker](https://freemarker.apache.org/) package to i
 
 The primary use of templates is to support the following features:
 
-* [`ExpandTemplateFile`](https://opencdss.state.co.us/tstool/latest/doc-user/command-ref/ExpandTemplateFile/ExpandTemplateFile/) command for automation
-* time series product files have built in template functionality
+*   [`ExpandTemplateFile`](https://opencdss.state.co.us/tstool/latest/doc-user/command-ref/ExpandTemplateFile/ExpandTemplateFile/) command for automation
+*   time series product files have built in template functionality
 
 TSTool also supports built-in `${Property}` notation for many commands,
 which substitute processor properties.

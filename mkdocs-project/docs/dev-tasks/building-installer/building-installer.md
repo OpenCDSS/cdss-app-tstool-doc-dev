@@ -2,24 +2,24 @@
 
 This documentation describes how to create and package the TSTool software installer.
 
-* [Overview](#overview)
-* [Build Tools](#build-tools) - tools used to build the installer
-	+ [cdss-util-buildtools](#cdss-util-buildtools)
-	+ [Eclipse IDE External Tools](#eclipse-ide-external-tools)
-	+ [NSIS](#nsis)
-	+ [Java Runtime Environment](#java-runtime-environment)
-	+ [launch4j](#launch4j)
-* [Creating a Windows Installer](#creating-a-windows-installer) - the sequence of steps to build the installer
-	+ [1. Coordination](#1-coordination)
-	+ [2. Release Setup](#2-release-setup)
-	+ [3. Clean Build](#3-clean-build)
-	+ [4. Update Documentation](#4-update-documentation)
-	+ [5. Create Local Distribution](#5-create-local-distribution)
-	+ [6. Create Installer](#6-create-installer)
-	+ [7. Run the Installer and Test Software](#7-run-the-installer-and-test-software)
-	+ [8. Publish the Installer](#8-publish-the-installer)
-	+ [9. Repository Maintenance](#9-repository-maintenance)
-* [Creating a Linux Installer](#creating-a-linux-installer)
+*   [Overview](#overview)
+*   [Build Tools](#build-tools) - tools used to build the installer
+    +   [cdss-util-buildtools](#cdss-util-buildtools)
+    +   [Eclipse IDE External Tools](#eclipse-ide-external-tools)
+    +   [NSIS](#nsis)
+    +   [Java Runtime Environment](#java-runtime-environment)
+    +   [launch4j](#launch4j)
+*   [Creating a Windows Installer](#creating-a-windows-installer) - the sequence of steps to build the installer
+    +   [1. Coordination](#1-coordination)
+    +   [2. Release Setup](#2-release-setup)
+    +   [3. Clean Build](#3-clean-build)
+    +   [4. Update Documentation](#4-update-documentation)
+    +   [5. Create Local Distribution](#5-create-local-distribution)
+    +   [6. Create Installer](#6-create-installer)
+    +   [7. Run the Installer and Test Software](#7-run-the-installer-and-test-software)
+    +   [8. Publish the Installer](#8-publish-the-installer)
+    +   [9. Repository Maintenance](#9-repository-maintenance)
+*   [Creating a Linux Installer](#creating-a-linux-installer)
 
 ----------------
 
@@ -27,8 +27,8 @@ This documentation describes how to create and package the TSTool software insta
 
 The TSTool installer depends on the target operating system:
 
-* ![Windows](../../images/windows-32.png) Windows - self-extracting installer (e.g., `TSTool_CDSS_14.0.0_Setup.exe`).
-* ![Linux](../../images/linux-32.png) Linux - "run" file installer (e.g., `TSTool-linux-14.0.0.run`).
+*   ![Windows icon](../../images/windows-32.png) Windows - self-extracting installer (e.g., `TSTool_CDSS_14.0.0_Setup.exe`).
+*   ![Linux icon](../../images/linux-32.png) Linux - "run" file installer (e.g., `TSTool-linux-14.0.0.run`).
 
 The Windows installer uses the technologies described below to create the installer.
 The Linux installer is created by packaging Windows files on a Linux machine, for example using a shared folder.
@@ -37,12 +37,12 @@ TSTool is complex and sufficient resources need to be available to
 evaluate Maven implementation and impacts that it has on the existing build processes.
 The following are software tools used to create the installer
 
-* Eclipse IDE is used to run build processes using ***External Tools Configurations*** - see [instructions for installing Eclipse](../../dev-env/eclipse.md).
-* Eclipse Ant is used to automate tasks (comes packaged with Eclipse).
-* Java Runtime Environment (JRE) compatible with TSTool version is packaged with the installer - see [instructions for installing Java](../../dev-env/java8.md).
-* The NSIS software is used to create self-extracting installer for Windows - see [instructions for installing NSIS](../../dev-env/nsis.md).
-* The launch4j software is used to create a launcher for TSTool, so that it behaves similar to other executable programs - see
-[instructions for installing launch4j](../../dev-env/launch4j.md).
+*   Eclipse IDE is used to run build processes using ***External Tools Configurations*** - see [instructions for installing Eclipse](../../dev-env/eclipse.md).
+*   Eclipse Ant is used to automate tasks (comes packaged with Eclipse).
+*   Java Runtime Environment (JRE) compatible with TSTool version is packaged with the installer - see [instructions for installing Java](../../dev-env/java8.md).
+*   The NSIS software is used to create self-extracting installer for Windows - see [instructions for installing NSIS](../../dev-env/nsis.md).
+*   The launch4j software is used to create a launcher for TSTool, so that it behaves similar to other executable programs - see
+    [instructions for installing launch4j](../../dev-env/launch4j.md).
 
 This build process is parallel to the normal Eclipse compile process, but they are separate in some ways.
 For example, Eclipse compiles source Java files located in `src` folders into class files located in the parallel `bin` folder.
@@ -87,7 +87,7 @@ installation folder, to determine what needs to be changed.
 The Eclipse IDE provides a way to run external tools such as command line software:
 
 **<p style="text-align: center;">
-![eclipse-external-tools1](images/eclipse-external-tools1.png)
+![Eclipse external tools configuration menu](images/eclipse-external-tools1.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -100,7 +100,7 @@ Many of these can be phased out as software development focuses on the OpenCDSS 
 The specific run configurations of interest are described in the [Creating a Windows Installer](#creating-a-windows-installer) sections.
 
 **<p style="text-align: center;">
-![eclipse-external-tools2.png](images/eclipse-external-tools2.png)
+![Eclipse external tools configurations](images/eclipse-external-tools2.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -163,18 +163,18 @@ There are two main places that version information needs to be specified.
 These should be changed as soon after making a release as possible (and planning for the next release)
 to minimize confusion and overwriting the previous release installer in the development environment.
 
-1. **TSTool Main Program Code** - The [TSToolMain.java](https://github.com/OpenCDSS/cdss-app-tstool-main/blob/master/src/DWR/DMI/tstool/TSToolMain.java) file 
-sets the `PROGRAM_VERSION` with format similar to `14.0.0 (2021-09-14)`.
-As of version 14.x, the parts are **not** padded with zeros.
-However; older versions padded the version parts with zeros).
-If necessary, `.beta`, `.dev1`, etc. can be added
-to the version, such as `14.0.0.dev1 (2021-09-01)`.
-This information is shown in the TSTool ***Help / About*** dialog,
-is used in installer names, is used in versioned documentation, and is shown on the download page.
-2. **Build Process Configuration File** - The
-[cdss-app-tstool-main repository product properties file](https://github.com/OpenCDSS/cdss-app-tstool-main/blob/master/conf/product.properties)
-contains important properties used by the build system to create the installer.
-The `nsis.version` and `exe.version` properties are used by NSIS to create the installer.
+1.  **TSTool Main Program Code** - The [TSToolMain.java](https://github.com/OpenCDSS/cdss-app-tstool-main/blob/master/src/DWR/DMI/tstool/TSToolMain.java) file 
+    sets the `PROGRAM_VERSION` with format similar to `14.0.0 (2021-09-14)`.
+    As of version 14.x, the parts are **not** padded with zeros.
+    However; older versions padded the version parts with zeros).
+    If necessary, `.beta`, `.dev1`, etc. can be added
+    to the version, such as `14.0.0.dev1 (2021-09-01)`.
+    This information is shown in the TSTool ***Help / About*** dialog,
+    is used in installer names, is used in versioned documentation, and is shown on the download page.
+2.  **Build Process Configuration File** - The
+    [cdss-app-tstool-main repository product properties file](https://github.com/OpenCDSS/cdss-app-tstool-main/blob/master/conf/product.properties)
+    contains important properties used by the build system to create the installer.
+    The `nsis.version` and `exe.version` properties are used by NSIS to create the installer.
 
 ### 3. Clean Build ###
 
@@ -202,7 +202,7 @@ To run this step, execute the external run configuration as shown in the followi
 The following image shows the ***External Tools Configurations...*** selection that should be used.
 
 **<p style="text-align: center;">
-![eclipse-external-tools-create-1](images/eclipse-external-tools-create-1.png)
+![Build configuration to create distribution](images/eclipse-external-tools-create-1.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -228,16 +228,16 @@ This step will package the files in the `dist` folder into the installer using N
 The resulting files will be as shown below:
 
 **<p style="text-align: center;">
-![eclipse-external-tools-create-dist](images/eclipse-external-tools-create-dist.png)
+![Distribution files for the installer](images/eclipse-external-tools-create-dist.png)
 </p>**
 
 **<p style="text-align: center;">
-Distribution Files for Installer (<a href="../images/eclipse-external-tools-create-dist.png">see full-size image</a>)
+Distribution Files for the Installer (<a href="../images/eclipse-external-tools-create-dist.png">see full-size image</a>)
 </p>**
 
-* `install-cdss` - contains an image of all the files in the distribution before packaging
-* `cdss-app-tstool-main_18.jar` - the Jar file for the main TSTool application corresponding to the repository
-* `TSTool_CDSS_12.05.00_Setup.exe` - setup file that will install TSTool on the Windows computer
+*   `install-cdss` - contains an image of all the files in the distribution before packaging
+*   `cdss-app-tstool-main_18.jar` - the Jar file for the main TSTool application corresponding to the repository
+*   `TSTool_CDSS_12.05.00_Setup.exe` - setup file that will install TSTool on the Windows computer
 
 The version number for the installer file will match the version in the `product-properties` file.
 
@@ -247,7 +247,7 @@ The setup executable created in the previous step can be run to install the soft
 which will show dialogs similar to the following.
 
 **<p style="text-align: center;">
-![installer1](images/installer1.png)
+![Run TSTool installer](images/installer1.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -268,23 +268,23 @@ See the [Deploying](../deploying/deploying.md) documentation.
 
 When a release has been made, especially for an important milestone, each repository should be maintained, for example:
 
-1. Close issues that were resolved.
-2. Make sure that all local changes are committed.
-Run the `build-util/git-check-tstool.sh` script to confirm that there are no loose ends and deal with loose ends.
-3. Run the `build-util/git-tag-all-tstool.sh` script to tag all related repositories for the released TSTool version.
+1.  Close issues that were resolved.
+2.  Make sure that all local changes are committed.
+    Run the `build-util/git-check-tstool.sh` script to confirm that there are no loose ends and deal with loose ends.
+3.  Run the `build-util/git-tag-all-tstool.sh` script to tag all related repositories for the released TSTool version.
 
 ## Creating a Linux Installer ##
 
 A Linux installer can be created by relying on a VirtualBox virtual machine (or similar), as follows:
 
-1. First install and configure a VirtualBox VM, for example see the
-[Open Water Foundation / Learn VirtualBox](http://learn.openwaterfoundation.org/owf-learn-virtualbox/) documentation.
-2. Configure a VirtualBox shared folder for CDSS files, to allow access to the Windows installed TSTool files.
-3. From a Linux VM terminal window run the `bin/build-linux-distro.bash` script that is distributed with TSTool,
-for the installed version of interest, using the shared folder to access Windows files.
-	1. The source exists in `resources/runtime/bin` folder in the TSTool repository.
-	2. The `makeself` software is used to create the installer (install with `sudo apt-get install makeself` if not already installed).
-	3. The resulting installer can be run on Linux to install TSTool in system or user files.
-	4. Java 8 will need to be installed on the VM where TSTool is installed.
+1.  First install and configure a VirtualBox VM, for example see the
+    [Open Water Foundation / Learn VirtualBox](http://learn.openwaterfoundation.org/owf-learn-virtualbox/) documentation.
+2.  Configure a VirtualBox shared folder for CDSS files, to allow access to the Windows installed TSTool files.
+3.  From a Linux VM terminal window run the `bin/build-linux-distro.bash` script that is distributed with TSTool,
+    for the installed version of interest, using the shared folder to access Windows files.
+    1.  The source exists in `resources/runtime/bin` folder in the TSTool repository.
+    2.  The `makeself` software is used to create the installer (install with `sudo apt-get install makeself` if not already installed).
+    3.  The resulting installer can be run on Linux to install TSTool in system or user files.
+    4.  Java 8 will need to be installed on the VM where TSTool is installed.
 
 Linux versions of TSTool are not currently supported by the State of Colorado.

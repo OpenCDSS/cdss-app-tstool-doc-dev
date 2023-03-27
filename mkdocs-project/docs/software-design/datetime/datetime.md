@@ -1,11 +1,11 @@
 # Date/time Handling #
 
-* [Introduction](#introduction)
-* [DateTime Class / Java Date / Java 8 `java.time` Package](#datetime-class-java-date-java-8-javatime-package)
-* [Instantaneous and Interval-ending Data Values](#instantaneous-and-interval-ending-data-values)
-* [0 and 24 Hour Clocks](#0-and-24-hour-clocks)
-* [Time Series Interval Bins](#time-series-interval-bins)
-* [Time Zone](#time-zone)
+*   [Introduction](#introduction)
+*   [DateTime Class / Java Date / Java 8 `java.time` Package](#datetime-class-java-date-java-8-javatime-package)
+*   [Instantaneous and Interval-ending Data Values](#instantaneous-and-interval-ending-data-values)
+*   [0 and 24 Hour Clocks](#0-and-24-hour-clocks)
+*   [Time Series Interval Bins](#time-series-interval-bins)
+*   [Time Zone](#time-zone)
 
 ----------------
 
@@ -27,20 +27,20 @@ Because the built-in Java `Date` class was insufficient, the "home grown"
 [`DateTime`](https://github.com/OpenCDSS/cdss-lib-common-java/blob/master/src/RTi/Util/Time/DateTime.java) class was created for use in TSTool.
 This class has the following characteristics:
 
-* Internally represents data using date/time parts (year, month number, day number, etc.).
-It does not use an internal long integer such as Unix Epoch (time since Jan 1, 1970) to represent time, as some libraries do,
-although it has methods to convert to and from long integers, based on Java `Date`.
-Conversion between `DateTime` and other date/time representations will continue to evolve as Java 8 `java.time` is integrated.
-* Recognizes a precision internally, for example to ensure that date/time only includes hour, but not minute and second.
-The precision is consistent with time series interval.
-The `toString()` method therefore can automatically format a `DateTime` to the proper precision.
-* Provides methods to parse and format date/time strings.
-* Provides methods to increment/decrement time, including `addInterval()` that is compatible with `TS` data interval, used for iteration.
-* Is aware of time zone as a string, with some support for conversions.
-This is an area that can be further enhanced with Java 8 `java.time` package features.
-* `DateTime` are mutable.  This functionality was chosen by design to support efficient time series processing without
-having to create date/time object instances for each time series timestep.
-Features are built into `TS` and other classes to create a copy of the `DateTime` to protect against unexpected modification to objects by reference.
+*   Internally represents data using date/time parts (year, month number, day number, etc.).
+    It does not use an internal long integer such as Unix Epoch (time since Jan 1, 1970) to represent time, as some libraries do,
+    although it has methods to convert to and from long integers, based on Java `Date`.
+    Conversion between `DateTime` and other date/time representations will continue to evolve as Java 8 `java.time` is integrated.
+*   Recognizes a precision internally, for example to ensure that date/time only includes hour, but not minute and second.
+    The precision is consistent with time series interval.
+    The `toString()` method therefore can automatically format a `DateTime` to the proper precision.
+*   Provides methods to parse and format date/time strings.
+*   Provides methods to increment/decrement time, including `addInterval()` that is compatible with `TS` data interval, used for iteration.
+*   Is aware of time zone as a string, with some support for conversions.
+    This is an area that can be further enhanced with Java 8 `java.time` package features.
+*   `DateTime` are mutable.  This functionality was chosen by design to support efficient time series processing without
+    having to create date/time object instances for each time series timestep.
+    Features are built into `TS` and other classes to create a copy of the `DateTime` to protect against unexpected modification to objects by reference.
 
 **Does it make sense to replace `DateTime` with `java.time` classes?** Perhaps, but there is so much code that this will take awhile.
 It does make sense to phase `java.time` in as a replacement for legacy Java `Date` and related classes.
@@ -116,7 +116,7 @@ However, "MDT" corresponds to Mountain Daylight Time, which is offset by -6 hour
 Daylight saving shift occurs once in the fall (fall back), in which case the data record will have one value overwritten at 2:00 AM on the designated day,
 and once in the spring (spring forward), in which case the data record will be missing one interval at 2:00 AM on the designated day.
 
-* See:  [Daylight saving time in the United States on Wikipedia](https://en.wikipedia.org/wiki/Daylight_saving_time_in_the_United_States)
+*   See:  [Daylight saving time in the United States on Wikipedia](https://en.wikipedia.org/wiki/Daylight_saving_time_in_the_United_States)
 
 TSTool for the most part does not care about time zone, especially if all data are within an area where time zone is consistent.
 However, time zone is important to display data so that data users understand time for data values.
@@ -149,17 +149,17 @@ Consequently, part of the year will be displayed (or will be output) with time z
 This will result in misinterpretation and other software that reads the data will introduce additional errors.
 In this specific case, the following can be done:
 
-1. Shift the date/time for each data value to the time zone corresponding to the start `DateTime`.
-	* This is bad because the `DateTime` internal data will no longer match the source.
-	* This is bad because data users will probably be confused, during part of the year.
-2. Remove the time zone (set to blank string).
-	* This is bad because then the time has no time zone and could lead to confusion (although local time is often assumed as a default).
-3. Change the time zone string to something more general that is constant throughout the year, such as "America/Denver",
-	which is technically correct.
-	* This is OK but requires software features to change the time zone.
-	* This is bad if the time series is output and third-party software cannot handle the time zone
-	(but can handle the original source -07:00 and -06:00).
-4. Enhance TSTool design to allow time zone string to change within the year.
+1.  Shift the date/time for each data value to the time zone corresponding to the start `DateTime`.
+    *   This is bad because the `DateTime` internal data will no longer match the source.
+    *   This is bad because data users will probably be confused, during part of the year.
+2.  Remove the time zone (set to blank string).
+    *   This is bad because then the time has no time zone and could lead to confusion (although local time is often assumed as a default).
+3.  Change the time zone string to something more general that is constant throughout the year, such as "America/Denver",
+    which is technically correct.
+    *   This is OK but requires software features to change the time zone.
+    *   This is bad if the time series is output and third-party software cannot handle the time zone
+        (but can handle the original source -07:00 and -06:00).
+4.  Enhance TSTool design to allow time zone string to change within the year.
 
 Option 2 is perhaps the best option to avoid erroneous output.
 Option 3 is perhaps the next best if software can be updated.

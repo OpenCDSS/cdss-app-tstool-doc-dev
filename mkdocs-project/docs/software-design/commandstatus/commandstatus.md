@@ -1,9 +1,9 @@
 # Command Status #
 
-* [Introduction](#introduction)
-* [CommandStatusProvider Interface](#commandstatusprovider-interface)
-* [CommandStatus Class Use](#commandstatus-class-use)
-* [Using with For Command](#using-with-for-command)
+*   [Introduction](#introduction)
+*   [CommandStatusProvider Interface](#commandstatusprovider-interface)
+*   [CommandStatus Class Use](#commandstatus-class-use)
+*   [Using with For Command](#using-with-for-command)
 
 ---------
 
@@ -54,11 +54,11 @@ command presents challenges for command logging because
 the same instance of a command can be executed multiple times during processing of the loop.
 There are at least three options for handling command status logging:
 
-1. Clear command logging each iteration.
-2. Accumulate logging for all iterations.
-3. Allow the logging approach to be specified, such as a parameter in the `For` command.
-	1. Could implement global behavior across all iterations.
-	2. Could implement granular control to log only some iterations.
+1.  Clear command logging each iteration.
+2.  Accumulate logging for all iterations.
+3.  Allow the logging approach to be specified, such as a parameter in the `For` command.
+    1.  Could implement global behavior across all iterations.
+    2.  Could implement granular control to log only some iterations.
 
 A complication is that each command being executed in the loop needs to dynamically check whether or not to log.
 

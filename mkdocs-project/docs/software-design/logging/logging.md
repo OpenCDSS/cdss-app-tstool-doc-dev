@@ -1,12 +1,12 @@
 # Logging #
 
-* [Introduction](#introduction)
-* [Log Messages](#log-messages)
-* [Log Files](#log-files)
-* [Setting Logging Levels](#setting-logging-levels)
-* [Logging Code Performance](#logging-code-performance)
-* [Log File Viewer](#log-file-viewer)
-* [Potential Future Changes](#potential-future-changes)
+*   [Introduction](#introduction)
+*   [Log Messages](#log-messages)
+*   [Log Files](#log-files)
+*   [Setting Logging Levels](#setting-logging-levels)
+*   [Logging Code Performance](#logging-code-performance)
+*   [Log File Viewer](#log-file-viewer)
+*   [Potential Future Changes](#potential-future-changes)
 
 -------------
 
@@ -172,14 +172,14 @@ Consequently, use the startup log file to troubleshoot startup issues.
 
 Logging levels are set in a number of ways:
 
-1. Logging levels are set in the
-[Message class](https://github.com/OpenCDSS/cdss-lib-common-java/blob/master/src/RTi/Util/Message/Message.java) class.
-2. The [TSTool_Main](https://github.com/OpenCDSS/cdss-app-tstool-main/blob/master/src/DWR/DMI/tstool/TSToolMain.java)
-class adjusts based on TSTool defaults and optionally command line parameters.
-3. User can interactively change levels via the ***Tools / Diagnostics...*** menu.
-4. The [`SetDebugLevel`](https://opencdss.state.co.us/tstool/latest/doc-user/command-ref/SetDebugLevel/SetDebugLevel/) and
-[`SetWarningLevel`](https://opencdss.state.co.us/tstool/latest/doc-user/command-ref/SetWarningLevel/SetWarningLevel/) commands can change logging levels,
-and are typically used with [`StartLog`](https://opencdss.state.co.us/tstool/latest/doc-user/command-ref/StartLog/StartLog/) command.
+1.  Logging levels are set in the
+    [Message class](https://github.com/OpenCDSS/cdss-lib-common-java/blob/master/src/RTi/Util/Message/Message.java) class.
+2.  The [`TSTool_Main`](https://github.com/OpenCDSS/cdss-app-tstool-main/blob/master/src/DWR/DMI/tstool/TSToolMain.java)
+    class adjusts based on TSTool defaults and optionally command line parameters.
+3.  User can interactively change levels via the ***Tools / Diagnostics...*** menu.
+4.  The [`SetDebugLevel`](https://opencdss.state.co.us/tstool/latest/doc-user/command-ref/SetDebugLevel/SetDebugLevel/) and
+    [`SetWarningLevel`](https://opencdss.state.co.us/tstool/latest/doc-user/command-ref/SetWarningLevel/SetWarningLevel/) commands can change logging levels,
+    and are typically used with [`StartLog`](https://opencdss.state.co.us/tstool/latest/doc-user/command-ref/StartLog/StartLog/) command.
 
 Log levels are typically left at the default unless troubleshooting the application.
 In this case, 

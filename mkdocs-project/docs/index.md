@@ -5,13 +5,13 @@ This developer documentation explains how to build, enhance, and maintain
 TSTool software automates processing time series, data tables, and other data.
 See also the [TSTool User Documentation](https://opencdss.state.co.us/tstool/latest/doc-user/).
 
-* [How to Use this Documentation](#how-to-use-this-documentation)
-* [Acknowledgements](#acknowledgements)
-* [Colorado's Decision Support Systems](#colorados-decision-support-systems)
-* [About the Open Water Foundation](#about-the-open-water-foundation)
-* [License](#license)
-* [Source Repository on GitHub](#source-repository-on-github)
-* [Release Notes](#release-notes) - **this documentation has been updated for TSTool version 14.4.0**
+*   [How to Use this Documentation](#how-to-use-this-documentation)
+*   [Acknowledgements](#acknowledgements)
+*   [Colorado's Decision Support Systems](#colorados-decision-support-systems)
+*   [About the Open Water Foundation](#about-the-open-water-foundation)
+*   [License](#license)
+*   [Source Repository on GitHub](#source-repository-on-github)
+*   [Release Notes](#release-notes) - **this documentation has been updated for TSTool version 14.7.0**
 
 ----------------
 
@@ -26,16 +26,16 @@ Use the search feature of this website to find specific information.
 
 As of version 14.0.0, the TSTool development environment creates a 64-bit Java TSTool runtime for use on Windows and Linux computers.
 Older versions focused on 32-bit Java runtime.
-Icons for Cygwin ![Cygwin](images/cygwin-32.png), Linux ![Linux](images/linux-32.png), and Windows ![Windows](images/windows-32.png)
+Icons for Cygwin ![Cygwin icon](images/cygwin-32.png), Linux ![Linux icon](images/linux-32.png), and Windows ![Windows icon](images/windows-32.png)
 are included to help indicate documentation
 specific to an operating system.
 
-* [New Developer Setup](dev-new/overview/) - **new TSTool software developers should start here**
-* [Development Tasks](dev-tasks/overview/) - describes common development tasks - **refer to this after new development environment is configured**
-* [REFERENCE: Software Design](software-design/overview/) - provides details about the software code design
-* [REFERENCE: Deployed Environment](deployed-env/overview/) - describes the deployed environment after software is installed
-* [REFERENCE: Development Environment](dev-env/overview/) - describes development environment software installation
-* [REFERENCE: Initial Project Setup](project-init/overview/) - describes initial project setup and file structure
+*   [New Developer Setup](dev-new/overview/) - **new TSTool software developers should start here**
+*   [Development Tasks](dev-tasks/overview/) - describes common development tasks - **refer to this after new development environment is configured**
+*   [REFERENCE: Software Design](software-design/overview/) - provides details about the software code design
+*   [REFERENCE: Deployed Environment](deployed-env/overview/) - describes the deployed environment after software is installed
+*   [REFERENCE: Development Environment](dev-env/overview/) - describes development environment software installation
+*   [REFERENCE: Initial Project Setup](project-init/overview/) - describes initial project setup and file structure
 
 Use the navigation menu provided on the left side of the page to navigate the documentation sections within the full document.
 Use the navigation menu provided on the right side of the page to navigate the documentation sections with a page.
@@ -52,10 +52,10 @@ as part of Colorado’s Decision Support Systems (CDSS).
 
 Additional enhancements to TSTool have been funded by various organizations including:
 
-* Open Water Foundation
-* US Bureau of Reclamation
-* Tennessee Valley Authority
-* and others
+*   Open Water Foundation
+*   US Bureau of Reclamation
+*   Tennessee Valley Authority
+*   and others
 
 TSTool software developers are encouraged to provide feedback using the
 [GitHub Issues page](https://github.com/OpenCDSS/cdss-app-tstool-main/issues)
@@ -70,7 +70,7 @@ can be provided using the [CDSS email address](mailto:DNR_OpenCDSS@state.co.us).
 
 The following components are used in TSTool and require or request attribution:
 
-* [Material Theme icons](https://material.io/icons/) - these icons are used in documentation
+*   [Material Theme icons](https://material.io/icons/) - these icons are used in documentation
 
 ## Colorado's Decision Support Systems ##
 

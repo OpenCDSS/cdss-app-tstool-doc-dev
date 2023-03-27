@@ -1,7 +1,7 @@
 # Spreadsheet #
 
-* [Introduction](#introduction)
-* [Spreadsheet Code Design](#sreadsheet-code-design)
+*   [Introduction](#introduction)
+*   [Spreadsheet Code Design](#sreadsheet-code-design)
 
 ---------
 

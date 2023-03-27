@@ -1,7 +1,7 @@
 # Tables #
 
-* [Introduction](#introduction)
-* [Table Design](#table-design)
+*   [Introduction](#introduction)
+*   [Table Design](#table-design)
 
 -------
 
@@ -25,9 +25,9 @@ enhanced to support reading data from datastores, Excel files, delimited files, 
 The [`DataTable`](https://github.com/OpenCDSS/cdss-lib-common-java/tree/master/src/RTi/Util/Table/DataTable.java)
 code design is fairly simple, consisting of the following:
 
-* List of [`DataTableField`](https://github.com/OpenCDSS/cdss-lib-common-java/blob/master/src/RTi/Util/Table/TableField.java) to provide table column metadata
-* List of [`TableRecord`](https://github.com/OpenCDSS/cdss-lib-common-java/blob/master/src/RTi/Util/Table/TableRecord.java) to manage table rows
-* Other related classes
+*   List of [`DataTableField`](https://github.com/OpenCDSS/cdss-lib-common-java/blob/master/src/RTi/Util/Table/TableField.java) to provide table column metadata
+*   List of [`TableRecord`](https://github.com/OpenCDSS/cdss-lib-common-java/blob/master/src/RTi/Util/Table/TableRecord.java) to manage table rows
+*   Other related classes
 
 Data included in tables are expected to extend from the Java `Object` class and null values are allowed.
 The table therefore consists of a list of lists (list of
