@@ -4,11 +4,11 @@ Maven software is used to manage software library dependencies.
 
 This documentation was updated on 2022-05-28 for Maven 3.8.5.
 
-* [Introduction](#introduction)
-* [Maven Installation](#maven-installation)
-    + [Maven Installation on Windows](#maven-installation-on-windows)
-* [Automating Tasks with Maven](#automating-tasks-with-maven)
-    + [Listing a Project's Dependencies](#listing-a-projects-dependencies)
+*   [Introduction](#introduction)
+*   [Maven Installation](#maven-installation)
+    +   [Maven Installation on Windows](#maven-installation-on-windows)
+*   [Automating Tasks with Maven](#automating-tasks-with-maven)
+    +   [Listing a Project's Dependencies](#listing-a-projects-dependencies)
 
 ----
 

@@ -1,12 +1,12 @@
 # TSTool / Development Environment / Java 8 ##
 
-* [Introduction](#introduction)
-* ![Windows](../images/windows-32.png) [Windows](#windows)
-	+ [Download Java 8](#download-java-8)
-	+ [Install Java 8](#install-java-8)
-	+ [Create Symbolic Links for Java 8](#ceate-symbolic-links-for-java-8)
-	+ [Confirm Run Script Configuration](#confirm-run-script-configuration)
-* ![Linux](../images/linux-32.png) [Linux](#linux)
+*   [Introduction](#introduction)
+*   ![Windows icon](../images/windows-32.png) [Windows](#windows)
+    +   [Download Java 8](#download-java-8)
+    +   [Install Java 8](#install-java-8)
+    +   [Create Symbolic Links for Java 8](#ceate-symbolic-links-for-java-8)
+    +   [Confirm Run Script Configuration](#confirm-run-script-configuration)
+*   ![Linux icon](../images/linux-32.png) [Linux](#linux)
 
 ------
 
@@ -25,7 +25,7 @@ If 32-bit features are needed, an older version of TSTool can be installed.
 It is possible to change the run-time Java for deployed TSTool software by swapping
 the Java Runtime Environment (JRE) that is distributed with TSTool.
 
-## ![Windows](../images/windows-32.png) Windows ##
+## ![Windows icon](../images/windows-32.png) Windows ##
 
 ### Download Java 8 ###
 
@@ -49,7 +49,7 @@ Run the installer from the previous step.  Administrator privileges will be requ
 The following procedure may vary slightly as new Java releases are made.
 
 **<p style="text-align: center;">
-![java8-32-1](images/java8-32-1.png)
+![32 bit Java installation welcome](images/java8-32-1.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -59,7 +59,7 @@ Java Installation - Welcome (<a href="../images/java8-32-1.png">see full-size im
 Press ***Next >*** to continue.
 
 **<p style="text-align: center;">
-![java8-32-2](images/java8-32-2.png)
+![32-bit java installation custom setup](images/java8-32-2.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -73,7 +73,7 @@ Other installations of Java may already exist on the computer, which is OK.
 Press ***Next >*** to continue.
 
 **<p style="text-align: center;">
-![java8-32-3](images/java8-32-3.png)
+![32-bit Java installation destination folder](images/java8-32-3.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -84,7 +84,7 @@ Accept the defaults in the above dialog without changing.
 Press ***Next >*** to continue.  A progress indicator will be shown.
 
 **<p style="text-align: center;">
-![java8-32-4](images/java8-32-4.png)
+![32-bit Java installation complete](images/java8-32-4.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -100,7 +100,7 @@ Press ***Close*** to close the above dialog.
 The Java installation process creates files as shown in the following image (the links are created in steps below).
 
 **<p style="text-align: center;">
-![java8-64-5](images/java8-64-5.png)
+![64-bit Java installation folders](images/java8-64-5.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -132,7 +132,7 @@ mklink /d jre_18 jre8
 The Java installation process creates files as shown in the following image.
 
 **<p style="text-align: center;">
-![java8-32-5](images/java8-32-5.png)
+![32-bit Java installation system folders](images/java8-32-5.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -153,7 +153,7 @@ mklink /d jre8 jre1.8.0_171
 ```
 
 **<p style="text-align: center;">
-![java8-32-6-link](images/java8-32-6-link.png)
+![32-bit Java symbolic links](images/java8-32-6-link.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -174,7 +174,7 @@ These major development environment components need to be configured appropriate
 
 * [See information about the run script](eclipse.md#check-eclipse-run-scipt)
 
-## ![Linux](../images/linux-32.png) Linux ##
+## ![Linux icon](../images/linux-32.png) Linux ##
 
 This documentation was prepared while installing Java 8 on a Debian Stretch Linux VirtualBox virtual machine.
 Other environments will be similar.

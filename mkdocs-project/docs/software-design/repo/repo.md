@@ -1,8 +1,8 @@
 # Repositories and Projects #
 
-* [Introduction](#introduction)
-* [Repository List](#repository-list)
-* [Project Dependencies](#project-dependencies)
+*   [Introduction](#introduction)
+*   [Repository List](#repository-list)
+*   [Project Dependencies](#project-dependencies)
 
 ---------------
 

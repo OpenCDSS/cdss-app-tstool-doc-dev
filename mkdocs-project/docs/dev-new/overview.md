@@ -18,30 +18,30 @@ specific instructions are included below (rather than immediately linking to oth
 After reading instructions for a step, use "back" to return to this outline so that setup instructions can be followed in the proper sequence.
 **Bold comments** indicate which steps are required and which are optional.
 
-1. **Required:** [Machine for Development](../dev-env/machine.md) - need a suitable computer
-2. **Required:** [Create folder for development files](#create-folder-for-development-files) - where development will occur (**see details below**)
-3. **Required (if not already installed):** Development Environment software install part 1 (version control)
-	* [Development Environment / Git](../dev-env/git.md) - install Git software so the repositories can be cloned
-4. **Required:** [Clone Git Repositories](#clone-git-repositories) - clone the repositories to get access to all files (**see details below**)
-5. **Required:** Development Environment software install part 2 (Java development tools)
-	* **Required:** [Development Environment / Java 8](../dev-env/java8.md) - make sure Java 8 is available on system
-	* **Required (if not already installed):** [Development Environment / Eclipse](../dev-env/eclipse.md) - install Eclipse for use as IDE
-	* **Optional:** [Development Environment / KDiff3](../dev-env/kdiff3.md) - install software to facilitate comparing files
-	**(highly useful and can be used with Git)**
-	* **Optional:** [Development Environment / NSIS](../dev-env/nsis.md) - install software to create TSTool software installer
-	* **Optional:** [Development Environment / launch4j](../dev-env/launch4j.md) - install software to create TSTool software installer
-6. **Required:** Eclipse Workspace Setup (interactive development environment)
-	* **Required:** [Create Eclipse Workspace Folder](#create-eclipse-workspace-folder) - simple manual step (***see details below***)
-	* **Required:** [Import the Existing Eclipse TSTool Projects from the Git Repository Folders](#import-the-existing-eclipse-tstool-projects-from-the-git-repository-folders) -  import
-		- [Import Code Repositories](#import-code-repositories)
-		- [Additional Eclipse Configuration](#additional-eclipse-configuration)
-	from Git repository working files (**see details below**)
-7. **Optional:** Development Environment software install part 3 (documentation tools), **(install if will view and edit documentation within the development environment)**
-	* [Development Environment / Python and pip](../dev-env/python.md) - install Python, which is needed by MkDocs
-	* [Development Environment / MkDocs](../dev-env/mkdocs.md) - install MkDocs to view/edit full documentation locally.
-	See [Development Tasks / Documenting](../dev-tasks/overview.md#documenting)
-	for instructions on viewing documentation.
-8. [Next Steps - Development Tasks](#next-steps-development-tasks) - to compile, edit, run, etc.
+1.  **Required:** [Machine for Development](../dev-env/machine.md) - need a suitable computer
+2.  **Required:** [Create folder for development files](#create-folder-for-development-files) - where development will occur (**see details below**)
+3.  **Required (if not already installed):** Development Environment software install part 1 (version control)
+    *   [Development Environment / Git](../dev-env/git.md) - install Git software so the repositories can be cloned
+4.  **Required:** [Clone Git Repositories](#clone-git-repositories) - clone the repositories to get access to all files (**see details below**)
+5.  **Required:** Development Environment software install part 2 (Java development tools)
+    *   **Required:** [Development Environment / Java 8](../dev-env/java8.md) - make sure Java 8 is available on system
+    *   **Required (if not already installed):** [Development Environment / Eclipse](../dev-env/eclipse.md) - install Eclipse for use as IDE
+    *   **Optional:** [Development Environment / KDiff3](../dev-env/kdiff3.md) - install software to facilitate comparing files
+        **(highly useful and can be used with Git)**
+    *   **Optional:** [Development Environment / NSIS](../dev-env/nsis.md) - install software to create TSTool software installer
+    *   **Optional:** [Development Environment / launch4j](../dev-env/launch4j.md) - install software to create TSTool software installer
+6.  **Required:** Eclipse Workspace Setup (interactive development environment)
+    *   **Required:** [Create Eclipse Workspace Folder](#create-eclipse-workspace-folder) - simple manual step (***see details below***)
+    *   **Required:** [Import the Existing Eclipse TSTool Projects from the Git Repository Folders](#import-the-existing-eclipse-tstool-projects-from-the-git-repository-folders) -  import
+        -   [Import Code Repositories](#import-code-repositories)
+        -   [Additional Eclipse Configuration](#additional-eclipse-configuration)
+            from Git repository working files (**see details below**)
+7.  **Optional:** Development Environment software install part 3 (documentation tools), **(install if will view and edit documentation within the development environment)**
+    *   [Development Environment / Python and pip](../dev-env/python.md) - install Python, which is needed by MkDocs
+    *   [Development Environment / MkDocs](../dev-env/mkdocs.md) - install MkDocs to view/edit full documentation locally.
+    See [Development Tasks / Documenting](../dev-tasks/overview.md#documenting)
+    for instructions on viewing documentation.
+8.  [Next Steps - Development Tasks](#next-steps-development-tasks) - to compile, edit, run, etc.
 
 The following sections are referenced from the above outline.
 
@@ -61,9 +61,9 @@ Tools such as Git rely on a unique identity for developers in order to properly 
 and working in a shared space can be problematic.
 After the folder is created, additional instructions describe how to install development files into the folder.
 
-### ![Cygwin](../images/cygwin-32.png) Cygwin ###
+### ![Cygwin icon](../images/cygwin-32.png) Cygwin ###
 
-[Cygwin](../resources.md#cygin) is a useful software platform to provide Linux programs on a Windows computer.
+[Cygwin icon](../resources.md#cygin) is a useful software platform to provide Linux programs on a Windows computer.
 It may be convenient to use Cygwin for some work, such as running command-line utilities,
 although the development environment has focused on Windows and Git Bash.
 
@@ -80,7 +80,7 @@ $ cd cdss-dev/
 $ mkdir TSTool
 ```
 
-### ![Linux](../images/linux-32.png) Linux ###
+### ![Linux icon](../images/linux-32.png) Linux ###
 
 Do the following using a terminal window. Note that the syntax `~` indicates the home folder and is equivalent to the `$HOME` environment
 variable location.
@@ -92,7 +92,7 @@ $ cd ~/cdss-dev/
 $ mkdir TSTool
 ```
 
-### ![Windows](../images/windows-32.png) Windows ###
+### ![Windows icon](../images/windows-32.png) Windows ###
 
 Do the following in a Windows command shell, Git CMD, or perform the equivalent actions in file explorer, or Git Bash.
 
@@ -117,7 +117,7 @@ the repositories will be imported into the Eclipse workspace as Java projects (c
 
 If prompted when using `git clone`, specify the GitHub account credentials.
 
-### ![Cygwin](../images/cygwin-32.png) Clone the repository files (Cygwin) ###
+### ![Cygwin icon](../images/cygwin-32.png) Clone the repository files (Cygwin) ###
 
 **It is recommened that a Windows development environment is used including Git Bash.
 Cygwin can be used for repositories that are not included in Eclipse,
@@ -138,7 +138,7 @@ the shared Cygwin/Windows file location is used.
 $ cd /cygdrive/c/Users/user/cdss-dev/TSTool
 ```
 
-### ![Linux](../images/linux-32.png) Clone the repository files (Linux) ###
+### ![Linux icon](../images/linux-32.png) Clone the repository files (Linux) ###
 
 The following assumes that the Bash shell is used.
 If the `~` notation is not recognized as the home folder, use `$HOME`.
@@ -154,7 +154,7 @@ $ ./git-clone-all-tstool.sh
 
 The above will clone all repositories that comprise TSTool.
 
-### ![Windows](../images/windows-32.png) Clone the repository files (Windows) ###
+### ![Windows icon](../images/windows-32.png) Clone the repository files (Windows) ###
 
 Use a Windows Git client.  Git Bash is recommended.
 Perform the following steps.
@@ -435,13 +435,13 @@ as discussed in the [Development Files Structure](../project-init/overview.md#de
 
 The recommended Eclipse workspace folder for different environments is as follows:
 
-* ![Cygwin](../images/cygwin-32.png) Linux:  the workspace folder is `/cygdrive/c/Users/user/cdss-dev/TSTool/eclipse-workspace`
-* ![Linux](../images/linux-32.png) Linux:  the workspace folder is `~/cdss-dev/TSTool/eclipse-workspace`
-* ![Windows](../images/windows-32.png) Windows: the workspace folder is `C:\Users\user\cdss-dev\TSTool\eclipse-workspace`
+*   ![Cygwin icon](../images/cygwin-32.png) Linux:  the workspace folder is `/cygdrive/c/Users/user/cdss-dev/TSTool/eclipse-workspace`
+*   ![Linux icon](../images/linux-32.png) Linux:  the workspace folder is `~/cdss-dev/TSTool/eclipse-workspace`
+*   ![Windows icon](../images/windows-32.png) Windows: the workspace folder is `C:\Users\user\cdss-dev\TSTool\eclipse-workspace`
 
 The folder can be created on the command line or with file system tool.  Or, create in Eclipse as shown below.
 
-### ![Windows](../images/windows-32.png) Windows ###
+### ![Windows icon](../images/windows-32.png) Windows ###
 
 Git Bash can be used to create the workspace folder, as follows.
 Note that this folder does not exist in a Git repository folder because Eclipse workspace files are dynamic
@@ -470,7 +470,7 @@ Select a workspace as shown in the following figure.
 If the `eclipse-workspace` folder was not created previously, it can be created via the eclipse dialog.
 
 **<p style="text-align: center;">
-![eclipse-workspace-select](images/eclipse-workspace-select.png)
+![Select TSTool workspace folder](images/eclipse-workspace-select.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -498,39 +498,39 @@ The repositories fall into four categories, which are discussed in the following
 All of the repositories obviously use Git for version control
 (Eclipse generally detects this automatically when a project is imported and shows a repository icon decorator on the project folder and files).
 
-1. Code repositories with names ending with `java` are treated as Java projects.
-2. The CDSS build utility repository `cdss-util-buildtools` is treated as a general project and is currently required to create the software installer.
-3. The TSTool function test repository `cdss-app-tstool-test` is treated as a general project and is useful to import into Eclipse.
-4. Documentation repositories with `doc` in names can be treated as general projects and do not
-need to be imported because their files are typically edited outside of Eclipse.
-Eclipse can be used to edit these files but it can be problematic.
+1.  Code repositories with names ending with `java` are treated as Java projects.
+2.  The CDSS build utility repository `cdss-util-buildtools` is treated as a general project and is currently required to create the software installer.
+3.  The TSTool function test repository `cdss-app-tstool-test` is treated as a general project and is useful to import into Eclipse.
+4.  Documentation repositories with `doc` in names can be treated as general projects and do not
+    need to be imported because their files are typically edited outside of Eclipse.
+    Eclipse can be used to edit these files but it can be problematic.
 
 ### Import Code Repositories ###
 
 After the initial Eclipse workspace is selected, import the following repositories by following the same general procedure indicated below:
 
-* `cdss-app-tstool-doc` - not typically edited in Eclipse, but useful to see
-* `cdss-app-tstool-main`
-* `cdss-app-tstool-test` - may not be edited in Eclipse, but useful to see
-* `cdss-lib-cdss-java`
-* `cdss-lib-common-java`
-* `cdss-lib-dmi-hydrobase-java`
-* `cdss-lib-dmi-hydrobase-rest-java`
-* `cdss-lib-dmi-nwsrfs-java`
-* `cdss-lib-models-java`
-* `cdss-lib-processor-ts-java`
-* `cdss-util-buildtools`
+*   `cdss-app-tstool-doc` - not typically edited in Eclipse, but useful to see
+*   `cdss-app-tstool-main`
+*   `cdss-app-tstool-test` - may not be edited in Eclipse, but useful to see
+*   `cdss-lib-cdss-java`
+*   `cdss-lib-common-java`
+*   `cdss-lib-dmi-hydrobase-java`
+*   `cdss-lib-dmi-hydrobase-rest-java`
+*   `cdss-lib-dmi-nwsrfs-java`
+*   `cdss-lib-models-java`
+*   `cdss-lib-processor-ts-java`
+*   `cdss-util-buildtools`
 
 The initial workspace will be similar to the following (if necessary, close the ***Welcome*** tab).
 Use the ***Help / About Eclipse*** menu to check the Eclipse version, which should be consistent
 with the [Development Environment / Eclipse](../dev-env/eclipse.md) instructions.
 
 **<p style="text-align: center;">
-![eclipse-worskpace-0](images/eclipse-workspace-0.png)
+![Initial Eclipse workspace](images/eclipse-workspace-0.png)
 </p>**
 
 **<p style="text-align: center;">
-Initial Workspace (<a href="../images/eclipse-workspace-0.png">see full-size image</a>)
+Initial Eclipse Workspace (<a href="../images/eclipse-workspace-0.png">see full-size image</a>)
 </p>**
 
 Because the Eclipse `.project` files have already been created and are included in the repository,
@@ -541,7 +541,7 @@ Click on ***General*** to expand the choices and then on ***Existing Projects in
 
 
 **<p style="text-align: center;">
-![eclipse-workspace-1](images/eclipse-workspace-1.png)
+![Import existing projects](images/eclipse-workspace-1.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -553,7 +553,7 @@ Use the ***Browse...*** button to browse to the `git-repos` folder where
 repositories where cloned.
 
 **<p style="text-align: center;">
-![eclipse-workspace-3](images/eclipse-workspace-3.png)
+![Import projects: select projects](images/eclipse-workspace-3.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -576,7 +576,7 @@ The right arrow (`>`) symbol next to a component indicates that there are change
 in this case because the files were being modified to create this documentation.
 
 **<p style="text-align: center;">
-![eclipse-workspace-4](images/eclipse-workspace-4.png)
+![Eclipse workspace after importing projects](images/eclipse-workspace-4.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -594,56 +594,84 @@ in particular to ensure that the proper Java version is used with development.
 
 The `cdss-app-tstool-main` project in Eclipse has the following JRE configuration.
 
-* ***Project / Properties / Java Build Path***
-* ***Libraries*** tab
-* ***JRE System Library*** - double click on it
-* Select ***Workspace default JRE*** radio button
-* Select ***Installed JREs...*** button
+*   ***Project / Properties / Java Build Path***
+*   ***Libraries*** tab
+*   ***JRE System Library*** - double click on it
+*   Select ***Workspace default JRE*** radio button
+*   Select ***Installed JREs...*** button
 
 It may appear as follows since was previously configured to use the 32-bit JRE.
 If no installed Java is listed, add as shown in the next step.
 
 **<p style="text-align: center;">
-![installed-jre-0](images/installed-jre-0.png)
+![Installed Java runtime environments](images/installed-jre-0.png)
+</p>**
+
+**<p style="text-align: center;">
+Installed Java Runtime Environments (<a href="../images/installed-jre-0.png">see full-size image</a>)
 </p>**
 
 Use the ***Remove*** button to remove the JRE since the 64-bit version will have the same name (but different path).
 A warning will be shown as follows.
 
 **<p style="text-align: center;">
-![installed-jre-1](images/installed-jre-1.png)
+![JRE remove warning](images/installed-jre-1.png)
+</p>**
+
+**<p style="text-align: center;">
+JRE Remove Warning (<a href="../images/installed-jre-1.png">see full-size image</a>)
 </p>**
 
 Use the ***Add...*** button.
 
 **<p style="text-align: center;">
-![installed-jre-2](images/installed-jre-2.png)
+![Add JRE](images/installed-jre-2.png)
+</p>**
+
+**<p style="text-align: center;">
+Add JRE (<a href="../images/installed-jre-2.png">see full-size image</a>)
 </p>**
 
 Browse to the `C:\Program Files\Java\jdk8` folder that was configured as a symbolic link when Java was installed.
 The dialog automatically follows the link and uses the more specific folder.
 
 **<p style="text-align: center;">
-![installed-jre-3](images/installed-jre-3.png)
+![JRE Definition](images/installed-jre-3.png)
+</p>**
+
+**<p style="text-align: center;">
+JRE Definition (<a href="../images/installed-jre-3.png">see full-size image</a>)
 </p>**
 
 Press ***Finish***.
 
 **<p style="text-align: center;">
-![installed-jre-4](images/installed-jre-4.png)
+![Installed JREs after adding](images/installed-jre-4.png)
+</p>**
+
+**<p style="text-align: center;">
+Installed JREs After Adding (<a href="../images/installed-jre-4.png">see full-size image</a>)
 </p>**
 
 Accept with ***Finish*** and then ***Apply and Close***.
 Then the following is shown.
 
 **<p style="text-align: center;">
-![installed-jre-5](images/installed-jre-5.png)
+![JRE system library](images/installed-jre-5.png)
+</p>**
+
+**<p style="text-align: center;">
+JRE System Library (<a href="../images/installed-jre-5.png">see full-size image</a>)
 </p>**
 
 Press ***Finish***.
 
 **<p style="text-align: center;">
-![installed-jre-6](images/installed-jre-6.png)
+![Java build path](images/installed-jre-6.png)
+</p>**
+
+**<p style="text-align: center;">
+Java Build Path (<a href="../images/installed-jre-6.png">see full-size image</a>)
 </p>**
 
 Press ***Apply and Close***.
@@ -658,6 +686,6 @@ The `Java Virtual Machine Properties` shows `os.arch = "amd64"`, which indicates
 At this point it should be possible to [compile](../dev-tasks/overview.md#compiling) and
 [run](../dev-tasks/overview#running) TSTool within the Eclipse interface].  See also:
 
-* [Deployed Environment / Overview](../deployed-env/overview.md) - for an overview of the deployed software
-* [Software Design / Overview](../software-design/overview.md) - to understand software structure and logic
-* [Development Tasks / Overview](../dev-tasks/overview.md) - common development tasks
+*   [Deployed Environment / Overview](../deployed-env/overview.md) - for an overview of the deployed software
+*   [Software Design / Overview](../software-design/overview.md) - to understand software structure and logic
+*   [Development Tasks / Overview](../dev-tasks/overview.md) - common development tasks

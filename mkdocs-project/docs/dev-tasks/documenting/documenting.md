@@ -5,8 +5,8 @@ User documentation focuses on explanation of the software installation and featu
 providing reference documentation for commands, datastores, etc.
 TSTool documentation should follow conventions of the developer and user documentation.
 
-* See the [TSTool User Documentation repository](https://github.com/OpenCDSS/cdss-app-tstool-doc-user)
-* See the [TSTool Developer Documentation repository](https://github.com/OpenCDSS/cdss-app-tstool-doc-dev)
+*   See the [TSTool User Documentation repository](https://github.com/OpenCDSS/cdss-app-tstool-doc-user)
+*   See the [TSTool Developer Documentation repository](https://github.com/OpenCDSS/cdss-app-tstool-doc-dev)
 
 There has not been a focus on creating API documentation, such as using Javadoc,
 mainly because libraries have not been publicly available.

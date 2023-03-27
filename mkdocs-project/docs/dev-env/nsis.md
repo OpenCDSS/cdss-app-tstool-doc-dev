@@ -21,7 +21,7 @@ installer for TSTool.
 Install version 3.03 of the software for the development version operating system
 from the download page on the following page.
 
-* [NSIS on SourceForge](https://sourceforge.net/projects/nsis/)
+*   [NSIS on SourceForge](https://sourceforge.net/projects/nsis/)
 
 NSIS provides the benefit of being scriptable and therefore fits with automating
 creation of the installer.
@@ -87,10 +87,10 @@ development environment.
 These are the essential files that must be included in the NSIS 3.03 `Contrib/` folder
 to ensure that the TSTool installer will build properly with no errors.
 
-* `Contrib/UIs/UltraModernUI`  
-* `Contrib/UIs/default_sb.exe`  
-* `Contrib/UIs/modern_sb.exe`  
-* `Contrib/UltraModernUI`  
+*   `Contrib/UIs/UltraModernUI`  
+*   `Contrib/UIs/default_sb.exe`  
+*   `Contrib/UIs/modern_sb.exe`  
+*   `Contrib/UltraModernUI`  
 
 ### `Include/` Folder: ###
 
@@ -106,9 +106,9 @@ to ensure that the TSTool installer will build properly with no errors.
 These are the essential files that must be included in the NISI program `Include/`
 folder to ensure that TSTool installer will build properly with no errors.
 
-* `Include/Registry.nsh`
-* `Include/TextReplace.nsh`
-* `Include/UMUI.nsh`
+*   `Include/Registry.nsh`
+*   `Include/TextReplace.nsh`
+*   `Include/UMUI.nsh`
 
 ### `Plugins/` Folder: ###
 
@@ -127,9 +127,9 @@ that only includes one `.dll` file, it is safe to assume this will be `x86-ansi`
 
 **Necessary file for `Plugins/` Folder**:
 
-* `Plugins/SetCursor.dll`
-* `Plugins/SkinnedControls.dll`
-* `Plugins/TextReplace.dll`
+*   `Plugins/SetCursor.dll`
+*   `Plugins/SkinnedControls.dll`
+*   `Plugins/TextReplace.dll`
 
 ## NSIS Add-ons for NSIS 3.03 ##
 
@@ -186,10 +186,10 @@ development environment.
 These are the essential files that must be included in the NSIS 3.03 `Contrib/` folder
 to ensure that the TSTool installer will build properly with no errors.
 
-* `Contrib/UIs/UltraModernUI`  
-* `Contrib/UIs/default_sb.exe`  
-* `Contrib/UIs/modern_sb.exe`  
-* `Contrib/UltraModernUI`  
+*   `Contrib/UIs/UltraModernUI`  
+*   `Contrib/UIs/default_sb.exe`  
+*   `Contrib/UIs/modern_sb.exe`  
+*   `Contrib/UltraModernUI`  
 
 ### `Include/` Folder: ###
 
@@ -205,9 +205,9 @@ to ensure that the TSTool installer will build properly with no errors.
 These are the essential files that must be included in the NISI program `Include/`
 folder to ensure that TSTool installer will build properly with no errors.
 
-* `Include/Registry.nsh`
-* `Include/TextReplace.nsh`
-* `Include/UMUI.nsh`
+*   `Include/Registry.nsh`
+*   `Include/TextReplace.nsh`
+*   `Include/UMUI.nsh`
 
 ### `Plugins/` Folder: ###
 
@@ -226,9 +226,9 @@ that only includes one `.dll` file, it is safe to assume this will be `x86-ansi`
 
 **Necessary file for `Plugins/` Folder**:
 
-* `Plugins/SetCursor.dll`
-* `Plugins/SkinnedControls.dll`
-* `Plugins/TextReplace.dll`
+*   `Plugins/SetCursor.dll`
+*   `Plugins/SkinnedControls.dll`
+*   `Plugins/TextReplace.dll`
 
 ## NSIS Add-ons for NSIS 2.46 ##
 
@@ -239,37 +239,37 @@ Additional NSIS components were apparently installed on the main software,
 but it is unclear where to retrieve such files that are compatible with NSIS 2.46.
 Therefore, the following repository has been created with NSIS 2.46 files from an older computer used to create TSTool installers:
 
-* [cdss-archive-nsis-2.46](https://github.com/OpenCDSS/cdss-archive-nsis-2.46)
+*   [cdss-archive-nsis-2.46](https://github.com/OpenCDSS/cdss-archive-nsis-2.46)
 
 The following files in particular were copied into the `C:\Program Files (x86)\NSIS` to get the TSTool install process working
 (clone the above repository and then copy files as needed):
 
 *   Contrib/
-    + `Graphics/`
-        - `UltraModernUI/`
-    + `InstallOptiohnsEx/`
-    + `NSISArray/`
-    + `SetCursor/`
-    + `SkinnedControls/`
-    + `UltraModernUI/`
-    + `UIs/`
-        - `UltraModernUI/`
-        - `default_sb.exe`
-        - `modern_sb.exe`
+    +   `Graphics/`
+        -   `UltraModernUI/`
+    +   `InstallOptiohnsEx/`
+    +   `NSISArray/`
+    +   `SetCursor/`
+    +   `SkinnedControls/`
+    +   `UltraModernUI/`
+    +   `UIs/`
+        -   `UltraModernUI/`
+        -   `default_sb.exe`
+        -   `modern_sb.exe`
 *   Include/
-    + `MUIEx.nsh`
-    + `NSISArray.nsh`
-    + `Registry.nsh`
-    + `TextReplace.nsh`
-    + `UMUI.nsh`
+    +   `MUIEx.nsh`
+    +   `NSISArray.nsh`
+    +   `Registry.nsh`
+    +   `TextReplace.nsh`
+    +   `UMUI.nsh`
 *   Plugins/
-    + `InstallOptionsEx.dll`
-    + `InstallOptionsEx_legacy.dll`
-    + `InstallOptionsEx_newAPI.dll`
-    + `NSISArray.dll`
-    + `NSISArray_legacy.dll`
-    + `NSISArray_newAPI.dll`
-    + `Registry.dll`
-    + `SetCursor.dll`
-    + `SkinnedControls.dll`
-    + `TextReplace.dll`
+    +   `InstallOptionsEx.dll`
+    +   `InstallOptionsEx_legacy.dll`
+    +   `InstallOptionsEx_newAPI.dll`
+    +   `NSISArray.dll`
+    +   `NSISArray_legacy.dll`
+    +   `NSISArray_newAPI.dll`
+    +   `Registry.dll`
+    +   `SetCursor.dll`
+    +   `SkinnedControls.dll`
+    +   `TextReplace.dll`

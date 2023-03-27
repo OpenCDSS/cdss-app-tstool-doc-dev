@@ -1,11 +1,11 @@
 # Plugin Project #
 
-* [Introduction](#introduction)
-* [Add a New Plugin Project to Eclipse](#add-a-new-plugin-project-to-eclipse)
-    + [Create GitHub Repository](#create-github-repository)
-    + [Add a New Maven Project](#add-a-new-maven-project)
-    + [Configure the Eclipse Project](#configure-the-eclipse-project)
-    + [Configure the POM](#configure-the-POM)
+*   [Introduction](#introduction)
+*   [Add a New Plugin Project to Eclipse](#add-a-new-plugin-project-to-eclipse)
+    +   [Create GitHub Repository](#create-github-repository)
+    +   [Add a New Maven Project](#add-a-new-maven-project)
+    +   [Configure the Eclipse Project](#configure-the-eclipse-project)
+    +   [Configure the POM](#configure-the-POM)
 
 ----------------------
 
@@ -18,11 +18,11 @@ Different software versions should have similar configuration steps but will var
 TSTool plugins provide add-on features that are not provided by built-in features.
 Plugins are typically implemented for the following:
 
-1. Datastore, for example to integrate TSTool with a web service or database.
-2. Commands:
-    1. Provide read and/or write commands for a plugin datastore.
-    2. Provide commands that provide some other functionality specific to a technology
-       or set of third-part tools.
+1.   Datastore, for example to integrate TSTool with a web service or database.
+2.   Commands:
+    1.   Provide read and/or write commands for a plugin datastore.
+    2.   Provide commands that provide some other functionality specific to a technology
+         or set of third-part tools.
 
 A plugin in the deployed environment is packaged as a Java `jar` file that is
 installed in the software installation `plugins` folder
@@ -46,8 +46,8 @@ and deal with various general plugin issues.
 Separate documentation is available to provide additional details
 once the plugin project is initialized and supports development:
 
-* [Plugin Datastores](../plugin-datastores/plugin-datastores.md) - more information about adding a plugin for a datastore
-* [Plugin Commands](../plugin-commands/plugin-commands.md) - more information about adding a plugin for a command
+*   [Plugin Datastores](../plugin-datastores/plugin-datastores.md) - more information about adding a plugin for a datastore
+*   [Plugin Commands](../plugin-commands/plugin-commands.md) - more information about adding a plugin for a command
 
 ## Add a New Plugin Project to Eclipse ##
 
@@ -79,7 +79,7 @@ However, it is likely that older software will not need to be installed and rece
 Add a new project using ***File / New / (Other, if necessary) / Maven / Maven Project***, which shows the following:
 
 **<p style="text-align: center;">
-![new-project-1](images/new-project-1.png)
+![Add a new Maven project: select Maven project](images/new-project-1.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -89,7 +89,7 @@ Add a New Maven Project - Select Maven Project (<a href="../images/new-project-1
 Press ***Next >*** to continue.  The following will be shown.
 
 **<p style="text-align: center;">
-![new-project-2a](images/new-project-2a.png)
+![Add a New Maven Project](images/new-project-2a.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -101,7 +101,7 @@ because the project files will exist in the Git repository working files.
 Use the ***Browse...*** button to select the Git repository folder, which will result in settings similar to the following.
 
 **<p style="text-align: center;">
-![new-project-2b](images/new-project-2b.png)
+![Add a New Maven Project: select folder](images/new-project-2b.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -119,7 +119,7 @@ In this case select the `maven-archtype-quickstart` based on a similar plugin th
 which involves simple Java files (not J2EE, etc.).
 
 **<p style="text-align: center;">
-![new-project-3-archetype](images/new-project-3-archetype.png)
+![Specify the Maven project archetype](images/new-project-3-archetype.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -130,15 +130,15 @@ Press ***Next >*** to continue.
 
 Specify the Archetype parameters, which will be inserted at the top of the `*.pom` file and are used in the Maven dependency checks:
 
-* ***Group Id*** - it is typical to use the organization domain in reverse order, or a package hierarchy (folder slashes equivalent to periods)
-* ***Artifact Id*** - use the name of the repository, which should be a distinct name that follows appropriate conventions
-* ***Version*** - default is OK, can be changed over time if the plugin is distributed as a Maven package
-* ***Package*** - the Java package that will be created in the source code (`src`) folder,
-  can use reverse domain name conventions or other suitable package name
-  (in this example a verbose hierarchical package name is used)
+*   ***Group Id*** - it is typical to use the organization domain in reverse order, or a package hierarchy (folder slashes equivalent to periods)
+*   ***Artifact Id*** - use the name of the repository, which should be a distinct name that follows appropriate conventions
+*   ***Version*** - default is OK, can be changed over time if the plugin is distributed as a Maven package
+*   ***Package*** - the Java package that will be created in the source code (`src`) folder,
+    can use reverse domain name conventions or other suitable package name
+    (in this example a verbose hierarchical package name is used)
 
 **<p style="text-align: center;">
-![new-project-4-archetype-parameters](images/new-project-4-archetype-parameters.png)
+![Maven archetype parameters](images/new-project-4-archetype-parameters.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -148,7 +148,7 @@ Add a New Maven Project - Maven Archetype Parameters (<a href="../images/new-pro
 Press ***Finish*** to finish.  The following package folders and resources will be initialized (or similar).
 
 **<p style="text-align: center;">
-![new-project-5-eclipse-new](images/new-project-5-eclipse-new.png)
+![Initial Eclipse resources for new Maven project](images/new-project-5-eclipse-new.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -175,7 +175,7 @@ Right-click on the project in ***Package Explorer*** view and open ***Properties
 Change the ***Java Build Path / Projects*** tab settings to add the following projects that are needed for plugin development.
 
 **<p style="text-align: center;">
-![new-project-6-eclipse-properties](images/new-project-6-eclipse-properties.png)
+![Eclipse Java build path](images/new-project-6-eclipse-properties.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -187,7 +187,7 @@ The ***JDK Compliance*** must be configured before un-checking the ***Enable pro
 This generally simplifies the configuration to use the workspace settings across all projects.
 
 **<p style="text-align: center;">
-![new-project-7-eclipse-properties-compiler](images/new-project-7-eclipse-properties-compiler.png)
+![Java compiler properties](images/new-project-7-eclipse-properties-compiler.png)
 </p>**
 
 **<p style="text-align: center;">
@@ -204,7 +204,7 @@ rather than adding a potentially conflicting dependency in the `pom.xml` file.
 
 After updating the `pom.xml` file, right-click on the project and use ***Maven / Update Project...***.
 
-Additional documenentation needs to be added to explain how to package the dependencies in the plugin,
+Additional documentation needs to be added to explain how to package the dependencies in the plugin,
 especially when packages are already used in TSTool.
 For example, Maven uses the Jackson and Apache commons logging software, which is also used by TSTool elsewhere.
 It is possible to include additional jar files in the deployed `plugins` folder but this needs to be tested.
@@ -212,7 +212,7 @@ One option is to ensure that the overlapping plugin dependency versions are the 
 so that the software that is found will work in any case.
 
 **<p style="text-align: center;">
-![new-project-8-eclipse-maven-dependencies](images/new-project-8-eclipse-maven-dependencies.png)
+![Maven dependencies](images/new-project-8-eclipse-maven-dependencies.png)
 </p>**
 
 **<p style="text-align: center;">

@@ -1,12 +1,12 @@
 # Time Series #
 
-* [Introduction](#introduction)
-* [Time Series Concepts](#time-series-concepts)
-* [Time Series Identifier and Alias](#time-series-identifier-and-alias)
-* [Time Zone Handling](#time-zone-handling)
-* [Time Series Classes](#time-series-classes)
-* [Time Series Iteration](#time-series-iteration)
-* [Time Series Utility Classes](#time-series-utility-classes)
+*   [Introduction](#introduction)
+*   [Time Series Concepts](#time-series-concepts)
+*   [Time Series Identifier and Alias](#time-series-identifier-and-alias)
+*   [Time Zone Handling](#time-zone-handling)
+*   [Time Series Classes](#time-series-classes)
+*   [Time Series Iteration](#time-series-iteration)
+*   [Time Series Utility Classes](#time-series-utility-classes)
 
 -----------
 
@@ -24,9 +24,9 @@ Time series concepts related to TSTool are discussed in the
 
 Time series in basic form consist of a data "array":
 
-* date or date/time, also sometimes called timestamp - instantaneous or interval-end
-* value - the data value, typically a number
-* data flag - a string indicating data quality, etc.
+*   date or date/time, also sometimes called timestamp - instantaneous or interval-end
+*   value - the data value, typically a number
+*   data flag - a string indicating data quality, etc.
 
 Although it is possible to store multiple data values at a date/time,
 this causes issues with identifying and manipulating the data in a general way.
@@ -61,52 +61,52 @@ The metadata is output in some formats such as
 In addition to the data, properties are also needed to fully manage the time series.
 The following are major properties:
 
-* Identifying Information
-	+ Location type - The location type is an optional property that is useful
-	when location types might be confused, for example city and county of Denver.
-	+ Location - Although TSTool typically is used for processing data associated with stations (or sites), 
-	the concept of location can be generalized to sensor, area, political unit, etc.
-	The location is typically a station or other location identifier.
-	+ Data source - TSTool internally uses a data source to indicate originating entity, such as government agency.
-	+ Data type - The data type is typically a short string, such as "precip", but can be a numerical code or composite value.
-	+ Interval - string version corresponding to interval below,
-	indicates the spacing of data values, where [N] is assumed to be equivalent to 1 if not specified
-		- [N]Minute
-		- [N]Hour
-		- Day
-		- Month
-		- Year
-	+ Scenario - optional scenario indicator
-	+ Sequence (trace) ID - optional sequence identifier, typically year of trace in an ensemble
-* Period
-	+ Start
-	+ End
-	+ Original start - prior to extending/truncating, or available in original source
-	+ Original End - prior to extending/truncating, or available in original source
-* Interval - internal representation in
-[TimeInterval class](https://github.com/OpenCDSS/cdss-lib-common-java/blob/master/src/RTi/Util/Time/TimeInterval.java)
-	+ Base interval
-	+ Interval multiplier
-	+ Base interval, original - before conversion
-	+ Interval multiplier, original - before conversion
-* Units
-	+ Units
-	+ Original units - prior to a conversion
-* Missing value
-	+ Internally a range to handle numerical round-off for values like `-999`
-	+ `NaN` also recognized
-* Data limits
-	+ Useful to summarize data
-	+ Base class that is extended for monthly limits
-	+ Primarily used for monthly limits based on historical requirements
-* Descriptive information
-	+ Description
-	+ Genesis history (how modified)
-	+ Comments
-	+ Properties - free-form property=value properties
-* Data flags
-	+ Additional data array
-	+ Metadata - used to describe flag values
+*   Identifying Information:
+    +   Location type - The location type is an optional property that is useful
+        when location types might be confused, for example city and county of Denver.
+    +   Location - Although TSTool typically is used for processing data associated with stations (or sites), 
+        the concept of location can be generalized to sensor, area, political unit, etc.
+        The location is typically a station or other location identifier.
+    +   Data source - TSTool internally uses a data source to indicate originating entity, such as government agency.
+    +   Data type - The data type is typically a short string, such as "precip", but can be a numerical code or composite value.
+    +   Interval - string version corresponding to interval below,
+        indicates the spacing of data values, where [N] is assumed to be equivalent to 1 if not specified
+        -   [N]Minute
+        -   [N]Hour
+        -   Day
+        -   Month
+        -   Year
+    +   Scenario - optional scenario indicator
+    +   Sequence (trace) ID - optional sequence identifier, typically year of trace in an ensemble
+*   Period:
+    +   Start
+    +   End
+    +   Original start - prior to extending/truncating, or available in original source
+    +   Original End - prior to extending/truncating, or available in original source
+*   Interval - internal representation in
+    [TimeInterval class](https://github.com/OpenCDSS/cdss-lib-common-java/blob/master/src/RTi/Util/Time/TimeInterval.java):
+    +   Base interval
+    +   Interval multiplier
+    +   Base interval, original - before conversion
+    +   Interval multiplier, original - before conversion
+*   Units:
+    +   Units
+    +   Original units - prior to a conversion
+*   Missing value:
+    +   Internally a range to handle numerical round-off for values like `-999`
+    +   `NaN` also recognized
+*   Data limits:
+    +   Useful to summarize data
+    +   Base class that is extended for monthly limits
+    +   Primarily used for monthly limits based on historical requirements
+*   Descriptive information:
+    +   Description
+    +   Genesis history (how modified)
+    +   Comments
+    +   Properties - free-form property=value properties
+*   Data flags:
+    +   Additional data array
+    +   Metadata - used to describe flag values
 
 ## Time Series Identifier and Alias ##
 
@@ -143,15 +143,15 @@ but third-party packages vary in their use, in particular database libraries.
 The custom [`DateTime`](https://github.com/OpenCDSS/cdss-lib-common-java/blob/master/src/RTi/Util/Time/DateTime.java) class
 provides a number of features that work well with time series including:
 
-* Mutable
-	- In particular for time series iterators the
-	[`DateTime`](https://github.com/OpenCDSS/cdss-lib-common-java/blob/master/src/RTi/Util/Time/DateTime.java)
-	instance can be incremented or decremented by the time series interval.
-	Mutable design is not always desirable but it helps with performance in this case
-	**Perhaps need to implement an ImmutableDateTime class**.
-* Time zone is handled as much as needed but does not overwhelm (see more discussion below).
-* No limit on internal representation since milliseconds, UNIX epoch, or other datum is not used.
-* Performance of the class has been demonstrated.
+*   Mutable:
+    -   In particular for time series iterators the
+        [`DateTime`](https://github.com/OpenCDSS/cdss-lib-common-java/blob/master/src/RTi/Util/Time/DateTime.java)
+        instance can be incremented or decremented by the time series interval.
+        Mutable design is not always desirable but it helps with performance in this case
+        **Perhaps need to implement an ImmutableDateTime class**.
+*   Time zone is handled as much as needed but does not overwhelm (see more discussion below).
+*   No limit on internal representation since milliseconds, UNIX epoch, or other datum is not used.
+*   Performance of the class has been demonstrated.
 
 Time zone is stored in [`DateTime`](https://github.com/OpenCDSS/cdss-lib-common-java/blob/master/src/RTi/Util/Time/DateTime.java)
 as a simple string, mainly used for comparison and output/display.
@@ -164,23 +164,23 @@ Regular interval time series only store the start and end date/time and time zon
 in order to avoid offset issues.
 Time zones can be specified in date/time string in several ways:
 
-1. Time zone is constant across year:
-	1. Time zone is standard time:
-		1. GMT
-		2. MST
-		3. -07:00 (offset from GMT)
-		4. etc.
-		5. No daylight saving changes
-	2. Time zone is local time:
-		1. `America/Denver`
-		2. `Mountain`
-		3. etc.
-		4. Daylight saving changes so in spring will have missing value when spring forward
-		and in fall a value will be lost because a value is overwritten
-2. Time zone changes during full year:
-	1. Daylight saving string:
-		1. `MST` and `MDT` (seems to be less common and out of favor)
-		2. [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) `-07:00` and `-06:00` depending on time of year
+1.  Time zone is constant across year:
+    1.  Time zone is standard time:
+        1.  GMT
+        2.  MST
+        3.  -07:00 (offset from GMT)
+        4.  etc.
+        5.  No daylight saving changes
+    2.  Time zone is local time:
+        1.  `America/Denver`
+        2.  `Mountain`
+        3.  etc.
+        4.  Daylight saving changes so in spring will have missing value when spring forward
+            and in fall a value will be lost because a value is overwritten
+2.  Time zone changes during full year:
+    1.  Daylight saving string:
+        1.  `MST` and `MDT` (seems to be less common and out of favor)
+        2.  [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) `-07:00` and `-06:00` depending on time of year
 
 Within TSTool, the first option is OK given that the numerical 
 [`DateTime`](https://github.com/OpenCDSS/cdss-lib-common-java/blob/master/src/RTi/Util/Time/DateTime.java) values
@@ -192,10 +192,10 @@ The biggest issue is case 2.x because the time zone string changes during the ye
 time series have different time zone string, confusion will result.
 Consequently, time series need to generate an error when:
 
-* start and end date/time have different time zone
-* a date/time is used to set data and the time zone for that date/time is different from the start
-	+ could allow an alternate time zone to be used or changing time zone ignored,
-	but in any case the time zone would need to be consistent
+*   start and end date/time have different time zone
+*   a date/time is used to set data and the time zone for that date/time is different from the start
+    +   could allow an alternate time zone to be used or changing time zone ignored,
+        but in any case the time zone would need to be consistent
 
 Consistency can be enforced mainly by handling time zone when reading and writing time series.
 Once the time series is in memory, the time zone is generally ignored except for printing.
@@ -264,22 +264,22 @@ Time series are commonly iterated for input, output, analysis, and visualization
 Consequently, there is a need for efficient iteration design.
 There are two main ways to iterate over time series data.
 
-1. Simple for/while loop.
-	1. Start with time series start [`DateTime`](https://github.com/OpenCDSS/cdss-lib-common-java/blob/master/src/RTi/Util/Time/DateTime.java).
-	2. End with time series end [`DateTime`](https://github.com/OpenCDSS/cdss-lib-common-java/blob/master/src/RTi/Util/Time/DateTime.java).
-	3. Increment the [`DateTime`](https://github.com/OpenCDSS/cdss-lib-common-java/blob/master/src/RTi/Util/Time/DateTime.java)
-	by calling [`DateTime`](https://github.com/OpenCDSS/cdss-lib-common-java/blob/master/src/RTi/Util/Time/DateTime.java)
-	`addInterval()` method matching time series interval base and multiplier.
-	4. Retrieve data values using
-	[`TS`](https://github.com/OpenCDSS/cdss-lib-common-java/blob/master/src/RTi/TS/TS.java)
-	`getDataValue()` or similar method.
-2. Iterator class.
-	1. Call the time series class `iterator()` function to create a
-	[`TSIterator`](https://github.com/OpenCDSS/cdss-lib-common-java/blob/master/src/RTi/TS/TSIterator.java) instance.
-	If an irregular time series, a
-	[`IrregularTSIterator`](https://github.com/OpenCDSS/cdss-lib-common-java/blob/master/src/RTi/TS/IrregularTSIterator.java) will be returned.
-	2. Use the iterator methods to advance the date/time and retrieve corresponding data values via
-	[`TSData`](https://github.com/OpenCDSS/cdss-lib-common-java/blob/master/src/RTi/TS/TSData.java) objects.
+1.  Simple for/while loop.
+    1.  Start with time series start [`DateTime`](https://github.com/OpenCDSS/cdss-lib-common-java/blob/master/src/RTi/Util/Time/DateTime.java).
+    2.  End with time series end [`DateTime`](https://github.com/OpenCDSS/cdss-lib-common-java/blob/master/src/RTi/Util/Time/DateTime.java).
+    3.  Increment the [`DateTime`](https://github.com/OpenCDSS/cdss-lib-common-java/blob/master/src/RTi/Util/Time/DateTime.java)
+        by calling [`DateTime`](https://github.com/OpenCDSS/cdss-lib-common-java/blob/master/src/RTi/Util/Time/DateTime.java)
+        `addInterval()` method matching time series interval base and multiplier.
+    4.  Retrieve data values using
+        [`TS`](https://github.com/OpenCDSS/cdss-lib-common-java/blob/master/src/RTi/TS/TS.java)
+        `getDataValue()` or similar method.
+2.  Iterator class.
+    1.  Call the time series class `iterator()` function to create a
+        [`TSIterator`](https://github.com/OpenCDSS/cdss-lib-common-java/blob/master/src/RTi/TS/TSIterator.java) instance.
+        If an irregular time series, a
+        [`IrregularTSIterator`](https://github.com/OpenCDSS/cdss-lib-common-java/blob/master/src/RTi/TS/IrregularTSIterator.java) will be returned.
+    2.  Use the iterator methods to advance the date/time and retrieve corresponding data values via
+        [`TSData`](https://github.com/OpenCDSS/cdss-lib-common-java/blob/master/src/RTi/TS/TSData.java) objects.
 
 The second approach is approved for new code and should be phased in given that it
 uses a consistent approach.

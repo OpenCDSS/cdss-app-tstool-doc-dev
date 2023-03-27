@@ -4,7 +4,7 @@ KDiff3 software is highly useful for comparing source files and folders of files
 
 Install the appropriate version of the software for the operating system from the download page on the following page:
 
-* [KDiff3 Home](http://kdiff3.sourceforge.net/)
+*   [KDiff3 Home](http://kdiff3.sourceforge.net/)
 
 KDiff3 can be used directly or can be configured within `git` to use for the "difftool".
 

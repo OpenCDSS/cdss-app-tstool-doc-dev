@@ -1,11 +1,11 @@
 # Datastores #
 
-* [Introduction](#introduction)
-* [Datastore Configuration](#datastore-configuration)
-* [Database Datastores](#database-datastores)
-* [Web Service Datastores](#web-service-datastores)
-* [File Datastores](#file-datastores)
-* [Plugin Datastores](../plugin-datastores/plugin-datastores.md)
+*   [Introduction](#introduction)
+*   [Datastore Configuration](#datastore-configuration)
+*   [Database Datastores](#database-datastores)
+*   [Web Service Datastores](#web-service-datastores)
+*   [File Datastores](#file-datastores)
+*   [Plugin Datastores](../plugin-datastores/plugin-datastores.md)
 
 -------------------
 
@@ -20,20 +20,20 @@ but may also be phased in to access [files](#file-datastores).
 TSTool originally used the term "input types" to describe data input formats.
 Input types are being converted to datastores as follows:
 
-* Database input types are being migrated to database datatores.
-	+ Many databases have already been migrated
-	+ [Colorado's HydroBase](https://opencdss.state.co.us/tstool/latest/doc-user/datastore-ref/CO-HydroBase/CO-HydroBase/)
-	is available as datastore and input type, with input type as default due to historical conventions
-	related to how a HydroBase database is selected at TSTool startup
-* Web services are being migrated to web service datastores.
-	+ Most web services have already been migrated
-* Files are envisioned to be be migrated to file datastores, but have not been migrated yet
-	+ Files access is more granular than database or web services and are opened in TSTool UI via a file selector dialog
-	(rather than a datastore configuration file)
-	+ The concept of file datastore can be implemented but the datastore will likely not be named and configured up front
-	via a datastore configuration file
-	+ Files do not typically require a sustained connection during the TSTool session
-	
+*   Database input types are being migrated to database datatores.
+    +   Many databases have already been migrated
+    +   [Colorado's HydroBase](https://opencdss.state.co.us/tstool/latest/doc-user/datastore-ref/CO-HydroBase/CO-HydroBase/)
+        is available as datastore and input type, with input type as default due to historical conventions
+        related to how a HydroBase database is selected at TSTool startup
+*   Web services are being migrated to web service datastores.
+    +   Most web services have already been migrated
+*   Files are envisioned to be be migrated to file datastores, but have not been migrated yet
+    +   Files access is more granular than database or web services and are opened in TSTool UI via a file selector dialog
+        (rather than a datastore configuration file)
+    +   The concept of file datastore can be implemented but the datastore will likely not be named and configured up front
+        via a datastore configuration file
+    +   Files do not typically require a sustained connection during the TSTool session
+
 ## Datastore Design ##
 
 A "datastore" is fundamentally a persistent form of data storage.
@@ -43,10 +43,10 @@ the code is fairly generic.
 The following datastore interfaces and classes were originally implemented by evolving
 legacy code that provided database connections (more discussion below).
 
-* [datastore](https://github.com/OpenCDSS/cdss-lib-common-java/tree/master/src/riverside/datastore) package - core functionality
-* [DataStore](https://github.com/OpenCDSS/cdss-lib-common-java/tree/master/src/riverside/datastore/DataStore.java) interface - defines behavior
-* [AbstractDataStore](https://github.com/OpenCDSS/cdss-lib-common-java/tree/master/src/riverside/datastore/AbstractDataStore.java) class - default implementation
-for database datastore
+*   [datastore](https://github.com/OpenCDSS/cdss-lib-common-java/tree/master/src/riverside/datastore) package - core functionality
+*   [DataStore](https://github.com/OpenCDSS/cdss-lib-common-java/tree/master/src/riverside/datastore/DataStore.java) interface - defines behavior
+*   [AbstractDataStore](https://github.com/OpenCDSS/cdss-lib-common-java/tree/master/src/riverside/datastore/AbstractDataStore.java) class - default implementation
+    for database datastore
 
 Refactoring the above code to use built-in Java data objects such as hash map for properties will allow the code to be more general,
 but legacy code will need to be reworked.
@@ -70,12 +70,12 @@ for configuration information.
 
 The core datastore package is extended to create a database datastore:
 
-* [AbstractDatabaseDataStore](https://github.com/OpenCDSS/cdss-lib-common-java/blob/master/src/RTi/DMI/AbstractDatabaseDataStore.java)
+*   [AbstractDatabaseDataStore](https://github.com/OpenCDSS/cdss-lib-common-java/blob/master/src/RTi/DMI/AbstractDatabaseDataStore.java)
 
 The benefit of a general datastore design is that general commands can be implemented, including:
 
-* [`ReadTableFromDatastore`](https://opencdss.state.co.us/tstool/latest/doc-user/command-ref/ReadTableFromDataStore/ReadTableFromDataStore/)
-* [`RunSql`](https://opencdss.state.co.us/tstool/latest/doc-user/command-ref/RunSql/RunSql/)
+*   [`ReadTableFromDatastore`](https://opencdss.state.co.us/tstool/latest/doc-user/command-ref/ReadTableFromDataStore/ReadTableFromDataStore/)
+*   [`RunSql`](https://opencdss.state.co.us/tstool/latest/doc-user/command-ref/RunSql/RunSql/)
 
 Database datastores typically use the
 [DMI (Data Management Interface)](https://github.com/OpenCDSS/cdss-lib-common-java/tree/master/src/RTi/DMI) package

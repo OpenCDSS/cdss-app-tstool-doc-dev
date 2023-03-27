@@ -1,9 +1,9 @@
 # Data Products #
 
-* [Introduction](#introduction)
-* [UI Product Generation](#ui-product-generation)
-* [Automated Product Generation](#automated-product-generation)
-* [TSView Reference and GRTS Package](#tsview-reference-and-grts-package)
+*   [Introduction](#introduction)
+*   [UI Product Generation](#ui-product-generation)
+*   [Automated Product Generation](#automated-product-generation)
+*   [TSView Reference and GRTS Package](#tsview-reference-and-grts-package)
 
 -----------------
 
@@ -41,8 +41,8 @@ Data products are described in the
 Extensive properties are available to describe in text form how to create graphical time series products.
 The TSView functionality is provided by the following code:
 
-* [`GRTS`](https://github.com/OpenCDSS/cdss-lib-common-java/tree/master/src/RTi/GRTS) package - graphing for time series
-* [`GR`](https://github.com/OpenCDSS/cdss-lib-common-java/tree/master/src/RTi/GR) package - underlying drawing library
+*   [`GRTS`](https://github.com/OpenCDSS/cdss-lib-common-java/tree/master/src/RTi/GRTS) package - graphing for time series
+*   [`GR`](https://github.com/OpenCDSS/cdss-lib-common-java/tree/master/src/RTi/GR) package - underlying drawing library
 
 The above libraries were developed at a time when other alternatives were not available.
 These packages are integrated with the core time series package to provide optimized graphing.
