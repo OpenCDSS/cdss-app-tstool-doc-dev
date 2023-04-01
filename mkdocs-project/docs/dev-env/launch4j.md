@@ -18,10 +18,10 @@ The following is the download page for launch4j in order to evaluate whether upd
 
 ## launch4j Configuration ##
 
-The luanch4j software uses a file `bin/TSTool.l4j.ini` in the TSTool installation folder,
+The launch4j software uses a file `bin/TSTool.l4j.ini` in the TSTool installation folder,
 which is version-controlled in the `cdss-app-tstool-main` repository in folder `installer/common` folder.
 This is used by launch4j at run-time to configure the Java Runtime Environment.
-The following command line parameters are used by default, but can be changed after the software is intalled:
+The following command line parameters are used by default, but can be changed after the software is installed:
 
 |**Parameter**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Description**|
 |--|--|

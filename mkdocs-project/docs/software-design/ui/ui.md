@@ -180,7 +180,7 @@ describe input types and datastores, including configuration.
 </p>**
 
 **<p style="text-align: center;">
-TSTool Main Window Browse Area (<a href="../images/ui-main-browse.png">see also the full-size image</a>)
+TSTool Main Window Browse Area (<a href="../images/ui-main-browse.png">see full-size image</a>)
 </p>**
 
 TSIDs that are in the command area can be run to retrieve time series.
@@ -364,7 +364,7 @@ and [`NewTimeSeries_JDialog` editor class](https://github.com/OpenCDSS/cdss-lib-
 </p>**
 
 **<p style="text-align: center;">
-`NewTimeSeries` Command Editor (<a href="../images/ui-NewTimeSeries-dialog.png">see also the full-size image</a>)
+`NewTimeSeries` Command Editor (<a href="../images/ui-NewTimeSeries-dialog.png">see full-size image</a>)
 </p>**
 
 The `GridBagLayout` divides a panel into a virtual grid of rows and columns.
@@ -407,7 +407,7 @@ and [`ReadTableFromDataStore_JDialog` editor class](https://github.com/OpenCDSS/
 </p>**
 
 **<p style="text-align: center;">
-`ReadTableFromDataStore` Command Editor (<a href="../images/ui-ReadTableFromDataStore-dialog.png">see also the full-size image</a>)
+`ReadTableFromDataStore` Command Editor (<a href="../images/ui-ReadTableFromDataStore-dialog.png">see full-size image</a>)
 </p>**
 
 Additional design considerations include:

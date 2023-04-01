@@ -83,7 +83,7 @@ Add a new project using ***File / New / (Other, if necessary) / Maven / Maven Pr
 </p>**
 
 **<p style="text-align: center;">
-Add a New Maven Project - Select Maven Project (<a href="../images/new-project-1.png">see also the full-size image</a>)
+Add a New Maven Project - Select Maven Project (<a href="../images/new-project-1.png">see full-size image</a>)
 </p>**
 
 Press ***Next >*** to continue.  The following will be shown.
@@ -93,7 +93,7 @@ Press ***Next >*** to continue.  The following will be shown.
 </p>**
 
 **<p style="text-align: center;">
-Add a New Maven Project - New Maven Project (<a href="../images/new-project-2a.png">see also the full-size image</a>)
+Add a New Maven Project - New Maven Project (<a href="../images/new-project-2a.png">see full-size image</a>)
 </p>**
 
 Unselect the ***Use default Workspace location*** choice
@@ -105,7 +105,7 @@ Use the ***Browse...*** button to select the Git repository folder, which will r
 </p>**
 
 **<p style="text-align: center;">
-Add a New Maven Project - New Maven Project (<a href="../images/new-project-2b.png">see also the full-size image</a>)
+Add a New Maven Project - New Maven Project (<a href="../images/new-project-2b.png">see full-size image</a>)
 </p>**
 
 Press ***Next >*** to continue.
@@ -123,7 +123,7 @@ which involves simple Java files (not J2EE, etc.).
 </p>**
 
 **<p style="text-align: center;">
-Add a New Maven Project - Maven Archetype (<a href="../images/new-project-3-archetype.png">see also the full-size image</a>)
+Add a New Maven Project - Maven Archetype (<a href="../images/new-project-3-archetype.png">see full-size image</a>)
 </p>**
 
 Press ***Next >*** to continue.
@@ -142,7 +142,7 @@ Specify the Archetype parameters, which will be inserted at the top of the `*.po
 </p>**
 
 **<p style="text-align: center;">
-Add a New Maven Project - Maven Archetype Parameters (<a href="../images/new-project-4-archetype-parameters.png">see also the full-size image</a>)
+Add a New Maven Project - Maven Archetype Parameters (<a href="../images/new-project-4-archetype-parameters.png">see full-size image</a>)
 </p>**
 
 Press ***Finish*** to finish.  The following package folders and resources will be initialized (or similar).
@@ -152,7 +152,7 @@ Press ***Finish*** to finish.  The following package folders and resources will 
 </p>**
 
 **<p style="text-align: center;">
-Add a New Maven Project - Initial Eclipse Resources (<a href="../images/new-project-5-eclipse-new.png">see also the full-size image</a>)
+Add a New Maven Project - Initial Eclipse Resources (<a href="../images/new-project-5-eclipse-new.png">see full-size image</a>)
 </p>**
 
 The Git working files will contain a folder matching the Maven artifact name,
@@ -179,7 +179,7 @@ Change the ***Java Build Path / Projects*** tab settings to add the following pr
 </p>**
 
 **<p style="text-align: center;">
-Project Properties - Eclipse Java Build Path (<a href="../images/new-project-6-eclipse-properties.png">see also the full-size image</a>)
+Project Properties - Eclipse Java Build Path (<a href="../images/new-project-6-eclipse-properties.png">see full-size image</a>)
 </p>**
 
 Change the ***Java Compiler*** tab settings to use JDK 8 compliance and workspace settings (double click on ***Java Compiler***).
@@ -191,7 +191,7 @@ This generally simplifies the configuration to use the workspace settings across
 </p>**
 
 **<p style="text-align: center;">
-Project Properties - Java Compiler (<a href="../images/new-project-7-eclipse-properties-compiler.png">see also the full-size image</a>)
+Project Properties - Java Compiler (<a href="../images/new-project-7-eclipse-properties-compiler.png">see full-size image</a>)
 </p>**
 
 ## Configure the POM ##
@@ -216,5 +216,5 @@ so that the software that is found will work in any case.
 </p>**
 
 **<p style="text-align: center;">
-Project Properties - Maven Dependencies (<a href="../images/new-project-8-eclipse-maven-dependencies.png">see also the full-size image</a>)
+Project Properties - Maven Dependencies (<a href="../images/new-project-8-eclipse-maven-dependencies.png">see full-size image</a>)
 </p>**
