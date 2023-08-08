@@ -24,7 +24,7 @@ After reading instructions for a step, use "back" to return to this outline so t
     *   [Development Environment / Git](../dev-env/git.md) - install Git software so the repositories can be cloned
 4.  **Required:** [Clone Git Repositories](#clone-git-repositories) - clone the repositories to get access to all files (**see details below**)
 5.  **Required:** Development Environment software install part 2 (Java development tools)
-    *   **Required:** [Development Environment / Java 8](../dev-env/java8.md) - make sure Java 8 is available on system
+    *   **Required:** [Development Environment / Java](../dev-env/java.md) - make sure the correct Java version is available on system
     *   **Required (if not already installed):** [Development Environment / Eclipse](../dev-env/eclipse.md) - install Eclipse for use as IDE
     *   **Optional:** [Development Environment / KDiff3](../dev-env/kdiff3.md) - install software to facilitate comparing files
         **(highly useful and can be used with Git)**

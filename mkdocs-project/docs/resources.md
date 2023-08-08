@@ -43,27 +43,27 @@ Java is the underlying language an environment used by TSTool.
 Jython provides a Java implementation of Python, which allows Python to be integrated with TSTool.
 A major issue with Jython is whether Python 3 integration will be supported.
 
-*   [Jython](http://www.jython.org/)
+*   [Jython](https://www.jython.org/)
 
 ## KDiff3 ##
 
 KDiff3 software is useful for visually comparing individual files and folders of files.
 
-*   [KDiff3](http://kdiff3.sourceforge.net/)
+*   [KDiff3](https://kdiff3.sourceforge.net/)
 
 ## Launch4J ##
 
 Launch4J is used to launch TSTool at runtime and provides control over the JRE.
 It is used in the build utilities.
 
-*   [Launch4J](http://launch4j.sourceforge.net/)
+*   [Launch4J](https://launch4j.sourceforge.net/)
 
 ## MkDocs ##
 
 Markdown is used to create this documentation. See also the [Markdown](#markdown) section below.
 
-*   [MkDocs](http://www.mkdocs.org/) - MkDocs website
-*   [OWF / Learn MkDocs](http://learn.openwaterfoundation.org/owf-learn-mkdocs/) - Open Water Foundation MkDocs learning resources
+*   [MkDocs](https://www.mkdocs.org/) - MkDocs website
+*   [OWF / Learn MkDocs](https://learn.openwaterfoundation.org/owf-learn-mkdocs/) - Open Water Foundation MkDocs learning resources
 
 ## Markdown ##
 

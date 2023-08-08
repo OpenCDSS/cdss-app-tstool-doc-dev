@@ -1,11 +1,11 @@
 # TSTool / Development Environment / Eclipse ##
 
-*  [Introduction](#introduction)
-*  ![Windows icon](../images/windows-32.png) [Windows](#windows)
-    +  [Download Eclipse](#download-eclipse)
-    +  [Install Eclipse](#install-eclipse)
-    +  [Check Eclipse Run Script](#check-eclipse-run-script)
-*  ![Linux icon](../images/linux-32.png) [Linux](#linux)
+*   [Introduction](#introduction)
+*   ![Windows icon](../images/windows-32.png) [Windows](#windows)
+     +   [Download Eclipse](#download-eclipse)
+     +   [Install Eclipse](#install-eclipse)
+     +   [Check Eclipse Run Script](#check-eclipse-run-script)
+*   ![Linux icon](../images/linux-32.png) [Linux](#linux)
 
 -----
 
@@ -18,8 +18,9 @@ Eclipse does have some issues and limitations, but other IDEs have different iss
 
 TSTool development has typically occurred on Windows computers, although the software is often deployed to other operating systems.
 
-As discussed in the [Java 8](java8.md) section,
-Java 8 is currently used for development and 64-bit Java and Eclipse are used as of TSTool version 14.0.0.
+As discussed in the [Java](java.md) section,
+OpenJDK Java 9 is currently used for development as of TSTool version 14.9.0.
+Oracle Java 8 was currently used for development and 64-bit Java and Eclipse are used as of TSTool version 14.0.0.
 
 32-bit Java was previously used due to component requirements.
 TSTool has been developed with various versions of Eclipse, including Mars, Neon, 2019-03 and later versions.

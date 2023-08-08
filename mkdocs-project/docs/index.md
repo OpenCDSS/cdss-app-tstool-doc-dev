@@ -1,9 +1,10 @@
 # CDSS / TSTool (Developer) #
 
 This developer documentation explains how to build, enhance, and maintain
-[Colorado's Decision Support Systems (CDSS)](http://cdss.state.co.us/Pages/CDSSHome.aspx) TSTool software.
+[Colorado's Decision Support Systems (CDSS)](https://cdss.colorado.gov) TSTool software.
 TSTool software automates processing time series, data tables, and other data.
-See also the [TSTool User Documentation](https://opencdss.state.co.us/tstool/latest/doc-user/).
+See also the latest [TSTool User Documentation](https://opencdss.state.co.us/tstool/latest/doc-user/)
+and the [OpenCDSS TSTool](https://opencdss.state.co.us/opencdss/tstool/) product documentation.
 
 *   [How to Use this Documentation](#how-to-use-this-documentation)
 *   [Acknowledgements](#acknowledgements)
@@ -11,7 +12,7 @@ See also the [TSTool User Documentation](https://opencdss.state.co.us/tstool/lat
 *   [About the Open Water Foundation](#about-the-open-water-foundation)
 *   [License](#license)
 *   [Source Repository on GitHub](#source-repository-on-github)
-*   [Release Notes](#release-notes) - **this documentation has been updated for TSTool version 14.7.0**
+*   [Release Notes](#release-notes) - **this documentation has been updated for TSTool version 14.8.7**
 
 ----------------
 
@@ -24,14 +25,19 @@ The documentation is organized with the first sections focusing on setup for a n
 The reference sections at the end provide information that may be of use but are typically not used day to day.
 Use the search feature of this website to find specific information.
 
-As of version 14.0.0, the TSTool development environment creates a 64-bit Java TSTool runtime for use on Windows and Linux computers.
-Older versions focused on 32-bit Java runtime.
+As of version 14.8.7, OpenJDK Java is used.
+Prior to this version, Oracle Standard Edition Java was used.
+
+As of version 14.0.0, the TSTool development environment creates a 64-bit Java TSTool runtime for use on Windows and Linux computers,
+using Oracle Standard Edition.
+Older versions used the 32-bit Java runtime.
+
 Icons for Cygwin ![Cygwin icon](images/cygwin-32.png), Linux ![Linux icon](images/linux-32.png), and Windows ![Windows icon](images/windows-32.png)
 are included to help indicate documentation
 specific to an operating system.
 
 *   [New Developer Setup](dev-new/overview/) - **new TSTool software developers should start here**
-*   [Development Tasks](dev-tasks/overview/) - describes common development tasks - **refer to this after new development environment is configured**
+*   [Development Tasks](dev-tasks/overview/) - describes common development tasks - **refer to this after a new development environment has been configured**
 *   [REFERENCE: Software Design](software-design/overview/) - provides details about the software code design
 *   [REFERENCE: Deployed Environment](deployed-env/overview/) - describes the deployed environment after software is installed
 *   [REFERENCE: Development Environment](dev-env/overview/) - describes development environment software installation
@@ -127,5 +133,5 @@ in order to avoid confusion with the legacy documentation and to facilitate upda
 
 ## Release Notes ##
 
-See the [TSTool release notes](http://opencdss.state.co.us/tstool/latest/doc-user/appendix-release-notes/release-notes/)
+See the [TSTool release notes](https://opencdss.state.co.us/tstool/latest/doc-user/appendix-release-notes/release-notes/)
 section of the TSTool user documentation for information about TSTool software changes.
