@@ -208,6 +208,7 @@ This repository is maintained by the OpenCDSS team.
 The following release notes indicate the update major history for documentation.
 See the GitHub issues and repository history for detailed information.
 
+*   2023-08-07 - Update for 14.9.0 release (OpenJDK Java).
 *   2023-03-27 - Update for 14.7.0 release (web accessibility).
 *   2021-09-14 - Update for 14.0.0 release.
 *   2019-04-26 - Update links for opencdss.state.co.us domain.

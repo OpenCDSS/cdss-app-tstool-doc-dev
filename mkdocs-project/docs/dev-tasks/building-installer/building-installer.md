@@ -39,7 +39,7 @@ The following are software tools used to create the installer
 
 *   Eclipse IDE is used to run build processes using ***External Tools Configurations*** - see [instructions for installing Eclipse](../../dev-env/eclipse.md).
 *   Eclipse Ant is used to automate tasks (comes packaged with Eclipse).
-*   Java Runtime Environment (JRE) compatible with TSTool version is packaged with the installer - see [instructions for installing Java](../../dev-env/java8.md).
+*   Java Runtime Environment (JRE) compatible with TSTool version is packaged with the installer - see [instructions for installing Java](../../dev-env/java.md).
 *   The NSIS software is used to create self-extracting installer for Windows - see [instructions for installing NSIS](../../dev-env/nsis.md).
 *   The launch4j software is used to create a launcher for TSTool, so that it behaves similar to other executable programs - see
     [instructions for installing launch4j](../../dev-env/launch4j.md).
@@ -278,13 +278,14 @@ When a release has been made, especially for an important milestone, each reposi
 A Linux installer can be created by relying on a VirtualBox virtual machine (or similar), as follows:
 
 1.  First install and configure a VirtualBox VM, for example see the
-    [Open Water Foundation / Learn VirtualBox](http://learn.openwaterfoundation.org/owf-learn-virtualbox/) documentation.
+    [Open Water Foundation / Learn VirtualBox](https://learn.openwaterfoundation.org/owf-learn-virtualbox/) documentation.
 2.  Configure a VirtualBox shared folder for CDSS files, to allow access to the Windows installed TSTool files.
 3.  From a Linux VM terminal window run the `bin/build-linux-distro.bash` script that is distributed with TSTool,
     for the installed version of interest, using the shared folder to access Windows files.
     1.  The source exists in `resources/runtime/bin` folder in the TSTool repository.
     2.  The `makeself` software is used to create the installer (install with `sudo apt-get install makeself` if not already installed).
     3.  The resulting installer can be run on Linux to install TSTool in system or user files.
-    4.  Java 8 will need to be installed on the VM where TSTool is installed.
+    4.  The Java version at least that of the compiled TSTool software
+        will need to be installed on the VM where TSTool is installed.
 
 Linux versions of TSTool are not currently supported by the State of Colorado.

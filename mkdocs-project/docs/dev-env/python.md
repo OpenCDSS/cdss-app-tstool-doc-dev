@@ -2,4 +2,4 @@
 
 Install Python and pip, needed by MkDocs.
 
-See [OWF / Learn MkDocs python installation](http://learn.openwaterfoundation.org/owf-learn-mkdocs/install/).
+See [OWF / Learn MkDocs python installation](https://learn.openwaterfoundation.org/owf-learn-mkdocs/install/).

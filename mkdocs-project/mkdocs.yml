@@ -62,7 +62,7 @@ nav:
   - 'Git': dev-env/git.md
   - 'Python and pip': dev-env/python.md
   - 'MkDocs': dev-env/mkdocs.md
-  - 'Java 8': dev-env/java8.md
+  - 'Java': dev-env/java.md
   - 'Eclipse': dev-env/eclipse.md
   - 'Maven': dev-env/maven.md
 #  - 'Text Editor': dev-env/editor.md

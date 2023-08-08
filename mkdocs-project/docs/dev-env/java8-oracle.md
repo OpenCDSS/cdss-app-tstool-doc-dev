@@ -1,46 +1,39 @@
-# TSTool / Development Environment / Java 8 ##
+# TSTool / Development Environment / Windows Oracle Java 8
 
 *   [Introduction](#introduction)
-*   ![Windows icon](../images/windows-32.png) [Windows](#windows)
-    +   [Download Java 8](#download-java-8)
-    +   [Install Java 8](#install-java-8)
-    +   [Create Symbolic Links for Java 8](#ceate-symbolic-links-for-java-8)
-    +   [Confirm Run Script Configuration](#confirm-run-script-configuration)
-*   ![Linux icon](../images/linux-32.png) [Linux](#linux)
+*   [Download Oracle Java 8 ](#download-oracle-java-8)
+*   [Install Oracle Java 8](#install-oracle-java-8)
+*   [Create Symbolic Links for Oracle Java 8](#create-symbolic-links-for-oracle-java-8)
+*   [Confirm Oracle Java 8 Eclipse Run Script Configuration](#confirm-oracle-java-8-eclipse-run-script-configuration)
 
 ------
 
 ## Introduction ##
 
-Java 8 is currently required for TSTool development.
-Java 9 and newer versions will be evaluated and will be phased in as soon as possible,
-but requires confirmation that deployed systems including Linux variants support Java 9.
+This documentation is an archive of old documentation that was used to set up the Java 8 development environment
+using Oracle Java 8 through TSTool 14.8.6,
+including discussion of 64-bit and 32-bit environments.
 
-As of TSTool 14.0.0, 64-bit Java is currently the default for development.
-32-bit Java was previously used and supports native libraries used by some TSTool features,
-in particular the HEC-DSS libraries, which are used by `ReadHecDss` and `WriteHecDss` commands.
-64-bit versions of these libraries need to be integrated with TSTool in order to fully support 64-bit development environment.
-If 32-bit features are needed, an older version of TSTool can be installed.
+Oracle began charging a fee for Java Standard Edition as of January 2019.
+TSTool development was able to continue using the free version of Oracle Java.
+However, the free OpenJDK version was phased in as of TSTool 14.9.0 to avoid fees and allow Java to be updated to supported versions.
 
-It is possible to change the run-time Java for deployed TSTool software by swapping
-the Java Runtime Environment (JRE) that is distributed with TSTool.
+The links in this documentation may become unavailable as the Oracle web pages change.
 
-## ![Windows icon](../images/windows-32.png) Windows ##
-
-### Download Java 8 ###
+### Download Oracle Java 8 ###
 
 TSTool has traditionally been developed using Oracle Java.
-The major version (8) is important and otherwise the latest minor version can be downloaded to ensure support
-for recent operating systems and for security patches.
+The major Java version (8) is important and otherwise the latest minor version can be downloaded to ensure support
+for recent operating systems and security patches.
 
 Download the Java SE Development Kit from the
-[Oracle Java Download Site](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
+[Oracle Java Download Site](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
 
 The 64-bit version download file will be named `jdk-8u112-windows-x64.exe` or similar.
 
 The 32-bit version (for older versions of TSTool) is named `Windows x86` or similar and the download file will be named `jdk-8u171-windows-i586.exe` or similar.
 
-### Install Java 8 ###
+## Install Oracle Java 8 ##
 
 **This documentation needs to be updatd for 64-bit Java.
 Edits have been made to folder locations to indicate 64-bit installation but images need to be updated.**
@@ -49,21 +42,21 @@ Run the installer from the previous step.  Administrator privileges will be requ
 The following procedure may vary slightly as new Java releases are made.
 
 **<p style="text-align: center;">
-![32 bit Java installation welcome](images/java8-32-1.png)
+![32 bit Java installation welcome](images/oracle-java8/java8-32-1.png)
 </p>**
 
 **<p style="text-align: center;">
-Java Installation - Welcome (<a href="../images/java8-32-1.png">see full-size image</a>)
+Java Installation - Welcome (<a href="../images/oracle-java8/java8-32-1.png">see full-size image</a>)
 </p>**
 
 Press ***Next >*** to continue.
 
 **<p style="text-align: center;">
-![32-bit java installation custom setup](images/java8-32-2.png)
+![32-bit java installation custom setup](images/oracle-java8/java8-32-2.png)
 </p>**
 
 **<p style="text-align: center;">
-Java Installation - Custom Setup (<a href="../images/java8-32-2.png">see full-size image</a>)
+Java Installation - Custom Setup (<a href="../images/oracle-java8/java8-32-2.png">see full-size image</a>)
 </p>**
 
 Accept the defaults in the above dialog without changing.
@@ -73,38 +66,38 @@ Other installations of Java may already exist on the computer, which is OK.
 Press ***Next >*** to continue.
 
 **<p style="text-align: center;">
-![32-bit Java installation destination folder](images/java8-32-3.png)
+![32-bit Java installation destination folder](images/oracle-java8/java8-32-3.png)
 </p>**
 
 **<p style="text-align: center;">
-Java Installation - Destination Folder (<a href="../images/java8-32-3.png">see full-size image</a>)
+Java Installation - Destination Folder (<a href="../images/oracle-java8/java8-32-3.png">see full-size image</a>)
 </p>**
 
 Accept the defaults in the above dialog without changing.
 Press ***Next >*** to continue.  A progress indicator will be shown.
 
 **<p style="text-align: center;">
-![32-bit Java installation complete](images/java8-32-4.png)
+![32-bit Java installation complete](images/oracle-java8/java8-32-4.png)
 </p>**
 
 **<p style="text-align: center;">
-Java Installation - Complete (<a href="../images/java8-32-4.png">see full-size image</a>)
+Java Installation - Complete (<a href="../images/oracle-java8/java8-32-4.png">see full-size image</a>)
 </p>**
 
 Press ***Close*** to close the above dialog.
 
-### Create Symbolic Links for Java 8 ###
+## Create Symbolic Links for Oracle Java 8 ##
 
-#### 64-bit Java ####
+### 64-bit Java ###
 
 The Java installation process creates files as shown in the following image (the links are created in steps below).
 
 **<p style="text-align: center;">
-![64-bit Java installation folders](images/java8-64-5.png)
+![64-bit Java installation folders](images/oracle-java8/java8-64-5.png)
 </p>**
 
 **<p style="text-align: center;">
-Java Installation Folders (<a href="../images/java8-64-5.png">see full-size image</a>)
+Java Installation Folders (<a href="../images/oracle-java8/java8-64-5.png">see full-size image</a>)
 </p>**
 
 The use of version-specific folder can be problematic because Eclipse Java Runtime Environment and build utilities must
@@ -127,16 +120,16 @@ Create the link as follows in the `C:\Program Files\Java` folder:
 mklink /d jre_18 jre8
 ```
 
-#### 32-bit Java ####
+### 32-bit Java ###
 
 The Java installation process creates files as shown in the following image.
 
 **<p style="text-align: center;">
-![32-bit Java installation system folders](images/java8-32-5.png)
+![32-bit Java installation system folders](images/oracle-java8/java8-32-5.png)
 </p>**
 
 **<p style="text-align: center;">
-Java Installation Folders (<a href="../images/java8-32-5.png">see full-size image</a>)
+Java Installation Folders (<a href="../images/oracle-java8/java8-32-5.png">see full-size image</a>)
 </p>**
 
 The use of version-specific folder can be problematic because Eclipse Java Runtime Environment and build utilities must
@@ -153,11 +146,11 @@ mklink /d jre8 jre1.8.0_171
 ```
 
 **<p style="text-align: center;">
-![32-bit Java symbolic links](images/java8-32-6-link.png)
+![32-bit Java symbolic links](images/oracle-java8/java8-32-6-link.png)
 </p>**
 
 **<p style="text-align: center;">
-Java Symbolic Links (<a href="../images/java8-32-6-link.png">see full-size image</a>)
+Java Symbolic Links (<a href="../images/oracle-java8/java8-32-6-link.png">see full-size image</a>)
 </p>**
 
 In addition, the automated build system uses JRE folder that requires another symbolic link to find the JRE to distribute with the installer.
@@ -167,20 +160,10 @@ Create the link as follows in the `C:\Program Files (x86)\Java` folder:
 mklink /d jre_18 jre8
 ```
 
-### Confirm Run Script Configuration ###
+## Confirm Oracle Java 8 Eclipse Run Script Configuration ##
 
 The order that Java and Eclipse are installed may vary.
 These major development environment components need to be configured appropriately and it is useful to use a run script to start Eclipse.
 
-* [See information about the run script](eclipse.md#check-eclipse-run-scipt)
+*   [See information about the run script](eclipse.md#check-eclipse-run-scipt)
 
-## ![Linux icon](../images/linux-32.png) Linux ##
-
-This documentation was prepared while installing Java 8 on a Debian Stretch Linux VirtualBox virtual machine.
-Other environments will be similar.
-
-Java 8 was installed using the following command:
-
-```
-$ sudo apt-get install openjdk-8-jdk
-```
