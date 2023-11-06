@@ -32,7 +32,7 @@ After reading instructions for a step, use "back" to return to this outline so t
     *   **Optional:** [Development Environment / launch4j](../dev-env/launch4j.md) - install software to create TSTool software installer
 6.  **Required:** Eclipse Workspace Setup (interactive development environment)
     *   **Required:** [Create Eclipse Workspace Folder](#create-eclipse-workspace-folder) - simple manual step (***see details below***)
-    *   **Required:** [Import the Existing Eclipse TSTool Projects from the Git Repository Folders](#import-the-existing-eclipse-tstool-projects-from-the-git-repository-folders) -  import
+    *   **Required:** [Import the Existing Eclipse TSTool Projects from the Git Repository Folders](#import-the-existing-eclipse-tstool-projects-from-the-git-repository-folders):
         -   [Import Code Repositories](#import-code-repositories)
         -   [Additional Eclipse Configuration](#additional-eclipse-configuration)
             from Git repository working files (**see details below**)

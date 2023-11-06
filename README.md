@@ -3,13 +3,13 @@
 This repository contains the developer documentation for Colorado's Decision Support Systems (CDSS) TSTool software.
 The documentation uses Markdown format and MkDocs software to create a static website.
 
-See the latest deployed [CDSS / TSTool (Developer)](http://opencdss.state.co.us/tstool/latest/doc-dev/) documentation.
 See the following online resources:
 
+*   Latest deployed [CDSS / TSTool (Developer)](https://opencdss.state.co.us/tstool/latest/doc-dev/) documentation
 *   [Colorado's Decision Support System (CDSS)](https://cdss.colorado.gov/)
-*   [OpenCDSS](http://opencdss.state.co.us/opencdss/)
+*   [OpenCDSS](https://opencdss.state.co.us/opencdss/)
 *   [TSTool software main repository](https://github.com/OpenCDSS/cdss-app-tstool-main)
-*   [TSTool User Documentation](http://opencdss.state.co.us/tstool/latest/doc-user/)
+*   [TSTool User Documentation](https://opencdss.state.co.us/tstool/latest/doc-user/)
 
 See the following sections in this page:
 
@@ -120,7 +120,7 @@ C:\Users\user\                            Windows:  User's files.
 The development environment for contributing to this documentation requires
 installation of Python, MkDocs, and Material MkDocs theme.
 Python 3 and MkDocs 1+ is currently used for development.
-See the [OWF / Learn MkDocs](http://learn.openwaterfoundation.org/owf-learn-mkdocs/)
+See the [OWF / Learn MkDocs](https://learn.openwaterfoundation.org/owf-learn-mkdocs/)
 documentation for information about installing these tools.
 
 ## Editing and Viewing Content ##
