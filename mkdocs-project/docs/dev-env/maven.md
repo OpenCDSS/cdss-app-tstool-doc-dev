@@ -1,4 +1,4 @@
-# TSTool / Development Environment / Maven ##
+# TSTool / Development Environment / Maven #
 
 Maven software is used to manage software library dependencies.
 

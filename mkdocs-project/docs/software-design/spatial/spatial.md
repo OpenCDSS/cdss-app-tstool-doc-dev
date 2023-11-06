@@ -22,7 +22,7 @@ which allows spatial data to be handled in workflows.
 
 Spatial data support is provided through "home grown" code,
 mainly because libraries were not available at the time that TSTool was developed, or because third-party tools
-are cumbersome to integrate.  For example the [Java GeoTools](http://www.geotools.org/) library could be used, but would
+are cumbersome to integrate.  For example the [Java GeoTools](https://geotools.org/) library could be used, but would
 require resources to properly integrate, deal with dependencies, etc.
 The following are code packages related to spatial data:
 

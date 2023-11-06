@@ -1,4 +1,4 @@
-# TSTool / Development Environment / Overview ##
+# TSTool / Development Environment / Overview #
 
 This Development Environment documentation is intended to be used as a reference by the developer that
 sets up the project for the first time or initializes a new development environment to contribute to the project.

@@ -1,4 +1,4 @@
-# TSTool / Development Environment / Eclipse ##
+# TSTool / Development Environment / Eclipse #
 
 *   [Introduction](#introduction)
 *   ![Windows icon](../images/windows-32.png) [Windows](#windows)

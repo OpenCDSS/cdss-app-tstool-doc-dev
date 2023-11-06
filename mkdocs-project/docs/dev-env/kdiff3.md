@@ -1,4 +1,4 @@
-# TSTool / Development Environment / KDiff3 ##
+# TSTool / Development Environment / KDiff3 #
 
 KDiff3 software is highly useful for comparing source files and folders of files.
 

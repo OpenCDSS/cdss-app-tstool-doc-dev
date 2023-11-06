@@ -12,7 +12,7 @@ and the [OpenCDSS TSTool](https://opencdss.state.co.us/opencdss/tstool/) product
 *   [About the Open Water Foundation](#about-the-open-water-foundation)
 *   [License](#license)
 *   [Source Repository on GitHub](#source-repository-on-github)
-*   [Release Notes](#release-notes) - **this documentation has been updated for TSTool version 14.8.7**
+*   [Release Notes](#release-notes) - **this documentation has been updated for TSTool version 14.9.0**
 
 ----------------
 
@@ -49,7 +49,7 @@ The navigation menus may not be displayed if the web browser window is narrow or
 in which case look for a menu icon to access the menus.
 Use the search feature to find documentation matching the search words.
 
-## Acknowledgements
+## Acknowledgements ##
 
 TSTool has been developed by the Open Water Foundation (OWF) with significant
 funding provided by the Colorado Water Conservation Board (CWCB)
@@ -72,7 +72,7 @@ Feedback specific to CDSS functionality (e.g.,
 HydroBase, StateMod, StateModB, StateCU input)
 can be provided using the [CDSS email address](mailto:DNR_OpenCDSS@state.co.us).
 
-### Software Components
+### Software Components ###
 
 The following components are used in TSTool and require or request attribution:
 

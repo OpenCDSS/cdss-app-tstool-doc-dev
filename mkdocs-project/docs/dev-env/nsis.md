@@ -1,4 +1,4 @@
-# TSTool / Development Environment / NSIS ##
+# TSTool / Development Environment / NSIS #
 
 Nullsoft Scriptable Install System (NSIS) software is used to create the Windows
 installer for TSTool.
