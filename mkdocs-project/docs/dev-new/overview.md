@@ -1,9 +1,20 @@
 # TSTool / New Developer Setup / Overview #
 
 This documentation is for software developers that are members of the core TSTool team and others who
-have an interest in contributing to the TSTool software project.
-It is recommended that the TSTool development environment should follow these setup instructions, which are
-consistent with the [Development Environment](../dev-env/overview.md) and [Initial Project Setup](../project-init/overview.md) documentation.
+have an interest in contributing to the TSTool software project
+and are setting up a new development environment for the first time (or are setting up a new computer).
+
+Documentation sections include an archive of old documentation to help understand how to update
+components including Java and Eclipse.
+**All development is assumed to occur using the current supported Java and Eclipse versions described in this documentation.**
+
+See the [Updating Java](../update-java/overview.md) documentation for detailed information about updating the Java version.
+These steps are performed by the TSTool maintainers and don't typically need to be permed by other developers.
+However, the information may provide useful to troubleshoot development environment update issues.
+
+It is recommended that the TSTool development environment should follow these setup instructions,
+which are consistent with the [Development Environment](../dev-env/overview.md)
+and [Initial Project Setup](../project-init/overview.md) documentation.
 The [standard development folder structure](../project-init/overview.md#development-files-structure)
 should be followed to minimize potential for issues,
 especially given the number of components and setup steps.
@@ -18,14 +29,17 @@ specific instructions are included below (rather than immediately linking to oth
 After reading instructions for a step, use "back" to return to this outline so that setup instructions can be followed in the proper sequence.
 **Bold comments** indicate which steps are required and which are optional.
 
+Some steps can be skipped if updating an existing development environment.
+For example, Java and Eclipse can be updated for an existing development environment without rebuilding the entire environment.
+
 1.  **Required:** [Machine for Development](../dev-env/machine.md) - need a suitable computer
 2.  **Required:** [Create folder for development files](#create-folder-for-development-files) - where development will occur (**see details below**)
 3.  **Required (if not already installed):** Development Environment software install part 1 (version control)
     *   [Development Environment / Git](../dev-env/git.md) - install Git software so the repositories can be cloned
 4.  **Required:** [Clone Git Repositories](#clone-git-repositories) - clone the repositories to get access to all files (**see details below**)
 5.  **Required:** Development Environment software install part 2 (Java development tools)
-    *   **Required:** [Development Environment / Java](../dev-env/java.md) - make sure the correct Java version is available on system
-    *   **Required (if not already installed):** [Development Environment / Eclipse](../dev-env/eclipse.md) - install Eclipse for use as IDE
+    *   **Required:** [Development Environment / Java](../dev-env/java/java.md) - make sure the correct Java version is available on system
+    *   **Required (if not already installed):** [Development Environment / Eclipse](../dev-env/eclipse/eclipse.md) - install Eclipse for use as IDE
     *   **Optional:** [Development Environment / KDiff3](../dev-env/kdiff3.md) - install software to facilitate comparing files
         **(highly useful and can be used with Git)**
     *   **Optional:** [Development Environment / NSIS](../dev-env/nsis.md) - install software to create TSTool software installer
@@ -39,7 +53,7 @@ After reading instructions for a step, use "back" to return to this outline so t
 7.  **Optional:** Development Environment software install part 3 (documentation tools), **(install if will view and edit documentation within the development environment)**
     *   [Development Environment / Python and pip](../dev-env/python.md) - install Python, which is needed by MkDocs
     *   [Development Environment / MkDocs](../dev-env/mkdocs.md) - install MkDocs to view/edit full documentation locally.
-    See [Development Tasks / Documenting](../dev-tasks/overview.md#documenting)
+    See [Development Tasks / Documenting](../dev-tasks/documenting/documenting.md)
     for instructions on viewing documentation.
 8.  [Next Steps - Development Tasks](#next-steps-development-tasks) - to compile, edit, run, etc.
 
@@ -63,9 +77,12 @@ After the folder is created, additional instructions describe how to install dev
 
 ### ![Cygwin icon](../images/cygwin-32.png) Cygwin ###
 
-[Cygwin icon](../resources.md#cygin) is a useful software platform to provide Linux programs on a Windows computer.
+[Cygwin icon](../resources.md#cygwin) is a useful software platform to provide Linux programs on a Windows computer.
 It may be convenient to use Cygwin for some work, such as running command-line utilities,
 although the development environment has focused on Windows and Git Bash.
+Using Cygwin and Git Bash for working files in a Git repository can have issues
+with text file line endings and file execute permissions.
+Therefore, it is recommended to not mix using Git Bash and Cygwin.
 
 If using Cygwin, do the following using a terminal window. Note that the syntax `~` indicates the home folder for Bash shell
 and is equivalent to the `$HOME` environment variable location.
@@ -523,7 +540,7 @@ After the initial Eclipse workspace is selected, import the following repositori
 
 The initial workspace will be similar to the following (if necessary, close the ***Welcome*** tab).
 Use the ***Help / About Eclipse*** menu to check the Eclipse version, which should be consistent
-with the [Development Environment / Eclipse](../dev-env/eclipse.md) instructions.
+with the [Development Environment / Eclipse](../dev-env/eclipse/eclipse.md) instructions.
 
 **<p style="text-align: center;">
 ![Initial Eclipse workspace](images/eclipse-workspace-0.png)
@@ -585,20 +602,34 @@ Eclipse Workspace after Importing Projects (<a href="../images/eclipse-workspace
 
 *Press* ***back*** *in the browser to return to the outline.*
 
-### Additional Eclipse Configuration
+### Additional Eclipse Configuration ###
 
 It may be necessary to perform additional Eclipse configuration,
 in particular to ensure that the proper Java version is used with development.
 
-**The following documentation was created during updates from 32-bit to 64-bit Java 8 and to Eclipse 2019-03.**
+**The following documentation was created during updates from Java 8 and Eclipse 2019-03 to Java 11 and Eclipse 2022-06.
+See also the documentation archive for [Java 8 and Eclipse 2019-03](eclipse/eclipse-2019-03/eclipse-2019-03.md).**
 
-The `cdss-app-tstool-main` project in Eclipse has the following JRE configuration.
+The `cdss-app-tstool-main` is the project that contains the main TSTool application code.
+All projects should be configured to use workspace settings,
+so that the Java version can be set in one place.
+The settings for each project can be viewed by:
 
-*   ***Project / Properties / Java Build Path***
-*   ***Libraries*** tab
-*   ***JRE System Library*** - double click on it
-*   Select ***Workspace default JRE*** radio button
-*   Select ***Installed JREs...*** button
+1.  Select the project in the ***Project Explorer***.
+2.  Right-click on the selected project and select ***Properties***.
+3.  Expand the ***Java Build Path***.
+4.  In the ***Libraries*** tab, double-click on ***JRE System Library*** (may show `jdk8` or something else).
+5.  Select ***Workspace default JRE*** radio button (this indicates that the workspace JRE will be used for compiling).
+6   Select ***Installed JREs...*** button to specify the location of the JRE,
+    as shown in the following imagnste.
+
+**<p style="text-align: center;">
+![JRE System Library](images/installed-jre-0-system-library.png)
+</p>**
+
+**<p style="text-align: center;">
+JRE System Library (<a href="../images/installed-jre-0-system-library.png">see full-size image</a>)
+</p>**
 
 It may appear as follows since was previously configured to use the 32-bit JRE.
 If no installed Java is listed, add as shown in the next step.
@@ -611,7 +642,7 @@ If no installed Java is listed, add as shown in the next step.
 Installed Java Runtime Environments (<a href="../images/installed-jre-0.png">see full-size image</a>)
 </p>**
 
-Use the ***Remove*** button to remove the JRE since the 64-bit version will have the same name (but different path).
+Use the ***Remove*** button to remove a JRE.
 A warning will be shown as follows.
 
 **<p style="text-align: center;">
@@ -622,7 +653,7 @@ A warning will be shown as follows.
 JRE Remove Warning (<a href="../images/installed-jre-1.png">see full-size image</a>)
 </p>**
 
-Use the ***Add...*** button.
+Use the ***Add...*** button to add a ***Standard VM***.
 
 **<p style="text-align: center;">
 ![Add JRE](images/installed-jre-2.png)
@@ -632,15 +663,15 @@ Use the ***Add...*** button.
 Add JRE (<a href="../images/installed-jre-2.png">see full-size image</a>)
 </p>**
 
-Browse to the `C:\Program Files\Java\jdk8` folder that was configured as a symbolic link when Java was installed.
-The dialog automatically follows the link and uses the more specific folder.
+Press ***Next >*** and browse to the `C:\Program Files\Java\jdk11` folder that was configured as a symbolic link when Java was installed.
+The selector automatically follows the symbolic link and uses the link's original folder.
 
 **<p style="text-align: center;">
-![JRE Definition](images/installed-jre-3.png)
+![JRE Definition](images/installed-jre-3-jre-definition.png)
 </p>**
 
 **<p style="text-align: center;">
-JRE Definition (<a href="../images/installed-jre-3.png">see full-size image</a>)
+JRE Definition (<a href="../images/installed-jre-3-jre-definition.png">see full-size image</a>)
 </p>**
 
 Press ***Finish***.
@@ -653,38 +684,60 @@ Press ***Finish***.
 Installed JREs After Adding (<a href="../images/installed-jre-4.png">see full-size image</a>)
 </p>**
 
-Accept with ***Finish*** and then ***Apply and Close***.
+Accept with ***Apply and Close***.
 Then the following is shown.
 
 **<p style="text-align: center;">
-![JRE system library](images/installed-jre-5.png)
+![JRE system library](images/installed-jre-5-system-library.png)
 </p>**
 
 **<p style="text-align: center;">
-JRE System Library (<a href="../images/installed-jre-5.png">see full-size image</a>)
+JRE System Library after Configuring Java 11 (<a href="../images/installed-jre-5-system-library.png">see full-size image</a>)
 </p>**
 
-Press ***Finish***.
+Press ***Finish***, which will show the new Java version used for the system library, as shown below.
 
 **<p style="text-align: center;">
-![Java build path](images/installed-jre-6.png)
+![Java build path](images/installed-jre-6-java-build-path.png)
 </p>**
 
 **<p style="text-align: center;">
-Java Build Path (<a href="../images/installed-jre-6.png">see full-size image</a>)
+Java Build Path (<a href="../images/installed-jre-6-java-build-path.png">see full-size image</a>)
+</p>**
+
+It is also necessary to change the ***JDK Compliance*** to use Java 11.
+Expand the ***Java Compiler*** group in the ***Properties*** dialog.
+Select ***Configure Workspace Settings...*** and set the ***Compiler compliance level*** as shown below.
+
+**<p style="text-align: center;">
+![Java compiler](images/installed-jre-7-java-compiler.png)
+</p>**
+
+**<p style="text-align: center;">
+Java Compiler (<a href="../images/installed-jre-7-java-compiler.png">see full-size image</a>)
 </p>**
 
 Press ***Apply and Close***.
 
-Do a clean build with ***Projects / Clean...***.
+If necessary, do a clean compile with ***Projects / Clean...***.
+
+Refer to the ***Problems*** view to see a list of problems.
+If updating the Java version,
+it may be necessary to change the ***Java Build Path / JRE System Library*** to Java 11.
+Double-click on it and make sure that it is using the ***Workspace default JRE***,
+which should be Java 11.
+The ***Java Compiler / JKD Compliance*** should also show Java 11.
 
 Run TSTool from Eclipse and use ***Help / About*** and then ***Show Software/System Details***.
 The `Java Virtual Machine Properties` shows `os.arch = "amd64"`, which indicates 64-bit.
 
 ## Next Steps - Development Tasks ##
 
-At this point it should be possible to [compile](../dev-tasks/overview.md#compiling) and
-[run](../dev-tasks/overview#running) TSTool within the Eclipse interface].  See also:
+At this point it should be possible to [compile](../dev-tasks/compiling/compiling.md) and
+[run](../dev-tasks/running/running.md) TSTool within the Eclipse interface].
+Updating the Java version typically requires fixing code compliance issues,
+adding annotations to ignore warnings, etc.
+See also:
 
 *   [Deployed Environment / Overview](../deployed-env/overview.md) - for an overview of the deployed software
 *   [Software Design / Overview](../software-design/overview.md) - to understand software structure and logic

@@ -1,4 +1,4 @@
-# Command Factory #
+# TSTool / Software Design / Command Factory #
 
 An instance of the [TSCommandFactory class](https://github.com/OpenCDSS/cdss-lib-processor-ts-java/blob/master/src/rti/tscommandprocessor/core/TSCommandFactory.java)
 is used to parse commands as text and return an appropriate instance of a command class.

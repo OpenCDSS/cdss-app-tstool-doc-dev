@@ -1,4 +1,4 @@
-# Command Status #
+# TSTool / Software Design / Command Status #
 
 *   [Introduction](#introduction)
 *   [CommandStatusProvider Interface](#commandstatusprovider-interface)

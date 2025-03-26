@@ -1,11 +1,11 @@
 # TSTool / Development Environment / Eclipse #
 
 *   [Introduction](#introduction)
-*   ![Windows icon](../images/windows-32.png) [Windows](#windows)
+*   ![Windows icon](../../images/windows-32.png) [Windows](#windows)
      +   [Download Eclipse](#download-eclipse)
      +   [Install Eclipse](#install-eclipse)
      +   [Check Eclipse Run Script](#check-eclipse-run-script)
-*   ![Linux icon](../images/linux-32.png) [Linux](#linux)
+*   ![Linux icon](../../images/linux-32.png) [Linux](#linux)
 
 -----
 
@@ -18,9 +18,19 @@ Eclipse does have some issues and limitations, but other IDEs have different iss
 
 TSTool development has typically occurred on Windows computers, although the software is often deployed to other operating systems.
 
-As discussed in the [Java](java.md) section,
-OpenJDK Java 9 is currently used for development as of TSTool version 14.9.0.
-Oracle Java 8 was currently used for development and 64-bit Java and Eclipse are used as of TSTool version 14.0.0.
+As discussed in the [Development Environment / Java](../java/java.md) documentation,
+OpenJDK Java 11 is currently used for development as of TSTool version 15.0.0.
+The following table lists TSTool versions and Eclipse versions that have been used for development.
+
+**<p style="text-align: center;">
+TSTool Versions and Corresponding Eclipse Versions
+</p>**
+
+| **TSTool Version** | **Eclipse Version**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Comment** |
+| -- | -- | -- |
+| 15.0.0 | 4.24.0 (2022-06) | Installation is described in this documentation, last Eclipse version that runs with Java 11. |
+| < 15.0.0 | 4.11.0 (2019-03) | See the [archived documentation](eclipse-2019-03/eclipse-2019-03.md). |
+| Older versions (Mars, Neon, etc.) | | Not documented (obsolete). |
 
 32-bit Java was previously used due to component requirements.
 TSTool has been developed with various versions of Eclipse, including Mars, Neon, 2019-03 and later versions.
@@ -34,27 +44,28 @@ The Eclipse workspace (`.metadata`) folder is not saved in Git repository and is
 is recommended to be saved in `eclipse-workspace` folder under the TSTool product folder
 in a standard development folder structure.
 
-## ![Windows icon](../images/windows-32.png) Windows ##
+## ![Windows icon](../../images/windows-32.png) Windows ##
 
 **This documentation was created for an older version of Eclipse and needs to be updated.
 The process for current installations is similar.**
 
-### Download Eclipse 2019-03 (or newer) ###
+### Download Eclipse 2022-06 ###
 
-The download links for Eclipse may change as new versions are released.
-Download the ***Eclipse IDE for Java Developers*** (there is currently no reason to use the Eclipse IDE for Java EE Developers,
-which is used for web development).  Make sure to select the ***Windows 64-bit*** version.
-The zip file installer is convenient because it is very clear where the software is installed.
+Download the 2022-06 version of Eclipse, which can be run with Java 11:
+
+*   See the [Eclipse Packaging Project (EPP) Releases](https://www.eclipse.org/downloads/packages/release) web page.
+*   Select the ***2022-06*** release.
+*   Download the ***Eclipse IDE for Java Developers*** (there is currently no reason to use the Eclipse IDE for Java EE Developers,
+    which is used for web development).  Select the ***Windows x86_64*** version.
+*   The zip file installer is convenient because it is very clear where the software is installed.
+    Save the zip file (e.g. `eclipse-java-2022-06-R-win32-x86_64.zip`) in the user's `Downloads` folder.
 
 ### Install Eclipse ###
 
-The Eclipse installer file will be named `eclipse-java-2019-03-R-win32-x86_64.zip` or similar.
-Note that later versions of Eclipse provide an option to use an installation program
-so these instructions need to be updated when later versions of Eclipse are used.
-
-To avoid confusion with other versions of Eclipse that may be installed on the computer (as needed for other product development),
-install by copying/unzipping into a folder named `C:\Program Files\Eclipse\eclipse-java-2019-03`
-(older 32-bit Neon version used `C:\Program Files (x86)\eclipse-java-neon-3-win32`).
+To avoid confusion with other versions of Eclipse that may be installed on the computer
+(as needed for other product development or during transition from one version of software to another),
+install by copying/unzipping into a folder named `C:\Program Files\Eclipse\eclipse-java-2022-06`,
+which helps distinguish the version as being for Java development.
 The resulting folder structure is as shown in the following figure.
 
 **<p style="text-align: center;">
@@ -72,7 +83,9 @@ assuming a standard installation folder.  For example, `build-util/run-eclipse-w
 This ensures that the proper versions of Eclipse and Java are used.
 If necessary, this script can be modified or other versions added over time (for example for new versions of Java and Eclipse).
 
-## ![Linux icon](../images/linux-32.png) Linux ##
+## ![Linux icon](../../images/linux-32.png) Linux ##
+
+**This documentation has not been updated for Eclipse 2022-06 but should be OK.**
 
 TSTool is typically developed on Windows, with Linux used for testing to ensure that features work on Linux.
 The Linux environment is not the primary development or production environment,

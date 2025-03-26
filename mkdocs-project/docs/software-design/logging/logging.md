@@ -1,4 +1,4 @@
-# Logging #
+# TSTool / Software Design / Logging #
 
 *   [Introduction](#introduction)
 *   [Log Messages](#log-messages)
@@ -20,10 +20,10 @@ and in particular the
 TSTool provides features to create a log file, view the log file contents interactively,
 and control the amount of output to the log file.
 Logging at a command level is also integrated via the
-[`CommandStatus` class](../CommandStatus/CommandStatus).
+[`CommandStatus` class](../commandstatus/commandstatus.md).
 A message is often logged using the [Message package](https://github.com/OpenCDSS/cdss-lib-common-java/blob/master/src/RTi/Util/Message/)
 to allow review of the session,
-and also logged to [`CommandStatus` class](../CommandStatus/CommandStatus) in cases where a message is important enough for user to see in the UI.
+and also logged to [`CommandStatus` class](../commandstatus/commandstatus.md) in cases where a message is important enough for user to see in the UI.
 
 ## Log Messages ##
 
@@ -200,7 +200,7 @@ cross-reference log messages.
 
 ## Potential Future Changes ##
 
-The current logging approach may be replaced with a standard logging library such as [SLF4J](../resources#slf4j)
+The current logging approach may be replaced with a standard logging library such as [SLF4J](../../resources.md#slf4j)
 if resources allow.
 Significant redesign may be necessary in order to continue providing features consistent with the existing software,
 such as the log file viewer.

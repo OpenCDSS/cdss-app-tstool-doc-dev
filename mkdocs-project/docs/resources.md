@@ -3,6 +3,7 @@
 The following are useful resources.
 
 *   [Ant](#ant) - software to control build processes in development environment
+*   [Cygwin](#cygwin) - Linux-like environment for Windows
 *   [Eclipse](#eclipse) - integrated development environment software
 *   [Java](#java) - Java environment is used for development and runtime
 *   [Jython](#jython) - Java implementation of Python
@@ -23,6 +24,18 @@ It is currently used by the TSTool build utilities.
 The newer [Maven](#maven) software is often now used instead of Ant but is not currently used for TSTool.
 
 *   [Ant](https://ant.apache.org/)
+
+## Cygwin ##
+
+Cygwin is a Linux-like environment that runs on Windows.
+It is an alternative to Git Bash that is included with Git for Windows.
+Cygwin does introduce some issues.
+For example, text file line endings in Git repositories can get mixed up when
+switching between Git Bash and Cygwin terminal.
+The file execute permissions can also be odd when switching between Git Bash and Windows.
+Therefore, it is recommend that Cygwin only be used when Git Bash is not used.
+
+*   [Cygwin](https://www.cygwin.com/)
 
 ## Eclipse ##
 

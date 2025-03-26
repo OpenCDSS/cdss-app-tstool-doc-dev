@@ -1,4 +1,4 @@
-# Datastores #
+# TSTool / Software Design / Datastores #
 
 *   [Introduction](#introduction)
 *   [Datastore Configuration](#datastore-configuration)

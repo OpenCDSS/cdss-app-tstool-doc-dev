@@ -1,4 +1,4 @@
-# Time Series #
+# TSTool / Software Design / Time Series #
 
 *   [Introduction](#introduction)
 *   [Time Series Concepts](#time-series-concepts)

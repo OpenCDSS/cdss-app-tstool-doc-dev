@@ -1,4 +1,4 @@
-# Command File and Command Syntax #
+# TSTool / Software Design / Command File and Command Syntax #
 
 *   [Introduction](#introduction)
 *   [UI Considerations](#ui-considerations)

@@ -12,23 +12,23 @@ and the [OpenCDSS TSTool](https://opencdss.state.co.us/opencdss/tstool/) product
 *   [About the Open Water Foundation](#about-the-open-water-foundation)
 *   [License](#license)
 *   [Source Repository on GitHub](#source-repository-on-github)
-*   [Release Notes](#release-notes) - **this documentation has been updated for TSTool version 14.9.0**
+*   [Release Notes](#release-notes) - **this documentation has been updated for TSTool version 15.0.0**
 
 ----------------
 
 ## How to Use this Documentation ##
 
-This website is a companion to the TSTool source code and provides guidance for software developers that modify and
-support TSTool.
+This website is a companion to the TSTool source code and provides guidance for software developers that modify and support TSTool.
 
 The documentation is organized with the first sections focusing on setup for a new developer and common development tasks.
 The reference sections at the end provide information that may be of use but are typically not used day to day.
 Use the search feature of this website to find specific information.
 
-As of version 14.8.7, OpenJDK Java is used.
+As of TSTool version 14.8.7, OpenJDK Java is used.
 Prior to this version, Oracle Standard Edition Java was used.
+Refer to the [Development Environment / Java](dev-env/java/java.md) documentation for a list of TSTool and Java versions.
 
-As of version 14.0.0, the TSTool development environment creates a 64-bit Java TSTool runtime for use on Windows and Linux computers,
+As of TSTool version 14.0.0, the TSTool development environment creates a 64-bit Java TSTool runtime for use on Windows and Linux computers,
 using Oracle Standard Edition.
 Older versions used the 32-bit Java runtime.
 
@@ -36,12 +36,12 @@ Icons for Cygwin ![Cygwin icon](images/cygwin-32.png), Linux ![Linux icon](image
 are included to help indicate documentation
 specific to an operating system.
 
-*   [New Developer Setup](dev-new/overview/) - **new TSTool software developers should start here**
-*   [Development Tasks](dev-tasks/overview/) - describes common development tasks - **refer to this after a new development environment has been configured**
-*   [REFERENCE: Software Design](software-design/overview/) - provides details about the software code design
-*   [REFERENCE: Deployed Environment](deployed-env/overview/) - describes the deployed environment after software is installed
-*   [REFERENCE: Development Environment](dev-env/overview/) - describes development environment software installation
-*   [REFERENCE: Initial Project Setup](project-init/overview/) - describes initial project setup and file structure
+*   [New Developer Setup](dev-new/overview.md) - **new TSTool software developers should start here**
+*   [Development Tasks](dev-tasks/overview.md) - describes common development tasks - **refer to this after a new development environment has been configured**
+*   [REFERENCE: Software Design](software-design/overview.md) - provides details about the software code design
+*   [REFERENCE: Deployed Environment](deployed-env/overview.md) - describes the deployed environment after software is installed
+*   [REFERENCE: Development Environment](dev-env/overview.md) - describes development environment software installation
+*   [REFERENCE: Initial Project Setup](project-init/overview.md) - describes initial project setup and file structure
 
 Use the navigation menu provided on the left side of the page to navigate the documentation sections within the full document.
 Use the navigation menu provided on the right side of the page to navigate the documentation sections with a page.
