@@ -1,7 +1,7 @@
-# Spreadsheet #
+# TSTool / Software Design / Spreadsheet #
 
 *   [Introduction](#introduction)
-*   [Spreadsheet Code Design](#sreadsheet-code-design)
+*   [Spreadsheet Code Design](#spreadsheet-code-design)
 
 ---------
 

@@ -1,4 +1,4 @@
-# Command Processor #
+# TSTool / Software Design / Command Processor #
 
 *   [Introduction](#introduction)
 *   [Processor Properties](#processor-properties)
@@ -21,7 +21,7 @@ which may be combined into a single class in the future:
 
 The current design maintains most large [processor data](#processor-data) in the 
 [TSCommandProcessor](https://github.com/OpenCDSS/cdss-lib-processor-ts-java/blob/master/src/rti/tscommandprocessor/core/TSCommandProcessor.java) class,
-whereas [processor properties](procesor-properties) are split between the processor and the
+whereas [processor properties](#processor-properties) are split between the processor and the
 [TSEngine](https://github.com/OpenCDSS/cdss-lib-processor-ts-java/blob/master/src/rti/tscommandprocessor/core/TSEngine.java) instance used by the processor.
 [TSEngine](https://github.com/OpenCDSS/cdss-lib-processor-ts-java/blob/master/src/rti/tscommandprocessor/core/TSEngine.java) functions
 are called from the processor to perform work.

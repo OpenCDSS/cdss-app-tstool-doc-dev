@@ -37,9 +37,9 @@ TSTool is complex and sufficient resources need to be available to
 evaluate Maven implementation and impacts that it has on the existing build processes.
 The following are software tools used to create the installer
 
-*   Eclipse IDE is used to run build processes using ***External Tools Configurations*** - see [instructions for installing Eclipse](../../dev-env/eclipse.md).
+*   Eclipse IDE is used to run build processes using ***External Tools Configurations*** - see [instructions for installing Eclipse](../../dev-env/eclipse/eclipse.md).
 *   Eclipse Ant is used to automate tasks (comes packaged with Eclipse).
-*   Java Runtime Environment (JRE) compatible with TSTool version is packaged with the installer - see [instructions for installing Java](../../dev-env/java.md).
+*   Java Runtime Environment (JRE) compatible with TSTool version is packaged with the installer - see [instructions for installing Java](../../dev-env/java/java.md).
 *   The NSIS software is used to create self-extracting installer for Windows - see [instructions for installing NSIS](../../dev-env/nsis.md).
 *   The launch4j software is used to create a launcher for TSTool, so that it behaves similar to other executable programs - see
     [instructions for installing launch4j](../../dev-env/launch4j.md).

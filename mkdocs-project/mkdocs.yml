@@ -28,32 +28,38 @@ nav:
 - 'Resources': resources.md
 - 'REFERENCE: Software Design':
   - 'Overview': software-design/overview.md
-  - 'Repositories and Projects': software-design/repo/repo.md
-  - 'Testing Framework': software-design/testing-framework/testing-framework.md
-  - 'Documentation': software-design/documentation/documentation.md
-  - 'User Interface (UI)': software-design/ui/ui.md
-  - 'Java Runtime Environment (JRE)': software-design/jre/jre.md
-  - 'TSTool Main Application': software-design/tstool-app/tstool-app.md
-  - 'Command File and Command Syntax': software-design/command-syntax/command-syntax.md
-  - 'Command Processor': software-design/command-processor/command-processor.md
-  - 'Command': software-design/command/command.md
-  - 'Command Factory': software-design/command-factory/command-factory.md
-  - 'Command Status': software-design/commandstatus/commandstatus.md
-  - 'Plugin Project': software-design/plugin-project/plugin-project.md
-  - 'Plugin Commands': software-design/plugin-commands/plugin-commands.md
-  - 'Utility Packages': software-design/util/util.md
-  - 'Commands that Read Time Series': software-design/command-read-ts/command-read-ts.md
-  - 'Logging': software-design/logging/logging.md
-  - 'Date/time Handling': software-design/datetime/datetime.md
-  - 'Time Series': software-design/ts/ts.md
-  - 'Datastores': software-design/datastores/datastores.md
-  - 'Plugin Datastores': software-design/plugin-datastores/plugin-datastores.md
-  - 'Tables': software-design/tables/tables.md
-  - 'Data Products': software-design/data-products/data-products.md
-  - 'Spreadsheet': software-design/spreadsheet/spreadsheet.md
-  - 'Spatial Data': software-design/spatial/spatial.md
-  - 'Templates': software-design/templates/templates.md
   - 'Development Roadmap': software-design/roadmap/roadmap.md
+  - 'Environment':
+    - 'Java Runtime Environment (JRE)': software-design/jre/jre.md
+    - 'Repositories and Projects': software-design/repo/repo.md
+    - 'Testing Framework': software-design/testing-framework/testing-framework.md
+    - 'Documentation': software-design/documentation/documentation.md
+  - 'Application':
+    - 'TSTool Main Application': software-design/tstool-app/tstool-app.md
+    - 'User Interface (UI)': software-design/ui/ui.md
+    - 'Logging': software-design/logging/logging.md
+  - 'Commands':
+    - 'Command File and Command Syntax': software-design/command-syntax/command-syntax.md
+    - 'Command Processor': software-design/command-processor/command-processor.md
+    - 'Command': software-design/command/command.md
+    - 'Command Factory': software-design/command-factory/command-factory.md
+    - 'Command Status': software-design/commandstatus/commandstatus.md
+    - 'Commands that Read Time Series': software-design/command-read-ts/command-read-ts.md
+  - 'Plugins':
+     - 'Overview': software-design/plugins/overview.md
+     - 'Plugin Project': software-design/plugins/plugin-project/plugin-project.md
+     - 'Plugin Commands': software-design/plugins/plugin-commands/plugin-commands.md
+     - 'Plugin Datastores': software-design/plugins/plugin-datastores/plugin-datastores.md
+  - 'Data':
+    - 'Datastores': software-design/datastores/datastores.md
+    - 'Date/time Handling': software-design/datetime/datetime.md
+    - 'Data Products': software-design/data-products/data-products.md
+    - 'Spreadsheet': software-design/spreadsheet/spreadsheet.md
+    - 'Spatial Data': software-design/spatial/spatial.md
+    - 'Tables': software-design/tables/tables.md
+    - 'Templates': software-design/templates/templates.md
+    - 'Time Series': software-design/ts/ts.md
+  - 'Utility Packages': software-design/util/util.md
 - 'REFERENCE: Deployed Environment':
   - 'Overview': deployed-env/overview.md
 - 'REFERENCE: Development Environment':
@@ -62,8 +68,13 @@ nav:
   - 'Git': dev-env/git.md
   - 'Python and pip': dev-env/python.md
   - 'MkDocs': dev-env/mkdocs.md
-  - 'Java': dev-env/java.md
-  - 'Eclipse': dev-env/eclipse.md
+  - 'Java':
+    - '11': dev-env/java/java.md
+    - '8 OpenJDK': dev-env/java/java8-openjdk/java8-openjdk.md
+    - '8 Oracle': dev-env/java/java8-oracle/java8-oracle.md
+  - 'Eclipse':
+    - '2022-06': dev-env/eclipse/eclipse.md
+    - '2019-03': dev-env/eclipse/eclipse-2019-03/eclipse-2019-03.md
   - 'Maven': dev-env/maven.md
 #  - 'Text Editor': dev-env/editor.md
   - 'KDiff3': dev-env/kdiff3.md
@@ -85,6 +96,8 @@ nav:
 #  - 'Documentation, User (MkDocs)': project-init/doc-user.md
 #  - 'Documentation, API (Doxygen)': project-init/doc-doxygen.md
 #  - 'Git StateMod History': project-init/git-statemod-history.md
+- 'REFERENCE: Updating Java':
+  - Overview: update-java/overview.md
 # ------- configuration properties ---------------
 # Alphabetize
 # ------------------------------------------------

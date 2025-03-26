@@ -1,4 +1,4 @@
-# User Interface (UI) #
+# TSTool / Software Design / User Interface (UI) #
 
 The TSTool user interface or UI (also called graphical user interface, or GUI) provides
 TSTool software users with an interface to browse data, create workflows of commands,

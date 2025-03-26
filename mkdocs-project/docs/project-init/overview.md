@@ -48,4 +48,6 @@ C:\Users\user\                             Windows:  Software developer's home f
         cdss-lib-models-java/              API for CDSS StateCU and StateMod models.
         cdss-lib-processor-ts-java/        API for TSTool command processor and commands.
         cdss-util-buildtools/              Utility programs to build TSTool installer.
+        other-repository/                  Other repositories (e.g., TSTool plugins).
+        ...
 ```

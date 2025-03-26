@@ -1,6 +1,6 @@
-# Templates #
+# TSTool / Software Design / Templates #
 
-*   [Introduction](#itroduction)
+*   [Introduction](#introduction)
 *   [Software Design](#software-design)
 
 -----------------

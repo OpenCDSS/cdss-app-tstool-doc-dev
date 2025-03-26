@@ -1,4 +1,4 @@
-# TSTool Application #
+# TSTool / Software Design / Main Application #
 
 *   [Introduction](#introduction)
 *   [Launching](#launching)

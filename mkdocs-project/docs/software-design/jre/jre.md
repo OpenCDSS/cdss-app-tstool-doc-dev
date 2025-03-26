@@ -1,4 +1,4 @@
-# Java Runtime Environment #
+# TSTool / Software Design / Java Runtime Environment #
 
 This documentation focuses on technical issues related to the Java Runtime Environment.
 
@@ -27,11 +27,17 @@ packaged into Java Archive (`*.jar`) files for distribution and use at run-time.
 
 A [Java Runtime Environment (JRE)](../../resources.md#java) that is the same or newer than the Java version used in the development environment
 is required to run TSTool in the operational environment.
-For example, TSTool developed and distributed with Java 8 cannot be run using JRE 7.
-Although it is possible to rely on a Java version on the computer, TSTool software
-is distributed with its own JRE.  See the `jre_VERSION` folder under the TSTool installation,
-for example `jre_18` when Java 8 is used (the convention of using 1.8 for Java 7, etc. is from Java developers
-and TSTool conventions need to migrate to the more easily understood "8" as time allows to make this change).
+For example, TSTool developed and distributed with Java 11 cannot be run using JRE 8.
+A newer version of Java runtime can run an older version of compiled java code.
+Although it is possible to rely on a Java version on the computer, TSTool software is distributed with its own JRE.
+
+See the `jre_VERSION` folder under the TSTool installation,
+for example:
+
+*   `jre_11` when Java 11 is used
+*   `jre_18` when Java 8 is used
+    (this convention of using 1.8 for Java 8 and eearlier is from Java and was changed after Java 8)
+
 The JRE allows Java to be run in a protected virtual environment separate from other Java installations on the computer.
 
 ## Java Launcher ##
@@ -45,7 +51,6 @@ On Linux the `tstool` script is used.
 ## 64-bit and 32-bit Versions ##
 
 As of TSTool version 14.0.0, 64-bit java is used for development and runtime libraries.
-Some 32-bit features are disabled as discussed below.
 
 TSTool prior to version 14.0.0 uses 32-bit java,
 which supports components that use native Windows 32-bit libraries,

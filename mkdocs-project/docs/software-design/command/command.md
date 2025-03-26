@@ -1,4 +1,4 @@
-# Command #
+# TSTool / Software Design / Commands #
 
 *   [Introduction](#introduction)
 *   [Command Interface](#command-interface) - basic behavior requirements
@@ -6,7 +6,7 @@
 *   [Specific Command Class](#specific-command-class)
 *   [CommandStatusProvider Interface](#commandstatusprovider-interface) - for command log/status access
 *   [CommandDiscovable Interface](#commanddiscoverable-interface) - to run in discovery (pre-run) mode
-*   [FileGenerator Interface](#file-generator-interface) - for commands that create output files
+*   [FileGenerator Interface](#filegenerator-interface) - for commands that create output files
 *   [CommandProcessorEventProvider Interface](#commandprocessoreventprovider-interface) - to allow processor to listen for command events
 
 ----
@@ -19,7 +19,7 @@ The [TSCommandProcessor](https://github.com/OpenCDSS/cdss-lib-processor-ts-java/
 manages a list of commands, which allows the commands to be interacted with in the UI and run in batch mode.
 The processor performs tasks that are general but does not perform analysis.
 
-Command instances are created using the [TSCommandFactory Class](../command-factory/command-factory) (see separate discussion).
+Command instances are created using the [TSCommandFactory Class](../command-factory/command-factory.md) (see separate discussion).
 
 Command classes implement the functionality to perform data manipulation, analysis, and product generation.
 The command design provides flexibility and has been used to implement a wide variety of computational functionality.
@@ -60,7 +60,7 @@ The verbose `_Command` is used to clearly indicate commands, given the larger nu
 The [CommandStatusProvider](https://github.com/OpenCDSS/cdss-lib-common-java/blob/master/src/RTi/Util/IO/CommandStatusProvider.java)
 interface defines behavior needed by the TSTool UI to display command log messages and status.
 Command status features allow messages relevant to a command to be accumulated on the command instance,
-simplifying tracking of success and failure.  See also the [CommandStatus](../commandstatus/commandstatus) documentation section.
+simplifying tracking of success and failure.  See also the [CommandStatus](../commandstatus/commandstatus.md) documentation section.
 
 ## CommandDiscoverable Interface ##
 

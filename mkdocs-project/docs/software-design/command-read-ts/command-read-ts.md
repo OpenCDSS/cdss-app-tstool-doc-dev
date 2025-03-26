@@ -1,4 +1,4 @@
-# Commands that Read Time Series #
+# TSTool / Software Design / Commands that Read Time Series #
 
 *   [Introduction](#introduction)
 *   [`readTimeSeries` Method](#readtimeseries-method)
