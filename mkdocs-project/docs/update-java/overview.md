@@ -129,14 +129,12 @@ The developer documentation was updated as software was updated.
         In the case below, the Apache `xmlbeans-2.3.0.jar` file contains mostly Apache-specific classes,
         but also contains the following:
 
-        ```
-        org/w3c/
-        org/w3c/dom/
-        org/w3c/dom/DOMConfiguration.class
-        org/w3c/dom/DOMStringList.class
-        org/w3c/dom/TypeInfo.class
-        org/w3c/dom/UserDataHandler.class
-        ```
+        `org/w3c/`  
+        `org/w3c/dom/`  
+        `org/w3c/dom/DOMConfiguration.class`  
+        `org/w3c/dom/DOMStringList.class`  
+        `org/w3c/dom/TypeInfo.class`  
+        `org/w3c/dom/UserDataHandler.class`  
 
         Because they are duplicates of classes included in Java, the following error is shown:
 
@@ -168,3 +166,24 @@ The developer documentation was updated as software was updated.
         Dependency management will be an issue as more plugins are added.
         Code for TSTool and plugins may need to be periodically (re)synchronized and in some cases Jar file contents
         may need to be manipulated to remove unnecessary classes.
+
+9.  Build system:
+    1.  Update the `conf/product.properties` files to use Java 11 instead of 8.
+    2.  Add libraries identified above, which were also added to the build path in Eclipse.
+        Also remove and change library names as indicated.
+    3.  Update the `cdss-util-buildtools` project for Java 11.
+        Add support for simple integer main version like `11` and phase out more complex `1.8` notation.
+        *   `common.xml`
+        *   `common-installer.xml`
+        *   `conf/product.properties` - default properties
+   4.  Update the `cdss-app-tstool-main/installer/CDSS/TSTool.nsi` to use lowercase `dist\install-cdss` folder.
+   5.  Update the `cdss-app-tstool-main/externals/CDSS/installer/CDSS/cdss.nsh` to use lowercase
+       `dist\install-cdss` folder (just a comment).
+   6.  Update the `cdss-util-buildutils/externals/NSIS_Common/JRE.nsh`:
+       *   As of Java 9, the `rt.jar` file is not used and instead Jigsaw modules are used.
+           Disable the old code.
+   7.  Update `launch4j`:
+       *   Successfully created an NSIS installer with the above changes, but TSTool had an error launching.
+       *   Use `launch4j` version 3.50 and save in the `cdss-util-buildtools/lib/launch4j` folder.
+       *   Save the old version to the `launch4j-java` folder.
+       *   This did not end up being the issue but keep the newer version.

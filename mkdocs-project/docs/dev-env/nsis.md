@@ -8,17 +8,17 @@ installer for TSTool.
     +   [Contrib Folder](#contrib-folder)
     +   [Include Folder](#include-folder)
     +   [Plugins Folder](#plugins-folder)
-*   [NSIS Add-ons for NSIS 3.03](#nsis-add-ons-for-nsis-303)
+*   [NSIS Add-ons for NSIS 3.03](#nsis-add-ons-for-nsis-303) - documentation archive
     +   [Contrib Folder](#contrib-folder)
     +   [Include Folder](#include-folder)
     +   [Plugins Folder](#plugins-folder)
-*   [NSIS Add-ons for NSIS 2.46](#nsis-add-ons-for-nsis-246)
+*   [NSIS Add-ons for NSIS 2.46](#nsis-add-ons-for-nsis-246) - documentation archive
 
 ----
 
 ## NSIS Installation ##
 
-Install version 3.03 of the software for the development version operating system
+Install version 3.08 of the software for the development version operating system
 from the download page on the following page.
 
 *   [NSIS on SourceForge](https://sourceforge.net/projects/nsis/)
@@ -26,13 +26,20 @@ from the download page on the following page.
 NSIS provides the benefit of being scriptable and therefore fits with automating
 creation of the installer.
 
+NSIS installs into `C:\Program Files (x86)\NSIS`.
+To determine the version that is installed, run the `makensisw.exe` program in the installation folder
+and then use the ***Help / NSIS Users Manual*** and check the release notes,
+or use ***Help / About MakeNSISW***.
+
+Download and run the `nsis-3.08-setup.exe` installer as Administrator.
+Install NSIS 3.08 or later using the installer defaults.
+Version 3.08 was used to set up a new computer for TSTool 14.4.0+ development.
+The version must be compatible with scripts used to configure the software.
+
 Running the installer advises to uninstall the earlier version of NSIS
 (2.46 was used for TSTool 12.05.00 and earlier).
-Therefore, uninstall the older version.
-
-Install NSIS 3.03 or later using the installer defaults.
-Version 3.08 was used to set up a new computer for TSTool 14.4.0 development.
-The version must be compatible with scripts used to configure the software.
+Therefore, if necessary, uninstall the older version.
+The software installer will show a warning about the old version and can uninstall it.
 
 ## NSIS Add-ons for NSIS 3.08 ##
 
@@ -84,7 +91,7 @@ development environment.
 | **`UltraModernUI/`** | The main UltraModernUI | [UltraModernUI 2.0 beta 4 on GitHub](https://github.com/SuperPat45/UltraModernUI/releases) | This is the main component for UltraModernUI and is absolutely necessary for using the UltraModernUI plug-in. If not included in NSIS there will be errors with building the TSTool installer. |
 
 **Necessary files for `Contrib/` Folder**:  
-These are the essential files that must be included in the NSIS 3.03 `Contrib/` folder
+These are the essential files that must be included in the NSIS 3.08 `Contrib/` folder
 to ensure that the TSTool installer will build properly with no errors.
 
 *   `Contrib/UIs/UltraModernUI`  
@@ -112,7 +119,7 @@ folder to ensure that TSTool installer will build properly with no errors.
 
 ### `Plugins/` Folder: ###
 
-NSIS 2.46 strictly used `x86-ansi` for `.dll` files. NSIS 3.03 has updated to
+NSIS 2.46 strictly used `x86-ansi` for `.dll` files. NSIS 3.08 has updated to
 include both `x86-ansi` and `x86-unicode` for `.dll` files. If adding a plug-in
 that only includes one `.dll` file, it is safe to assume this will be `x86-ansi`.
 

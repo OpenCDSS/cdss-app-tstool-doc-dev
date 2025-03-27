@@ -35,7 +35,7 @@ The following software are required for TSTool development:
 6.  [Eclipse](eclipse/eclipse.md) - IDE used for interactive Java software development (other environments may work but have not been tested)
 7.  [KDiff3](kdiff3.md) - tool for comparing files (**skip if not comparing files or have equivalent tool**)
 8.  [NSIS](nsis.md) - tool used to create software installer (**skip if not creating installers**)
-9.  [launch4j](launch4j.md) - tool used to create software installer (**skip if not creating installers**)
+9.  [Launch4j](launch4j.md) - tool used to create software installer (**skip if not creating installers**)
 
 ## Software Install Location Considerations ##
 
