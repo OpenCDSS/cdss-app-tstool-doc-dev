@@ -192,10 +192,9 @@ mklink /d jre11 jdk-11.0.26+4-jre
 
 In addition, the automated build system uses JRE folder that requires another symbolic link to find the JRE to distribute with the installer.
 Create the link as follows in the `C:\Program Files\Java` folder:
-**TODO need to fix this to not use the underscore.**
 
 ```
-mklink /d jre_18 jdk8u382-b05\jre
+mklink /d jre_11 jdk-11.0.26+4-jre
 ```
 
 The resulting `C:\Program Files\Java` folder will have contents similar to the following:
