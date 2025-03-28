@@ -2,7 +2,7 @@
 
 *   [Introduction](#introduction)
 *   ![Windows icon](../../images/windows-32.png) [Windows](#windows)
-     +   [Download Eclipse](#download-eclipse)
+     +   [Download Eclipse 2022-06](#download-eclipse-2022-06)
      +   [Install Eclipse](#install-eclipse)
      +   [Check Eclipse Run Script](#check-eclipse-run-script)
 *   ![Linux icon](../../images/linux-32.png) [Linux](#linux)
@@ -46,9 +46,6 @@ in a standard development folder structure.
 
 ## ![Windows icon](../../images/windows-32.png) Windows ##
 
-**This documentation was created for an older version of Eclipse and needs to be updated.
-The process for current installations is similar.**
-
 ### Download Eclipse 2022-06 ###
 
 Download the 2022-06 version of Eclipse, which can be run with Java 11:
@@ -64,8 +61,13 @@ Download the 2022-06 version of Eclipse, which can be run with Java 11:
 
 To avoid confusion with other versions of Eclipse that may be installed on the computer
 (as needed for other product development or during transition from one version of software to another),
-install by copying/unzipping into a folder named `C:\Program Files\Eclipse\eclipse-java-2022-06`,
-which helps distinguish the version as being for Java development.
+install by copying/unzipping:
+
+*   from zip file folder: `eclipse`
+*   to: `C:\Program Files\Eclipse\eclipse-java-2022-06`
+
+This helps distinguish the version as being for Java development
+and allows multiple Eclipse versions to be installed on the computer.
 The resulting folder structure is as shown in the following figure.
 
 **<p style="text-align: center;">
@@ -82,6 +84,10 @@ The `cdss-app-tstool-main` repository `build-util` folder contains scripts to ru
 assuming a standard installation folder.  For example, `build-util/run-eclipse-win64.cmd` can be run from a Windows command shell.
 This ensures that the proper versions of Eclipse and Java are used.
 If necessary, this script can be modified or other versions added over time (for example for new versions of Java and Eclipse).
+
+The Eclipse splash screen should show that the Eclipse version agrees with that installed above.
+If not, make sure that the run script has been updated to run the correct version of Eclipse and that
+Eclipse is installed in the correct location.
 
 ## ![Linux icon](../../images/linux-32.png) Linux ##
 

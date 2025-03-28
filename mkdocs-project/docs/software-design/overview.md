@@ -21,7 +21,7 @@ Separate pages are provided to explain the following design elements.
     +   [Command Status](commandstatus/commandstatus.md)
     +   [Commands that Read Time Series](command-read-ts/command-read-ts.md)
 *   Plugins:
-    +   [Plugins](plugin/plugins.md)
+    +   [Plugins](plugins/overview.md)
 *   Other code:
     +   [Utility Packages](util/util.md)
 *   Data:
