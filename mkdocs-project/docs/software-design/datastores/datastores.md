@@ -5,7 +5,7 @@
 *   [Database Datastores](#database-datastores)
 *   [Web Service Datastores](#web-service-datastores)
 *   [File Datastores](#file-datastores)
-*   [Plugin Datastores](../plugin-datastores/plugin-datastores.md)
+*   [Software Design / Plugins / Plugin Datastores](../plugins/plugin-datastores/plugin-datastores.md)
 
 -------------------
 

@@ -73,5 +73,5 @@ New features in Java 9 may simplify plugin implementation.
 However, Java 9 is not currently being used as of TSTool 12.x.
 See also:
 
-*   [Plugin Commands](../plugin-commands/plugin-commands.md)
-*   [Plugin Datastores](../plugin-datastores/plugin-datastores.md)
+*   [Plugin Commands](../plugins/plugin-commands/plugin-commands.md)
+*   [Plugin Datastores](../plugins/plugin-datastores/plugin-datastores.md)

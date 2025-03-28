@@ -7,6 +7,7 @@ nav:
 - 'Introduction': index.md
 - 'New Developer Setup':
   - 'Overview': dev-new/overview.md
+  - 'Archive - Eclipse 2019-03': dev-new/eclipse/eclipse-2019-03/eclipse-2019-03.md
 - 'Development Tasks':
   - 'Overview': dev-tasks/overview.md
   - 'OpenCDSS Coordination': dev-tasks/opencdss-coord/opencdss-coord.md

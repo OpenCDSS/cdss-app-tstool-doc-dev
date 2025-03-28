@@ -85,13 +85,16 @@ See the following resources:
     +   prebuilt high performance OpenJDK download page
     +   has separate downloads for JDK and JRE
 
-Use the above Adoptium page to select the required OpenJDK version:
+Use the [Adoptium page](https://adoptium.net) to select the required OpenJDK version:
 
 *   Select ***Release Archive*** and then the ***11 - LTS*** filter.
-*   Select the ***Windows*** ***x64 OS/Architecture*** and then select the ***JDK*** and ***JRE*** links to download each.
+*   Select the most recent version (typically at the top) for ***Windows*** ***x64 OS/Architecture***
+    and then select the ***JDK*** and ***JRE*** links to download each.
 *   The `11.0.26+4` release is used for this documentation.
-*   Make sure to download the ***Windows x64*** version for 64-bit Java.
-*   Download the `.zip` (rather than the `.msi`) file to allow more control of the installation.
+*   Make sure to download the ***Windows x64*** version for 64-bit Java (**not** ***Windows x86***).
+*   Download the `.zip` (rather than the `.msi`) file under the ***Binary*** column
+    (**not** the ***Installer*** `msi` file).
+    This allows more control of the installation.
 *   The JDK download file will have a name similar to `OpenJDK11U-jdk_x64_windows_hotspot_11.0.26_4.zip`
     and will have contents similar to the following.
 
@@ -127,7 +130,8 @@ This will display instructions.  For example, if using Git Bash for development:
     certutil -hashfile OpenJDK11U-jdk_x64_windows_hotspot_11.0.26_4.zip SHA256 > OpenJDK11U-jdk_x64_windows_hotspot_11.0.26_4.sha256sum2
     ```
 
-3.  Edit the checksum files with a text editor to remove extra lines, end of line characters, etc.
+3.  Edit the `sha256sum2` files with a text editor to remove extra lines, end of line characters, etc.
+    It may be necessary to edit the file in binary mode and remove Windows-style carriage return characters.
 
 4.  Compare the files with a command similar to the following.  There should be no differences.
 
